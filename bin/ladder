@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*jslint node: true */
 "use strict";
 
@@ -17,15 +19,15 @@ if (argv.h) {
   process.exit(64);
 }
 
-var Ladder = require( './ladder-diagram' );
-var LadderParse = require( './ladder-parser');
+var Ladder = require( '../lib/ladder-diagram' );
+var LadderParse = require( '../lib/ladder-parser');
 var fs = require('fs');
 var path = require('path');
 var canvg = require("canvg");
 var Canvas = require("canvas");
 
 if (argv.d) {
-    require('./debug').enable();
+    require('../lib/debug').enable();
     process.argv.shift();
 }
 
