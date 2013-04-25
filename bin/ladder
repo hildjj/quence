@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/*jslint node: true */
+/* jslint node: true */
 "use strict";
 
 var opt = require('optimist');
@@ -28,12 +28,12 @@ var Canvas = require("canvas");
 
 if (argv.d) {
     require('../lib/debug').enable();
-    process.argv.shift();
 }
 
 function newExt(name, ext) {
   // check extension now, so we don't create an empty file
   switch (ext) {
+    case 'svg':
     case 'png':
       break;
     case 'jpg':
