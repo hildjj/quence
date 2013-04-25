@@ -1,6 +1,4 @@
 *.svg
 *.png
-batik-rasterizer.jar
-lib
 node_modules
 *~
