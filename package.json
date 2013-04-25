@@ -1,1 +1,32 @@
-{ "name": "jssd", "version": "1.0.0", "main": "./ladder.js", "dependencies": { } }
+{
+  "name": "ladder",
+  "version": "0.0.1",
+  "main": "./ladder.js",
+  "dependencies": {
+    "optimist": "*", 
+    "canvg": "*",
+    "canvas": "*"
+  },
+  "description": "Create sequence diagrams",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hildjj/ladder.git"
+  },
+  "keywords": [
+    "sequencediagram",
+    "sequence",
+    "diagram"
+  ],
+  "author": [
+    { "name": "Cullen Jennings", "email": "fluffy@iii.ca"},
+    { "name": "Eric Rescorla", "email": "ekr@rtfm.com"},
+    { "name": "Martin Thomson", "email": "martin.thomson@gmail.com"},
+    { "name": "Joe Hildebrand", "email": "joe-github@cursive.net"}
+  ],
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
