@@ -20,7 +20,7 @@ if (argv.h) {
 }
 
 var Ladder = require( '../lib/ladder-diagram' );
-var LadderParse = require( '../lib/ladder-parser');
+var parser = require( '../lib/ladder');
 var fs = require('fs');
 var path = require('path');
 var canvg = require("canvg");
@@ -35,6 +35,8 @@ function newExt(name, ext) {
   switch (ext) {
     case 'svg':
     case 'png':
+    case 'js':
+    case 'json':
       break;
     case 'jpg':
     case 'jpeg':
@@ -56,12 +58,21 @@ function readFile(name) {
       process.stderr.write(er + "\n");
       process.exit(1);
     }
-    var parsed = LadderParse.parse(data);
+    var parsed = parser.parse(data);
+    var outf = newExt(name, argv.o);
     Ladder.compute_ladder(parsed);
     var output = Ladder.draw_ladder();
-    var outf = newExt(name, argv.o);
 
-    if (argv.o === 'svg') {
+    if ((argv.o === 'js') || (argv.o === 'json')) {
+      fs.writeFile(outf, JSON.stringify(parsed, null, 2), function(er) {
+        if (er) {
+          process.stderr.write(er + "\n");
+          process.exit(1);
+        }
+      });
+      return;
+    }
+    else if (argv.o === 'svg') {
       fs.writeFile(outf, output, function (er) {
         if (er) {
           process.stderr.write(er + "\n");
