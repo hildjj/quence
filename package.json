@@ -5,7 +5,8 @@
   "dependencies": {
     "optimist": "*", 
     "canvg": "*",
-    "canvas": "*"
+    "canvas": "*",
+    "log4js": "*"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {

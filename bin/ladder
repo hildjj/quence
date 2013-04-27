@@ -5,11 +5,11 @@
 
 var opt = require('optimist');
 var argv = opt
-  .boolean('d')
-  .describe('d', 'debug output')
   .string('o')
   .describe('o', 'output type [png, svg]')
   .default('o', 'svg')
+  .boolean('v')
+  .describe('v', 'verbose logging')
   .boolean('h')
   .describe('h', 'Show help')
   .argv;
@@ -19,16 +19,19 @@ if (argv.h) {
   process.exit(64);
 }
 
-var Ladder = require( '../lib/ladder-diagram' );
-var parser = require( '../lib/ladder');
+var log = require('log4js').getLogger();
+var LadderDiagram = require( '../lib/ladder-diagram' );
+var ladder = require( '../lib/ladder');
 var fs = require('fs');
 var path = require('path');
-var canvg = require("canvg");
-var Canvas = require("canvas");
+var canvg = require('canvg');
+var Canvas = require('canvas');
 
 if (argv.d) {
     require('../lib/debug').enable();
 }
+
+log.setLevel(argv.v ? 'ALL' : 'WARN');
 
 function newExt(name, ext) {
   // check extension now, so we don't create an empty file
@@ -40,10 +43,10 @@ function newExt(name, ext) {
       break;
     case 'jpg':
     case 'jpeg':
-      process.stderr.write('Output type not working yet: "' + ext + '"\n');
+      log.warn('Output type not working yet:', ext);
       break;
     default:
-      process.stderr.write('Unknown output type: "' + ext + '"\n');
+      log.fatal('Unknown output type:', ext);
       process.exit(1);
   }
   return path.dirname(name) +
@@ -55,19 +58,28 @@ function newExt(name, ext) {
 function readFile(name) {
   fs.readFile(name, {encoding: 'utf8'}, function(er, data) {
     if (er) {
-      process.stderr.write(er + "\n");
-      process.exit(1);
+      log.error(name, er);
+      return;
     }
-    var parsed = parser.parse(data);
+
+    var parsed;
+    try {
+      parsed = ladder.parse(data);
+    } catch (e) {
+      if (e instanceof ladder.SyntaxError) {
+        log.error(name + "(" + e.line + ":" + e.column + "): " + e.message);
+        return;
+      }
+    }
     var outf = newExt(name, argv.o);
-    Ladder.compute_ladder(parsed);
-    var output = Ladder.draw_ladder();
+    LadderDiagram.compute_ladder(parsed);
+    var output = LadderDiagram.draw_ladder();
 
     if ((argv.o === 'js') || (argv.o === 'json')) {
       fs.writeFile(outf, JSON.stringify(parsed, null, 2), function(er) {
         if (er) {
-          process.stderr.write(er + "\n");
-          process.exit(1);
+          log.error(name, er);
+          return;
         }
       });
       return;
@@ -75,8 +87,8 @@ function readFile(name) {
     else if (argv.o === 'svg') {
       fs.writeFile(outf, output, function (er) {
         if (er) {
-          process.stderr.write(er + "\n");
-          process.exit(1);
+          log.error(name, er);
+          return;
         }
       });
     } else {
