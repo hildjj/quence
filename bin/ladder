@@ -69,14 +69,15 @@ function readFile(name) {
       if (e instanceof ladder.SyntaxError) {
         log.error(name + "(" + e.line + ":" + e.column + "): " + e.message);
         return;
+      } else {
+        log.fatal(e);
+        process.exit(1);
       }
     }
     var outf = newExt(name, argv.o);
-    LadderDiagram.compute_ladder(parsed);
-    var output = LadderDiagram.draw_ladder();
 
     if ((argv.o === 'js') || (argv.o === 'json')) {
-      fs.writeFile(outf, JSON.stringify(parsed, null, 2), function(er) {
+      fs.writeFile(outf, JSON.stringify(parsed, null, 2) + "\n", function(er) {
         if (er) {
           log.error(name, er);
           return;
@@ -84,8 +85,11 @@ function readFile(name) {
       });
       return;
     }
-    else if (argv.o === 'svg') {
-      fs.writeFile(outf, output, function (er) {
+
+    var svg = LadderDiagram.draw(parsed);
+
+    if (argv.o === 'svg') {
+      fs.writeFile(outf, svg, function (er) {
         if (er) {
           log.error(name, er);
           return;
@@ -93,7 +97,7 @@ function readFile(name) {
       });
     } else {
       var canvas = new Canvas();
-      canvg(canvas, output, {ignoreAnimation: true});
+      canvg(canvas, svg, {ignoreAnimation: true});
       var outs = fs.createWriteStream(outf);
       switch (argv.o) {
         case 'png': canvas.pngStream().pipe(outs); break;

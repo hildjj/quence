@@ -6,7 +6,8 @@
     "optimist": "*", 
     "canvg": "*",
     "canvas": "*",
-    "log4js": "*"
+    "log4js": "*",
+    "xmlbuilder": "*"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
