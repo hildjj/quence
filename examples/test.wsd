@@ -1,3 +1,5 @@
+set arrow_color purple
+set auto_number
 
 title that is that # test4
 participant "Bob's JS" as Bob
@@ -33,6 +35,6 @@ end
 
 # This is a comment
 Bob <-> Alice: xxxy
-Bob -> Bob: selfie is a long long time to go without a newline
+Bob -> Bob: selfie is a long long time to go without a newline [duration=2]
 Bob->Alice
 Alice -> carlos
