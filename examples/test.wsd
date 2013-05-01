@@ -6,6 +6,21 @@ title that is that # test4
 participant "Bob's JS" as Bob
 participant Alice as Alice
 Bob -> Alice: Test
+Bob --> Alice: dash it all
+Alice --> Bob: back dash
+Bob ->> Alice: open
+Alice ->> Bob: back open
+Bob -->> Alice: Dash Open
+Alice -->> Bob: dash back open
+Bob <-> Alice: <->
+Bob <->> Alice: <->>
+Bob <<-> Alice: <<->
+Bob <<->> Alice: <<->>
+Bob <--> Alice: <-->
+Bob <-->> Alice: <-->>
+Bob <<--> Alice: <<-->
+Bob <<-->> Alice: <<-->>
+
 loop outer
 	loop first # with a comment
 	end # also commented
@@ -36,6 +51,10 @@ end
 
 # This is a comment
 Bob <-> Alice: xxxy
-Bob -> Bob: selfie is a long long time to go without a newline [duration=2]
+Bob -> Bob: This is a long label (TODO: wrap) [duration=2]
+Bob --> Bob: -->
+Bob ->> Bob: ->>
+Bob <-> Bob: <->
+
 Bob->Alice
 Alice -> carlos
