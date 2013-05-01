@@ -1,36 +1,37 @@
 set arrow_color purple
 set auto_number
+set rung_width 2
 
 title that is that # test4
 participant "Bob's JS" as Bob
 participant Alice as Alice
 Bob -> Alice: Test
 loop outer
-loop first # with a comment
-end # also commented
-loop second
-loop inner
-loop inner inner
-end
-end
-end
-loop at least once
-	loop lots of times
-		here: Bob -> Alice: Test duration=2[duration=2]
-		Alice@here -> Bob: Another test duration=1 [duration=1]
-		advance 1
-		Bob->Alice
+	loop first # with a comment
+	end # also commented
+	loop second
+		loop inner
+			loop inner inner
+			end
+		end
 	end
-	loop once
-		Alice -> Bob
+	loop at least once
+		loop lots of times
+			here: Bob -> Alice: Test duration=2[duration=2]
+			Alice@here -> Bob: Another test duration=1 [duration=1]
+			advance 1
+			Bob->Alice
+		end
+		loop once
+			Alice -> Bob
+		end
+		loop twice
+			Alice -> Bob: Hey!
+		end
+		loop three times a lady
+			Alice -> Bob
+		end
 	end
-	loop twice
-		Alice -> Bob: Hey!
-	end
-	loop three times a lady
-		Alice -> Bob
-	end
-end
 end
 
 # This is a comment
