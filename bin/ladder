@@ -6,7 +6,7 @@
 var opt = require('optimist');
 var argv = opt
   .string('o')
-  .describe('o', 'output type [png, svg]')
+  .describe('o', 'output type [pdf, svg]')
   .default('o', 'svg')
   .boolean('v')
   .describe('v', 'verbose logging')
@@ -20,11 +20,11 @@ if (argv.h) {
 }
 
 var log = require('log4js').getLogger();
-var LadderDiagram = require( '../lib/ladder-diagram' );
+var LadderSVG = require( '../lib/ladder-svg' );
+var LadderCanvas = require( '../lib/ladder-canvas' );
 var ladder = require( '../lib/ladder');
 var fs = require('fs');
 var path = require('path');
-var canvg = require('canvg');
 var Canvas = require('canvas');
 
 if (argv.d) {
@@ -40,6 +40,7 @@ function newExt(name, ext) {
     case 'png':
     case 'js':
     case 'json':
+    case 'pdf':
       break;
     case 'jpg':
     case 'jpeg':
@@ -86,9 +87,9 @@ function readFile(name) {
       return;
     }
 
-    var svg = LadderDiagram.draw(parsed);
 
     if (argv.o === 'svg') {
+      var svg = LadderSVG.draw(parsed);
       fs.writeFile(outf, svg, function (er) {
         if (er) {
           log.error(name, er);
@@ -96,14 +97,16 @@ function readFile(name) {
         }
       });
     } else {
-      var canvas = new Canvas();
-      canvg(canvas, svg, {ignoreAnimation: true});
-      var outs = fs.createWriteStream(outf);
+      var pdf = LadderCanvas.draw(parsed);
+      pdf.write(outf);
+
+/*
       switch (argv.o) {
         case 'png': canvas.pngStream().pipe(outs); break;
         case 'jpg':
         case 'jpeg': canvas.jpegStream().pipe(outs); break;
       }
+      */
     }
   });
 }

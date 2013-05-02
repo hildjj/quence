@@ -1,6 +1,7 @@
 set arrow_color purple
 set auto_number
-set rung_width 2
+set rung_width 1
+set line_color red
 
 title that is that # test4
 participant "Bob's JS" as Bob
@@ -33,7 +34,7 @@ loop outer
 	loop at least once
 		loop lots of times
 			here: Bob -> Alice: Test duration=2[duration=2]
-			Alice@here -> Bob: Another test duration=1 [duration=1]
+			Alice@here ->> Bob: Another test duration=1 [duration=1]
 			advance 1
 			Bob->Alice
 		end
@@ -56,5 +57,4 @@ Bob --> Bob: -->
 Bob ->> Bob: ->>
 Bob <-> Bob: <->
 
-Bob->Alice
-Alice -> carlos
+Bob->carlos
