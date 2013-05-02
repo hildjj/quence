@@ -6,9 +6,8 @@
   "bugs": "https://github.com/hildjj/ladder/issues",
   "dependencies": {
     "optimist": "*", 
-    "canvg": "*",
-    "canvas": "*",
     "log4js": "*",
+    "pdfkit": "*",
     "xmlbuilder": "*"
   },
   "description": "Create sequence diagrams",

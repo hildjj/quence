@@ -7,7 +7,7 @@ var opt = require('optimist');
 var argv = opt
   .string('o')
   .describe('o', 'output type [pdf, svg]')
-  .default('o', 'svg')
+  .default('o', 'pdf')
   .boolean('v')
   .describe('v', 'verbose logging')
   .boolean('h')
@@ -20,12 +20,11 @@ if (argv.h) {
 }
 
 var log = require('log4js').getLogger();
-var LadderSVG = require( '../lib/ladder-svg' );
-var LadderCanvas = require( '../lib/ladder-canvas' );
-var ladder = require( '../lib/ladder');
 var fs = require('fs');
 var path = require('path');
-var Canvas = require('canvas');
+
+var draw = require('../lib/ladder-draw');
+var ladder = require('../lib/ladder');
 
 if (argv.d) {
     require('../lib/debug').enable();
@@ -35,21 +34,11 @@ log.setLevel(argv.v ? 'ALL' : 'WARN');
 
 function newExt(name, ext) {
   // check extension now, so we don't create an empty file
-  switch (ext) {
-    case 'svg':
-    case 'png':
-    case 'js':
-    case 'json':
-    case 'pdf':
-      break;
-    case 'jpg':
-    case 'jpeg':
-      log.warn('Output type not working yet:', ext);
-      break;
-    default:
-      log.fatal('Unknown output type:', ext);
-      process.exit(1);
+  if (!draw.supported(ext)) {
+    log.fatal('Unknown output type:', ext);
+    process.exit(1);
   }
+
   return path.dirname(name) +
     path.sep +
     path.basename(name, path.extname(name)) +
@@ -63,9 +52,12 @@ function readFile(name) {
       return;
     }
 
-    var parsed;
     try {
-      parsed = ladder.parse(data);
+      var outf = newExt(name, argv.o);
+      var out  = draw.draw(data, argv.o);
+      fs.writeFile(outf, out, function(er) {
+        if (er) { log.error(name, er); }
+      });
     } catch (e) {
       if (e instanceof ladder.SyntaxError) {
         log.error(name + "(" + e.line + ":" + e.column + "): " + e.message);
@@ -75,43 +67,9 @@ function readFile(name) {
         process.exit(1);
       }
     }
-    var outf = newExt(name, argv.o);
-
-    if ((argv.o === 'js') || (argv.o === 'json')) {
-      fs.writeFile(outf, JSON.stringify(parsed, null, 2) + "\n", function(er) {
-        if (er) {
-          log.error(name, er);
-          return;
-        }
-      });
-      return;
-    }
-
-
-    if (argv.o === 'svg') {
-      var svg = LadderSVG.draw(parsed);
-      fs.writeFile(outf, svg, function (er) {
-        if (er) {
-          log.error(name, er);
-          return;
-        }
-      });
-    } else {
-      var pdf = LadderCanvas.draw(parsed);
-      pdf.write(outf);
-
-/*
-      switch (argv.o) {
-        case 'png': canvas.pngStream().pipe(outs); break;
-        case 'jpg':
-        case 'jpeg': canvas.jpegStream().pipe(outs); break;
-      }
-      */
-    }
   });
 }
 
 for (var i=0; i<argv._.length; i++) {
   readFile(argv._[i]);
 }
-
