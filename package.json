@@ -1,7 +1,7 @@
 {
   "name": "ladder",
   "version": "0.0.2",
-  "main": "./ladder.js",
+  "main": "./lib/ladder-draw.js",
   "homepage": "https://github.com/hildjj/ladder",
   "bugs": "https://github.com/hildjj/ladder/issues",
   "dependencies": {
