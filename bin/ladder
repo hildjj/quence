@@ -5,8 +5,9 @@
 
 var opt = require('optimist');
 var argv = opt
+  .usage("Usage: $0 [-o type] [-v] [-h] FILE...")
   .string('o')
-  .describe('o', 'output type [pdf, svg]')
+  .describe('o', 'output type [pdf, svg, json]')
   .default('o', 'pdf')
   .boolean('v')
   .describe('v', 'verbose logging')
@@ -52,21 +53,23 @@ function readFile(name) {
       return;
     }
 
-    try {
-      var outf = newExt(name, argv.o);
-      var out  = draw.draw(data, argv.o);
+    var outf = newExt(name, argv.o);
+    draw.draw(data, argv.o, function(er, out) {
+      if (er) {
+        if (er instanceof ladder.SyntaxError) {
+          log.error(name + "(" + er.line + ":" + er.column + "): " + er.message);
+          return;
+        } else {
+          log.fatal(er);
+          process.exit(1);
+        }
+      }
+      log.debug("writing", outf);
       fs.writeFile(outf, out, function(er) {
         if (er) { log.error(name, er); }
       });
-    } catch (e) {
-      if (e instanceof ladder.SyntaxError) {
-        log.error(name + "(" + e.line + ":" + e.column + "): " + e.message);
-        return;
-      } else {
-        log.fatal(e);
-        process.exit(1);
-      }
-    }
+
+    });
   });
 }
 

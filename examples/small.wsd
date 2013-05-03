@@ -1,0 +1,5 @@
+set text_color purple
+
+Alice -> Bob: Hello #comment
+Bob -> Alice: World
+Bob -> Bob: !
