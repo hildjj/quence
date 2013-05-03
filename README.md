@@ -69,7 +69,8 @@ Messages
 
 `[participant] [arrow] [participant]` draw a line with [arrows](#arrows) between
 two [participants](#participants).  A participant that has not been previously
-mentioned will be automatically created.
+mentioned will be automatically created.  Note that a message may be of the form
+`B -> B`, which produces a self message.
 
 Options
 -------
