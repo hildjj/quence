@@ -1,0 +1,45 @@
+
+text {
+  font-size: [text_size]px;
+  font-family: [font];
+  fill: [text_color];
+  baseline-shift: 2px;
+}
+path {
+  stroke: [line_color];
+  stroke-width: [line_width];
+}
+path.block_tab {
+  fill: [block_tab_fill];
+  stroke: none;
+}
+path.block {
+  fill: none;
+  stroke: [block_stroke];
+  stroke-dasharray: 2, 1;
+  stroke-linejoin: round;
+}
+path.self {
+  fill: none;
+}
+path.dashed {
+  stroke-dasharray: 6, 2;
+}
+path.rung {
+  stroke: [rung_color];
+  stroke-width: [rung_width];
+}
+path.closed {
+  fill: [arrow_color];
+  stroke: [arrow_color];
+}
+path.open {
+  stroke: [arrow_color];
+  fill: none;
+}
+text.end {
+  text-anchor: end;
+}
+text.center {
+  text-anchor: middle;
+}
