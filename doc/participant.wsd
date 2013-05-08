@@ -1,0 +1,2 @@
+participant Alice
+participant "Bob is Alice's Friend" as bob

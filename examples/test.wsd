@@ -1,7 +1,9 @@
 set arrow_color purple
 set auto_number
-set rung_width 1
+set rung_width 10
+set rung_color blue
 set line_color red
+set font "/Library/Fonts/Tahoma.ttf"
 
 title that is that # test4
 participant "Bob's JS" as Bob
@@ -50,11 +52,14 @@ loop outer
 	end
 end
 
-# This is a comment
-Bob <-> Alice: xxxy
-Bob -> Bob: This is a long label (TODO: wrap) [duration=2]
-Bob --> Bob: -->
-Bob ->> Bob: ->>
-Bob <-> Bob: <->
+opt Double arrows
+	# This is a comment
+	Bob <-> Alice: xxxy
+	Bob -> Bob: This is a long label (TODO: wrap) [duration=2]
+	Bob --> Bob: -->
+	Bob ->> Bob: ->>
+	Bob <-> Bob: <->
+end
 
 Bob->carlos
+Bob<->carlos [duration=1]
