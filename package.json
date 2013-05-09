@@ -1,9 +1,9 @@
 {
-  "name": "ladder",
-  "version": "0.0.2",
-  "main": "./lib/ladder-draw.js",
-  "homepage": "https://github.com/hildjj/ladder",
-  "bugs": "https://github.com/hildjj/ladder/issues",
+  "name": "arrow",
+  "version": "0.1.0",
+  "main": "./lib/arrow-draw.js",
+  "homepage": "https://github.com/hildjj/arrow",
+  "bugs": "https://github.com/hildjj/arrow/issues",
   "dependencies": {
     "optimist": "*", 
     "log4js": "*",
@@ -16,11 +16,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "node_modules/.bin/pegjs lib/ladder.pegjs"
+    "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hildjj/ladder.git"
+    "url": "git://github.com/hildjj/arrow.git"
   },
   "keywords": [
     "sequencediagram",
