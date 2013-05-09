@@ -1,6 +1,6 @@
 {
   "name": "arrow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/arrow-draw.js",
   "homepage": "https://github.com/hildjj/arrow",
   "bugs": "https://github.com/hildjj/arrow/issues",
@@ -17,6 +17,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
+  },
+  "bin": {
+    "arrow": "./bin/arrow"
   },
   "repository": {
     "type": "git",

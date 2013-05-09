@@ -22,6 +22,15 @@ Bob -> Alice: World
 Bob -> Bob: !
 ```
 
+Installation
+============
+
+Use [npm](http://npmjs.org/):
+
+```
+npm install -g arrow
+```
+
 Syntax
 ======
 
