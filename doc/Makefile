@@ -1,4 +1,4 @@
-LADDER = ../bin/ladder
+ARROW = ../bin/arrow
 SRCS = $(wildcard *.wsd)
 PICS = ${SRCS:.wsd=.png}
 
@@ -12,7 +12,7 @@ clean:
 	-$(RM) *.pdf *.png
 
 .wsd.pdf :
-	$(LADDER) -o pdf $< -n
+	$(ARROW) -o pdf $< -n
 
 .pdf.png :
 	convert -density 150 $< -flatten -trim -transparent "#ffffff"  $@

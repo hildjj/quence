@@ -11,7 +11,7 @@ Options:
 
 Small example:
 
-<img src='examples/small.png?raw=true' align='right' hspace='10' />
+<img src='doc/small.png?raw=true' align='right' hspace='10' />
 
 ```
 set text_color purple
