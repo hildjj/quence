@@ -1,0 +1,9 @@
+set no_clear
+set no_feet
+set time_height 25
+set text_size 10
+set column_width 50
+
+early: A-->>B
+late: B-->>A
+A@early->B@late

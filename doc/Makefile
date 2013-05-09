@@ -4,7 +4,6 @@ PICS = ${SRCS:.wsd=.png}
 
 .SUFFIXES:
 .SUFFIXES: .wsd .png .pdf
-.PRECIOUS: %.pdf
 
 all: $(PICS)
 
@@ -15,4 +14,7 @@ clean:
 	$(ARROW) -o pdf $< -n
 
 .pdf.png :
-	convert -density 150 $< -flatten -trim -transparent "#ffffff"  $@
+	gs -q -dNOPAUSE -dBATCH -sDEVICE=pngalpha -r100 -dEPSCrop -sOutputFile=$@ $<
+	convert -trim -background transparent -splice 50x0 $@ $@.tmp
+	mv $@.tmp $@
+	

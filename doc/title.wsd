@@ -1,0 +1,7 @@
+set no_clear
+set no_feet
+set time_height 18
+set text_size 10
+set column_width 70
+
+A->B: The title

@@ -1,4 +1,9 @@
 set text_color purple
+set no_feet
+set no_clear
+set time_height 18
+set text_size 10
+set column_width 70
 
 Alice -> Bob: Hello #comment
 Bob -> Alice: World

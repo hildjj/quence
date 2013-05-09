@@ -1,3 +1,4 @@
+
 Create sequence diagrams with a domain-specific language.
 
 ```
@@ -9,9 +10,9 @@ Options:
   -h  Show help                     [boolean]
 ```
 
-Small example:
+<img src='doc/small.png?raw=true' align='right'/>
 
-<img src='doc/small.png?raw=true' align='right' hspace='10' />
+Small example:
 
 ```
 set text_color purple
@@ -20,8 +21,6 @@ Alice -> Bob: Hello #comment
 Bob -> Alice: World
 Bob -> Bob: !
 ```
-
-<div style='clear:both;' />
 
 Syntax
 ======
@@ -35,14 +34,24 @@ Comments
 `# [comment]` Place a comment on a line by iteself, or at the end of any line.  
 If you need a `#` in a string, enclose the string in double quotes (`"`).
 
-Participants <a id="participants" />
+
+Participants <a id="participants"></a>
 ------------
 
 `participant "[description]" as [name]` Create a new participant in the order 
 that the `participant` directive appears in the input file.  The `description` 
 is output, and the `name` is what is used for reference in later directives.
 
-Arrows <a id="arrows" />
+<img src='doc/participant.png?raw=true' align='right'/>
+
+Example:
+
+```
+participant Alice
+participant "Bob Cat" as bob
+```
+
+Arrows <a id="arrows"></a>
 ------
 
 Arrows are draw between participants with open ends, closed ends, solid or 
@@ -60,19 +69,84 @@ dashed lines, and may be bi-directional.
 
 `--` dashed line
 
-### examples
+Example:
 
-`->` solid line with a closed arrow end
+<img src='doc/arrows.png?raw=true' align='right'/>
 
-`<-->>` dashed line with a closed source arrow and an open destination arrow
+```
+# A "normal" message from A to B
+A -> B
+
+# An "exciting" message between A and B
+# No, this doesn't have any defined meaning, as far as I know
+A<-->>B
+```
 
 Messages
 --------
 
-`[participant] [arrow] [participant]` draw a line with [arrows](#arrows) between
-two [participants](#participants).  A participant that has not been previously
-mentioned will be automatically created.  Note that a message may be of the form
-`B -> B`, which produces a self message.
+The minimum messsage looks like `participant arrow participant`, but a full description is:
+
+```
+[label:] participant[@time] arrow participant[@time] [:title] [[message options]]
+```
+
+Draw a line with 
+[arrows](#arrows) between two [participants](#participants).  A participant 
+that has not been previously mentioned will be automatically created.  Note 
+that a message may be of the form `B -> B`, which produces a self message.
+
+### Title
+
+<img src='doc/title.png?raw=true' align='right'/>
+
+A message can have a title that will be drawn over the message line.  The title
+will be justified toward the start of the message, or in the middle for 
+bi-directional messages.
+
+Example:
+
+```
+A->B: The title
+```
+
+<img src='doc/timestamps.png?raw=true' align='right'/>
+
+### Timestamps
+
+Each message start time can have a timestamp associated with it by prefixing 
+the messagewith `label:`.  Subsequent messages can be declared to start or end 
+at a given label by suffixing the participant name with `@time`, where `time` is 
+the lable from a previous message.
+This will usually result in a diagonal line.
+
+Example:
+
+```
+early: A-->>B
+late: B-->>A
+A@early->B@late
+```
+
+### Message options
+
+<img src='doc/messages.png?raw=true' align='right'/>
+
+Message options modify the message, and are of the form `name [= value]`, with 
+multiple options separated by a comma (`,`).  The following message options 
+may be set:
+
+ * `duration`: The number of time slices that this message takes up.  If this is
+    not `1`, a diagonal line will result.  [Default: `1`]
+ * `advance`: The number of time slices to advance the clock after this message.
+    This is useful after a flurry of crossing diagonal lines. [Default: `1`]
+
+Example:
+
+```
+A->B [duration=2, advance=2]
+B->A [duration=2]
+```
 
 Options
 -------
@@ -92,7 +166,7 @@ The following options may be set (followed by their defaults):
  * `block_tab_fill`: gray
  * `block_stroke`: gray
  * `column_width`: 150
- * `font`: DejaVu Sans
+ * `font`: Helvetica
  * `line_color`: black
  * `line_width`: 1
  * `rung_color`: black
@@ -117,3 +191,4 @@ Supported Output Types
 
  * PDF
  * SVG
+ * JSON

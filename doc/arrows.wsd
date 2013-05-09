@@ -4,5 +4,5 @@ set time_height 18
 set text_size 10
 set column_width 50
 
-participant Alice
-participant "Bob Cat" as bob
+A -> B
+A<-->>B
