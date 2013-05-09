@@ -1,7 +1,7 @@
 Create sequence diagrams with a domain-specific language.
 
 ```
-Usage: ladder [-o type] [-v] [-h] FILE...
+Usage: arrow [-o type] [-v] [-h] FILE...
 
 Options:
   -o  output type [pdf, svg, json]  [string]  [default: "pdf"]
@@ -11,6 +11,8 @@ Options:
 
 Small example:
 
+<img src='master/examples/small.png?raw=true' align='right' hspace='10' />
+
 ```
 set text_color purple
 
@@ -19,13 +21,13 @@ Bob -> Alice: World
 Bob -> Bob: !
 ```
 
-![small example](https://github.com/hildjj/ladder/raw/master/examples/small.png "Small example")
+<div style='clear:both;' />
 
 Syntax
 ======
 
 The following sections describe syntax that can be placed in a `.wsd` file for 
-input to the ladder processor.
+input to the arrow processor.
 
 Comments
 --------
@@ -103,8 +105,8 @@ Programmatic Interface
 ======================
 
 ```javascript
-var ladder = require('ladder');
-ladder.draw("A->B", "pdf", function(error, out) {
+var arrow = require('arrow');
+arrow.draw("A->B", "pdf", function(error, out) {
 	// err is `null` or an `Error`
 	// out is a `String` or `Buffer`
 });
