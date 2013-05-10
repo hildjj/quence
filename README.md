@@ -10,7 +10,7 @@ Options:
   -h  Show help                     [boolean]
 ```
 
-<img src='doc/small.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/small.png' align='right'/>
 
 Small example:
 
@@ -51,7 +51,7 @@ Participants <a id="participants"></a>
 that the `participant` directive appears in the input file.  The `description` 
 is output, and the `name` is what is used for reference in later directives.
 
-<img src='doc/participant.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/participant.png' align='right'/>
 
 Example:
 
@@ -80,7 +80,7 @@ dashed lines, and may be bi-directional.
 
 Example:
 
-<img src='doc/arrows.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/arrows.png' align='right'/>
 
 ```
 # A "normal" message from A to B
@@ -107,7 +107,7 @@ that a message may be of the form `B -> B`, which produces a self message.
 
 ### Title
 
-<img src='doc/title.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/title.png' align='right'/>
 
 A message can have a title that will be drawn over the message line.  The title
 will be justified toward the start of the message, or in the middle for 
@@ -119,7 +119,7 @@ Example:
 A->B: The title
 ```
 
-<img src='doc/timestamps.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/timestamps.png' align='right'/>
 
 ### Timestamps
 
@@ -139,7 +139,7 @@ A@early->B@late
 
 ### Message options
 
-<img src='doc/messages.png?raw=true' align='right'/>
+<img src='https://raw.github.com/hildjj/arrow/master/doc/messages.png' align='right'/>
 
 Message options modify the message, and are of the form `name [= value]`, with 
 multiple options separated by a comma (`,`).  The following message options 
