@@ -1,9 +1,9 @@
 {
-  "name": "arrow",
-  "version": "0.1.3",
-  "main": "./lib/arrow-draw.js",
-  "homepage": "https://github.com/hildjj/arrow",
-  "bugs": "https://github.com/hildjj/arrow/issues",
+  "name": "quence",
+  "version": "0.2.0",
+  "main": "./lib/quence.js",
+  "homepage": "https://github.com/hildjj/quence",
+  "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
     "optimist": "*",
     "log4js": "*",
@@ -19,11 +19,11 @@
     "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
   },
   "bin": {
-    "arrow": "./bin/arrow"
+    "quence": "./bin/quence"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hildjj/arrow.git"
+    "url": "git://github.com/hildjj/quence.git"
   },
   "keywords": [
     "sequencediagram",

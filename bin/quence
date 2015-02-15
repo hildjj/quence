@@ -24,7 +24,7 @@ var log = require('log4js').getLogger();
 var fs = require('fs');
 var path = require('path');
 
-var draw = require('../lib/arrow');
+var draw = require('../lib/quence');
 var grammar = require('../lib/grammar');
 
 if (argv.d) {
