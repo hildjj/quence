@@ -1,6 +1,6 @@
 {
   "name": "arrow",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "./lib/arrow-draw.js",
   "homepage": "https://github.com/hildjj/arrow",
   "bugs": "https://github.com/hildjj/arrow/issues",

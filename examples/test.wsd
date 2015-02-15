@@ -41,7 +41,7 @@ loop outer
 			Bob->Alice
 		end
 		loop once
-			Alice -> Bob
+			Alice -> Bob [color=yellow]
 		end
 		loop twice
 			Alice -> Bob: Hey!
