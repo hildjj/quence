@@ -2,7 +2,7 @@
 Create sequence diagrams with a domain-specific language.
 
 ```
-Usage: arrow [-o type] [-v] [-h] FILE...
+Usage: quence [-o type] [-v] [-h] FILE...
 
 Options:
   -o  output type [pdf, svg, json]  [string]  [default: "pdf"]
@@ -10,7 +10,7 @@ Options:
   -h  Show help                     [boolean]
 ```
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/small.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/small.png' align='right'/>
 
 Small example:
 
@@ -28,14 +28,14 @@ Installation
 Use [npm](http://npmjs.org/):
 
 ```
-npm install -g arrow
+npm install -g quence
 ```
 
 Syntax
 ======
 
-The following sections describe syntax that can be placed in a `.wsd` file for 
-input to the arrow processor.
+The following sections describe syntax that can be placed in a `.wsd` file for
+input to the quence processor.
 
 Comments
 --------
@@ -47,11 +47,11 @@ If you need a `#` in a string, enclose the string in double quotes (`"`).
 Participants <a id="participants"></a>
 ------------
 
-`participant "[description]" as [name]` Create a new participant in the order 
-that the `participant` directive appears in the input file.  The `description` 
+`participant "[description]" as [name]` Create a new participant in the order
+that the `participant` directive appears in the input file.  The `description`
 is output, and the `name` is what is used for reference in later directives.
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/participant.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/participant.png' align='right'/>
 
 Example:
 
@@ -63,8 +63,8 @@ participant "Bob Cat" as bob
 Arrows <a id="arrows"></a>
 ------
 
-Arrows are draw between participants with open ends, closed ends, solid or 
-dashed lines, and may be bi-directional. 
+Arrows are draw between participants with open ends, closed ends, solid or
+dashed lines, and may be bi-directional.
 
 ### ends
 
@@ -80,7 +80,7 @@ dashed lines, and may be bi-directional.
 
 Example:
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/arrows.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/arrows.png' align='right'/>
 
 ```
 # A "normal" message from A to B
@@ -100,17 +100,17 @@ The minimum messsage looks like `participant arrow participant`, but a full desc
 [label:] participant[@time] arrow participant[@time] [:title] [[message options]]
 ```
 
-Draw a line with 
-[arrows](#arrows) between two [participants](#participants).  A participant 
-that has not been previously mentioned will be automatically created.  Note 
+Draw a line with
+[arrows](#arrows) between two [participants](#participants).  A participant
+that has not been previously mentioned will be automatically created.  Note
 that a message may be of the form `B -> B`, which produces a self message.
 
 ### Title
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/title.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/title.png' align='right'/>
 
 A message can have a title that will be drawn over the message line.  The title
-will be justified toward the start of the message, or in the middle for 
+will be justified toward the start of the message, or in the middle for
 bi-directional messages.
 
 Example:
@@ -119,13 +119,13 @@ Example:
 A->B: The title
 ```
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/timestamps.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/timestamps.png' align='right'/>
 
 ### Timestamps
 
-Each message start time can have a timestamp associated with it by prefixing 
-the messagewith `label:`.  Subsequent messages can be declared to start or end 
-at a given label by suffixing the participant name with `@time`, where `time` is 
+Each message start time can have a timestamp associated with it by prefixing
+the messagewith `label:`.  Subsequent messages can be declared to start or end
+at a given label by suffixing the participant name with `@time`, where `time` is
 the lable from a previous message.
 This will usually result in a diagonal line.
 
@@ -139,10 +139,10 @@ A@early->B@late
 
 ### Message options
 
-<img src='https://raw.github.com/hildjj/arrow/master/doc/messages.png' align='right'/>
+<img src='https://raw.github.com/hildjj/quence/master/doc/messages.png' align='right'/>
 
-Message options modify the message, and are of the form `name [= value]`, with 
-multiple options separated by a comma (`,`).  The following message options 
+Message options modify the message, and are of the form `name [= value]`, with
+multiple options separated by a comma (`,`).  The following message options
 may be set:
 
  * `duration`: The number of time slices that this message takes up.  If this is
@@ -188,8 +188,8 @@ Programmatic Interface
 ======================
 
 ```javascript
-var arrow = require('arrow');
-arrow.draw("A->B", "pdf", function(error, out) {
+var quence = require('quence');
+quence.draw("A->B", "pdf", function(error, out) {
 	// err is `null` or an `Error`
 	// out is a `String` or `Buffer`
 });
@@ -201,3 +201,6 @@ Supported Output Types
  * PDF
  * SVG
  * JSON
+
+Quence was formerly known as "arrow", until I was asked very nicely to let
+another project use that name.
