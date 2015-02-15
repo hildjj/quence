@@ -5,7 +5,7 @@
   "homepage": "https://github.com/hildjj/arrow",
   "bugs": "https://github.com/hildjj/arrow/issues",
   "dependencies": {
-    "optimist": "*", 
+    "optimist": "*",
     "log4js": "*",
     "pdfkit": "*",
     "xmlbuilder": "*"
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "node_modules/.bin/pegjs --track-line-and-column lib/grammar.pegjs"
+    "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
   },
   "bin": {
     "arrow": "./bin/arrow"
