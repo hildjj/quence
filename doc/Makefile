@@ -1,4 +1,4 @@
-ARROW = ../bin/arrow
+ARROW = ../bin/quence
 SRCS = $(wildcard *.wsd)
 PICS = ${SRCS:.wsd=.png}
 
@@ -8,7 +8,7 @@ PICS = ${SRCS:.wsd=.png}
 all: $(PICS)
 
 clean:
-	-$(RM) *.pdf *.png
+	-$(RM) *.pdf *.png 
 
 .wsd.pdf :
 	$(ARROW) -o pdf $< -n
@@ -17,4 +17,3 @@ clean:
 	gs -q -dNOPAUSE -dBATCH -sDEVICE=pngalpha -r100 -dEPSCrop -sOutputFile=$@ $<
 	convert -trim -background transparent -splice 50x0 $@ $@.tmp
 	mv $@.tmp $@
-	
