@@ -43,3 +43,6 @@ text.end {
 text.center {
   text-anchor: middle;
 }
+text.rung_label {
+  text-anchor: middle;
+}
