@@ -22,6 +22,7 @@
   "title": "that is that",
   "data": [
     {
+      "_line": 11,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -44,6 +45,7 @@
       "msg": "Test"
     },
     {
+      "_line": 12,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -66,6 +68,7 @@
       "msg": "dash it all"
     },
     {
+      "_line": 13,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -88,6 +91,7 @@
       "msg": "back dash"
     },
     {
+      "_line": 14,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -110,6 +114,7 @@
       "msg": "open"
     },
     {
+      "_line": 15,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -132,6 +137,7 @@
       "msg": "back open"
     },
     {
+      "_line": 16,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -154,6 +160,7 @@
       "msg": "Dash Open"
     },
     {
+      "_line": 17,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -176,6 +183,7 @@
       "msg": "dash back open"
     },
     {
+      "_line": 18,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -198,6 +206,7 @@
       "msg": "<->"
     },
     {
+      "_line": 19,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -220,6 +229,7 @@
       "msg": "<->>"
     },
     {
+      "_line": 20,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -242,6 +252,7 @@
       "msg": "<<->"
     },
     {
+      "_line": 21,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -264,6 +275,7 @@
       "msg": "<<->>"
     },
     {
+      "_line": 22,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -286,6 +298,7 @@
       "msg": "<-->"
     },
     {
+      "_line": 23,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -308,6 +321,7 @@
       "msg": "<-->>"
     },
     {
+      "_line": 24,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -330,6 +344,7 @@
       "msg": "<<-->"
     },
     {
+      "_line": 25,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -352,6 +367,7 @@
       "msg": "<<-->>"
     },
     {
+      "_line": 27,
       "kind": "BLOCK",
       "depth": 3,
       "typ": "loop",
@@ -360,6 +376,7 @@
       "end": 42
     },
     {
+      "_line": 28,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -368,8 +385,10 @@
       "end": 18
     },
     {
+      "_line": 29,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 28,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -379,6 +398,7 @@
       }
     },
     {
+      "_line": 30,
       "kind": "BLOCK",
       "depth": 2,
       "typ": "loop",
@@ -387,6 +407,7 @@
       "end": 24
     },
     {
+      "_line": 31,
       "kind": "BLOCK",
       "depth": 1,
       "typ": "loop",
@@ -395,6 +416,7 @@
       "end": 23
     },
     {
+      "_line": 32,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -403,8 +425,10 @@
       "end": 22
     },
     {
+      "_line": 33,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 32,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -414,8 +438,10 @@
       }
     },
     {
+      "_line": 34,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 31,
         "kind": "BLOCK",
         "depth": 1,
         "typ": "loop",
@@ -425,8 +451,10 @@
       }
     },
     {
+      "_line": 35,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 30,
         "kind": "BLOCK",
         "depth": 2,
         "typ": "loop",
@@ -436,6 +464,7 @@
       }
     },
     {
+      "_line": 36,
       "kind": "BLOCK",
       "depth": 1,
       "typ": "loop",
@@ -444,6 +473,7 @@
       "end": 41
     },
     {
+      "_line": 37,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -452,6 +482,7 @@
       "end": 31
     },
     {
+      "_line": 38,
       "kind": "MESSAGE",
       "opts": {
         "duration": 2
@@ -477,6 +508,7 @@
       "tm": 27
     },
     {
+      "_line": 39,
       "kind": "MESSAGE",
       "opts": {
         "duration": 1
@@ -501,10 +533,12 @@
       "msg": "Another test duration=1"
     },
     {
+      "_line": 40,
       "kind": "ADVANCE",
       "distance": 1
     },
     {
+      "_line": 41,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -526,8 +560,10 @@
       }
     },
     {
+      "_line": 42,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 37,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -537,6 +573,7 @@
       }
     },
     {
+      "_line": 43,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -545,6 +582,7 @@
       "end": 34
     },
     {
+      "_line": 44,
       "kind": "MESSAGE",
       "opts": {
         "color": "yellow"
@@ -568,8 +606,10 @@
       }
     },
     {
+      "_line": 45,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 43,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -579,6 +619,7 @@
       }
     },
     {
+      "_line": 46,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -587,6 +628,7 @@
       "end": 37
     },
     {
+      "_line": 47,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -609,8 +651,10 @@
       "msg": "Hey!"
     },
     {
+      "_line": 48,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 46,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -620,6 +664,7 @@
       }
     },
     {
+      "_line": 49,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "loop",
@@ -628,6 +673,7 @@
       "end": 40
     },
     {
+      "_line": 50,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -649,8 +695,10 @@
       }
     },
     {
+      "_line": 51,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 49,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "loop",
@@ -660,8 +708,10 @@
       }
     },
     {
+      "_line": 52,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 36,
         "kind": "BLOCK",
         "depth": 1,
         "typ": "loop",
@@ -671,8 +721,10 @@
       }
     },
     {
+      "_line": 53,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 27,
         "kind": "BLOCK",
         "depth": 3,
         "typ": "loop",
@@ -682,6 +734,7 @@
       }
     },
     {
+      "_line": 55,
       "kind": "BLOCK",
       "depth": 0,
       "typ": "opt",
@@ -690,6 +743,7 @@
       "end": 54
     },
     {
+      "_line": 57,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -712,6 +766,7 @@
       "msg": "xxxy"
     },
     {
+      "_line": 58,
       "kind": "SELF",
       "opts": {
         "duration": 2
@@ -736,6 +791,7 @@
       "msg": "This is a long label (TODO: wrap)"
     },
     {
+      "_line": 59,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
@@ -758,6 +814,7 @@
       "msg": "-->"
     },
     {
+      "_line": 60,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
@@ -780,6 +837,7 @@
       "msg": "->>"
     },
     {
+      "_line": 61,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
@@ -802,8 +860,10 @@
       "msg": "<->"
     },
     {
+      "_line": 62,
       "kind": "END_BLOCK",
       "start": {
+        "_line": 55,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "opt",
@@ -813,6 +873,7 @@
       }
     },
     {
+      "_line": 64,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -834,6 +895,7 @@
       }
     },
     {
+      "_line": 65,
       "kind": "MESSAGE",
       "opts": {
         "duration": 1

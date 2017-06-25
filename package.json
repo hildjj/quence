@@ -5,14 +5,14 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
-    "optimist": "*",
-    "log4js": "*",
-    "pdfkit": "*",
-    "xmlbuilder": "*"
+    "optimist": "0.6",
+    "log4js": "1.1",
+    "pdfkit": "0.8",
+    "xmlbuilder": "9.0"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
-    "pegjs": "*"
+    "pegjs": "0.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,10 +31,22 @@
     "diagram"
   ],
   "author": [
-    { "name": "Cullen Jennings", "email": "fluffy@iii.ca"},
-    { "name": "Eric Rescorla", "email": "ekr@rtfm.com"},
-    { "name": "Martin Thomson", "email": "martin.thomson@gmail.com"},
-    { "name": "Joe Hildebrand", "email": "joe-github@cursive.net"}
+    {
+      "name": "Cullen Jennings",
+      "email": "fluffy@iii.ca"
+    },
+    {
+      "name": "Eric Rescorla",
+      "email": "ekr@rtfm.com"
+    },
+    {
+      "name": "Martin Thomson",
+      "email": "martin.thomson@gmail.com"
+    },
+    {
+      "name": "Joe Hildebrand",
+      "email": "joe-github@cursive.net"
+    }
   ],
   "license": "BSD",
   "readmeFilename": "README.md"

@@ -13,13 +13,13 @@ clean:
 	-$(RM) *.pdf *.png *.json *.svg
 
 .wsd.pdf :
-	$(ARROW) -o pdf $< -n
+	$(ARROW) -o pdf $<
 
 .wsd.json :
-	$(ARROW) -o json $< -n
+	$(ARROW) -o json $<
 
 .wsd.svg :
-	$(ARROW) -o svg $< -n
+	$(ARROW) -o svg $<
 
 .pdf.png :
 	gs -q -dNOPAUSE -dBATCH -sDEVICE=pngalpha -r100 -dEPSCrop -sOutputFile=$@ $<

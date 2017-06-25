@@ -17,6 +17,7 @@
   "title": null,
   "data": [
     {
+      "_line": 3,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
@@ -39,6 +40,7 @@
       "msg": "Test"
     },
     {
+      "_line": 4,
       "kind": "MESSAGE",
       "opts": {
         "duration": 2
@@ -64,6 +66,7 @@
       "tm": 2
     },
     {
+      "_line": 5,
       "kind": "MESSAGE",
       "opts": {
         "duration": 1
@@ -88,6 +91,7 @@
       "msg": "Another test duration=1"
     },
     {
+      "_line": 6,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,

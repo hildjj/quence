@@ -4,11 +4,12 @@ PICS = ${SRCS:.wsd=.png}
 
 .SUFFIXES:
 .SUFFIXES: .wsd .png .pdf
+.PRECIOUS: %.pdf
 
 all: $(PICS)
 
 clean:
-	-$(RM) *.pdf *.png 
+	-$(RM) *.pdf *.png -n
 
 .wsd.pdf :
 	$(ARROW) -o pdf $< -n
