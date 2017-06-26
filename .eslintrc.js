@@ -19,7 +19,6 @@ module.exports = {
   },
   "rules": {
     "brace-style": ["error", "1tbs"],
-    "camelcase": "warn",
     "comma-dangle": ["error", "never"],
     "comma-spacing": "error",
     "comma-style": ["error", "last"],
