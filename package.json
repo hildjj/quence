@@ -12,9 +12,11 @@
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
+    "eslint": "^4.1",
     "pegjs": "0.10"
   },
   "scripts": {
+    "lint": "eslint lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
   },
@@ -48,6 +50,6 @@
       "email": "joe-github@cursive.net"
     }
   ],
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "readmeFilename": "README.md"
 }
