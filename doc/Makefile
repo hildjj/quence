@@ -9,7 +9,7 @@ PICS = ${SRCS:.wsd=.png}
 all: $(PICS)
 
 clean:
-	-$(RM) *.pdf *.png -n
+	-$(RM) *.pdf *.png
 
 .wsd.pdf :
 	$(ARROW) -o pdf $< -n
