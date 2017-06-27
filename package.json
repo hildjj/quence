@@ -12,13 +12,26 @@
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
+    "ava": "^0.19.1",
     "eslint": "^4.1",
-    "pegjs": "0.10"
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^11.0.3",
+    "pegjs": "0.10",
+    "watch": "^1.0.2"
   },
   "scripts": {
-    "lint": "eslint lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "node_modules/.bin/pegjs lib/grammar.pegjs"
+    "lint": "eslint bin/quence lib/",
+    "test": "ava",
+    "coverage": "nyc npm test",
+    "coveragehtml": "nyc report -r html",
+    "precoveragehtml": "npm run coverage",
+    "prepare": "node_modules/.bin/pegjs lib/grammar.pegjs",
+    "release": "npm version patch && git push --follow-tags && npm publish",
+    "live": "live-server --port=4002 --ignorePattern='(js|css|png)$' coverage",
+    "predev": "if [ ! -f coverage/index.html ]; then mkdir coverage; cp .waiting.html coverage/index.html; fi;",
+    "dev": "npm-run-all -p --silent watch live",
+    "watch": "watch 'npm run coveragehtml' lib/ test/"
   },
   "bin": {
     "quence": "./bin/quence"
@@ -32,7 +45,7 @@
     "sequence",
     "diagram"
   ],
-  "author": [
+  "contributors": [
     {
       "name": "Cullen Jennings",
       "email": "fluffy@iii.ca"
@@ -51,5 +64,8 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "engines": {
+    "npm": ">=6"
+  }
 }

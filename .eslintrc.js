@@ -38,6 +38,15 @@ module.exports = {
     "space-before-function-paren": ["error", "never"],
     "keyword-spacing": "error",
     "strict": ["error", "global"],
+    "no-const-assign": "error",
+    "arrow-spacing": "error",
+    "generator-star-spacing": "error",
+    "no-const-assign": "error",
+    "no-dupe-class-members": "error",
+    "no-new-symbol": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
 
     // more from hildjj:
     "quotes": ["error", "single"],

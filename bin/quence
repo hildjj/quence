@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 /* jslint node: true */
-"use strict";
+'use strict';
 
-var opt = require('optimist');
-var argv = opt
-  .usage("Usage: $0 [-o type] [-v] [-h] FILE...")
+const opt = require('optimist');
+const argv = opt
+  .usage('Usage: $0 [-o type] [-v] [-h] FILE...')
   .string('o')
   .describe('o', 'output type [pdf, svg, json]')
   .default('o', 'pdf')
@@ -20,15 +20,15 @@ if (argv.h) {
   process.exit(64);
 }
 
-var log = require('log4js').getLogger();
-var fs = require('fs');
-var path = require('path');
+const log = require('log4js').getLogger();
+const fs = require('fs');
+const path = require('path');
 
-var draw = require('../lib/quence');
-var grammar = require('../lib/grammar');
+const draw = require('../lib/quence');
+const grammar = require('../lib/grammar');
 
 if (argv.d) {
-    require('../lib/debug').enable();
+  require('../lib/debug').enable();
 }
 
 log.setLevel(argv.v ? 'ALL' : 'WARN');
@@ -43,37 +43,37 @@ function newExt(name, ext) {
   return path.dirname(name) +
     path.sep +
     path.basename(name, path.extname(name)) +
-    "." + ext;
+    '.' + ext;
 }
 
 function readFile(name) {
-  fs.readFile(name, {encoding: 'utf8'}, function(er, data) {
+  fs.readFile(name, {encoding: 'utf8'}, (er, data) => {
     if (er) {
       log.error(name, er);
       return;
     }
 
-    var outf = newExt(name, argv.o);
-    var out = fs.createWriteStream(outf);
+    const outf = newExt(name, argv.o);
+    const out = fs.createWriteStream(outf);
     // TODO: Switch to promises
-    draw.draw(data, argv, out, function(er) {
+    draw.draw(data, argv, out, (er) => {
       if (er) {
         fs.unlinkSync(outf);
         if (er instanceof grammar.SyntaxError) {
-          log.error(name + "(" + er.location.start.line + ":" + er.location.start.column + "): " + er.message);
+          log.error(name + '(' + er.location.start.line + ':' +
+                    er.location.start.column + '): ' + er.message);
           return;
         } else {
           log.fatal(er);
           process.exit(1);
         }
-      }
-      else {
-        log.debug("finished");
+      } else {
+        log.debug('finished');
       }
     });
   });
 }
 
-for (var i=0; i<argv._.length; i++) {
+for (let i=0; i<argv._.length; i++) {
   readFile(argv._[i]);
 }
