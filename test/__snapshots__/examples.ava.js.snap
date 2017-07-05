@@ -25,7 +25,7 @@ exports[`json 1`] = `
   \\"title\\": \\"that is that\\",
   \\"data\\": [
     {
-      \\"_line\\": 11,
+      \\"_line\\": 13,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -48,7 +48,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"Test\\"
     },
     {
-      \\"_line\\": 12,
+      \\"_line\\": 14,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -71,7 +71,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"dash it all\\"
     },
     {
-      \\"_line\\": 13,
+      \\"_line\\": 15,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -94,7 +94,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"back dash\\"
     },
     {
-      \\"_line\\": 14,
+      \\"_line\\": 16,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -117,7 +117,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"open\\"
     },
     {
-      \\"_line\\": 15,
+      \\"_line\\": 17,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -140,7 +140,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"back open\\"
     },
     {
-      \\"_line\\": 16,
+      \\"_line\\": 18,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -163,7 +163,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"Dash Open\\"
     },
     {
-      \\"_line\\": 17,
+      \\"_line\\": 19,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -186,7 +186,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"dash back open\\"
     },
     {
-      \\"_line\\": 18,
+      \\"_line\\": 20,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -209,7 +209,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<->\\"
     },
     {
-      \\"_line\\": 19,
+      \\"_line\\": 21,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -232,7 +232,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<->>\\"
     },
     {
-      \\"_line\\": 20,
+      \\"_line\\": 22,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -255,7 +255,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<<->\\"
     },
     {
-      \\"_line\\": 21,
+      \\"_line\\": 23,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -278,7 +278,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<<->>\\"
     },
     {
-      \\"_line\\": 22,
+      \\"_line\\": 24,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -301,7 +301,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<-->\\"
     },
     {
-      \\"_line\\": 23,
+      \\"_line\\": 25,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -324,7 +324,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<-->>\\"
     },
     {
-      \\"_line\\": 24,
+      \\"_line\\": 26,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -347,7 +347,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<<-->\\"
     },
     {
-      \\"_line\\": 25,
+      \\"_line\\": 27,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -370,7 +370,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"<<-->>\\"
     },
     {
-      \\"_line\\": 27,
+      \\"_line\\": 29,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 3,
       \\"typ\\": \\"loop\\",
@@ -379,7 +379,7 @@ exports[`json 1`] = `
       \\"end\\": 42
     },
     {
-      \\"_line\\": 28,
+      \\"_line\\": 30,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -388,10 +388,10 @@ exports[`json 1`] = `
       \\"end\\": 18
     },
     {
-      \\"_line\\": 29,
+      \\"_line\\": 31,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 28,
+        \\"_line\\": 30,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -401,7 +401,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 30,
+      \\"_line\\": 32,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 2,
       \\"typ\\": \\"loop\\",
@@ -410,7 +410,7 @@ exports[`json 1`] = `
       \\"end\\": 24
     },
     {
-      \\"_line\\": 31,
+      \\"_line\\": 33,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 1,
       \\"typ\\": \\"loop\\",
@@ -419,7 +419,7 @@ exports[`json 1`] = `
       \\"end\\": 23
     },
     {
-      \\"_line\\": 32,
+      \\"_line\\": 34,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -428,10 +428,10 @@ exports[`json 1`] = `
       \\"end\\": 22
     },
     {
-      \\"_line\\": 33,
+      \\"_line\\": 35,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 32,
+        \\"_line\\": 34,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -441,10 +441,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 34,
+      \\"_line\\": 36,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 31,
+        \\"_line\\": 33,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 1,
         \\"typ\\": \\"loop\\",
@@ -454,10 +454,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 35,
+      \\"_line\\": 37,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 30,
+        \\"_line\\": 32,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 2,
         \\"typ\\": \\"loop\\",
@@ -467,7 +467,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 36,
+      \\"_line\\": 38,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 1,
       \\"typ\\": \\"loop\\",
@@ -476,7 +476,7 @@ exports[`json 1`] = `
       \\"end\\": 41
     },
     {
-      \\"_line\\": 37,
+      \\"_line\\": 39,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -485,7 +485,7 @@ exports[`json 1`] = `
       \\"end\\": 31
     },
     {
-      \\"_line\\": 38,
+      \\"_line\\": 40,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {
         \\"duration\\": 2
@@ -511,7 +511,7 @@ exports[`json 1`] = `
       \\"tm\\": 27
     },
     {
-      \\"_line\\": 39,
+      \\"_line\\": 41,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {
         \\"duration\\": 1
@@ -536,12 +536,12 @@ exports[`json 1`] = `
       \\"msg\\": \\"Another test duration=1\\"
     },
     {
-      \\"_line\\": 40,
+      \\"_line\\": 42,
       \\"kind\\": \\"ADVANCE\\",
       \\"distance\\": 1
     },
     {
-      \\"_line\\": 41,
+      \\"_line\\": 43,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -563,10 +563,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 42,
+      \\"_line\\": 44,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 37,
+        \\"_line\\": 39,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -576,7 +576,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 43,
+      \\"_line\\": 45,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -585,7 +585,7 @@ exports[`json 1`] = `
       \\"end\\": 34
     },
     {
-      \\"_line\\": 44,
+      \\"_line\\": 46,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {
         \\"color\\": \\"yellow\\"
@@ -609,10 +609,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 45,
+      \\"_line\\": 47,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 43,
+        \\"_line\\": 45,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -622,7 +622,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 46,
+      \\"_line\\": 48,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -631,7 +631,7 @@ exports[`json 1`] = `
       \\"end\\": 37
     },
     {
-      \\"_line\\": 47,
+      \\"_line\\": 49,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -654,10 +654,10 @@ exports[`json 1`] = `
       \\"msg\\": \\"Hey!\\"
     },
     {
-      \\"_line\\": 48,
+      \\"_line\\": 50,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 46,
+        \\"_line\\": 48,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -667,7 +667,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 49,
+      \\"_line\\": 51,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"loop\\",
@@ -676,7 +676,7 @@ exports[`json 1`] = `
       \\"end\\": 40
     },
     {
-      \\"_line\\": 50,
+      \\"_line\\": 52,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -698,10 +698,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 51,
+      \\"_line\\": 53,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 49,
+        \\"_line\\": 51,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"loop\\",
@@ -711,10 +711,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 52,
+      \\"_line\\": 54,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 36,
+        \\"_line\\": 38,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 1,
         \\"typ\\": \\"loop\\",
@@ -724,10 +724,10 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 53,
+      \\"_line\\": 55,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 27,
+        \\"_line\\": 29,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 3,
         \\"typ\\": \\"loop\\",
@@ -737,7 +737,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 55,
+      \\"_line\\": 57,
       \\"kind\\": \\"BLOCK\\",
       \\"depth\\": 0,
       \\"typ\\": \\"opt\\",
@@ -746,7 +746,7 @@ exports[`json 1`] = `
       \\"end\\": 54
     },
     {
-      \\"_line\\": 57,
+      \\"_line\\": 59,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -769,7 +769,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"xxxy\\"
     },
     {
-      \\"_line\\": 58,
+      \\"_line\\": 60,
       \\"kind\\": \\"SELF\\",
       \\"opts\\": {
         \\"duration\\": 2
@@ -794,7 +794,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"This is a long label (TODO: wrap)\\"
     },
     {
-      \\"_line\\": 59,
+      \\"_line\\": 61,
       \\"kind\\": \\"SELF\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -817,7 +817,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"-->\\"
     },
     {
-      \\"_line\\": 60,
+      \\"_line\\": 62,
       \\"kind\\": \\"SELF\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -840,7 +840,7 @@ exports[`json 1`] = `
       \\"msg\\": \\"->>\\"
     },
     {
-      \\"_line\\": 61,
+      \\"_line\\": 63,
       \\"kind\\": \\"SELF\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -863,10 +863,10 @@ exports[`json 1`] = `
       \\"msg\\": \\"<->\\"
     },
     {
-      \\"_line\\": 62,
+      \\"_line\\": 64,
       \\"kind\\": \\"END_BLOCK\\",
       \\"start\\": {
-        \\"_line\\": 55,
+        \\"_line\\": 57,
         \\"kind\\": \\"BLOCK\\",
         \\"depth\\": 0,
         \\"typ\\": \\"opt\\",
@@ -876,7 +876,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 64,
+      \\"_line\\": 66,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {},
       \\"timepoint\\": null,
@@ -898,7 +898,7 @@ exports[`json 1`] = `
       }
     },
     {
-      \\"_line\\": 65,
+      \\"_line\\": 67,
       \\"kind\\": \\"MESSAGE\\",
       \\"opts\\": {
         \\"duration\\": 1
@@ -932,7 +932,7 @@ exports[`json 1`] = `
     \\"block_tab_fill\\": \\"gray\\",
     \\"block_stroke\\": \\"gray\\",
     \\"column_width\\": 150,
-    \\"font\\": \\"/Library/Fonts/Tahoma.ttf\\",
+    \\"font\\": \\"Helvetica\\",
     \\"label_space_x\\": 3,
     \\"label_space_y\\": -3,
     \\"line_color\\": \\"red\\",
@@ -960,7 +960,7 @@ exports[`svg 1`] = `
     <style type=\\"text/css\\">
 text {
   font-size: 13px;
-  font-family: /Library/Fonts/Tahoma.ttf;
+  font-family: Helvetica;
   fill: black;
   baseline-shift: 2px;
 }
