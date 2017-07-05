@@ -1016,7 +1016,7 @@ text.rung_label {
   <text class=\\"title\\" x=\\"225\\" y=\\"20\\">that is that</text>
   <text text-anchor=\\"end\\" x=\\"525\\" y=\\"1340\\">
     <a xl:href=\\"https://github.com/hildjj/quence\\">
-      <tspan baseline-shift=\\"100%\\" fill=\\"blue\\" text-decoration=\\"underline\\">https://github.com/hildjj/quence</tspan>
+      <tspan baseline-shift=\\"100%\\" fill=\\"blue\\" text-decoration=\\"underline\\">quence</tspan>
     </a>
     <tspan fill=\\"black\\" baseline-shift=\\"100%\\">v0.2.1</tspan>
   </text>
