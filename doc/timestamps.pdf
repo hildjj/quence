@@ -1,17 +1,5 @@
 %PDF-1.3
 %ÿÿÿÿ
-6 0 obj
-<<
-/Type /ExtGState
-/ca 1
->>
-endobj
-8 0 obj
-<<
-/Type /ExtGState
-/CA 1
->>
-endobj
 5 0 obj
 <<
 /Type /Page
@@ -24,23 +12,19 @@ endobj
 4 0 obj
 <<
 /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
-/ExtGState <<
-/Gs1 6 0 R
-/Gs2 8 0 R
->>
 /Font <<
-/F1 7 0 R
+/F1 6 0 R
 >>
->>
-endobj
-9 0 obj
-<<
-/Producer (PDFKit)
-/Creator (ladder: https://github.com/hildjj/quence)
-/CreationDate (D:20170625233416Z)
 >>
 endobj
 7 0 obj
+<<
+/Producer (PDFKit)
+/Creator (quence: https://github.com/hildjj/quence)
+/CreationDate (D:20170705151924Z)
+>>
+endobj
+6 0 obj
 <<
 /Type /Font
 /BaseFont /Helvetica
@@ -63,32 +47,30 @@ endobj
 endobj
 3 0 obj
 <<
-/Length 308
+/Length 295
 /Filter /FlateDecode
 >>
 stream
-xœÍ’ßJÃ0ÆïÏSœHš¤ù³‚xÑ©ƒ]ÚŞ]ÕN…U˜}}OÒTgİ¦«$´œ“„|ßïK$
-LÒ/U«|/©ôísÉEıòXÕ·³«$úÑVOÌZ‰÷-¬`3Ø#Â‘Û{6 ¿Èäeœ”¨$·Ö 2Š‡eÉ©,W°8ÓòÅË9\–pCã“Ü´ˆrÅôÚË)/'ñõG{Èˆ_(úÖPÏÿÎš1jî`xêÏÂs}xî¤á¹Cá£YXTKš¿£{æäÚ×i,{ßït\ _§JkŒ4Éêuh™ÚÇst)xzº6–CÕ…|ÙVäÿl×íX‘©tBÄªI÷\T(ø$Î*\­²¾øXI¾ówÆ¾TXúÈC<oØÎ9
+xœÅ’İjƒ@…ïç)æv3»îO„ÒÓÈE¡Õ»+kh!Ò@ûú×µml•*²(3ÎùÎQ…ÄG(¾%ÚbYCÓ+.›öµ‚ÅUõö\V·–GPØœcù;8ôfV5³¨k³">T¨•tÎ¢¶Z’Ç¢†Åo%,v°¹0êi‹Å®¸çs"³Ê£L¾ºã}ï£3VDX7…ækyßìÔSTüh8úláø.–püX8Ó¨7õ–ûGşn’)m LbÙq~
+›8`¹i¬A0«a™ànZa¢Ößy[”9Ë>oëÉ‡üÄ·HÿÓÀoi;Ju²dRöd¬M‚o\¦äF’ÆãQtÅ×d¢Ã“Ÿoè!×"ıdÁşÇ¾
 endstream
 endobj
 xref
-0 10
+0 8
 0000000000 65535 f 
-0000000607 00000 n 
-0000000558 00000 n 
-0000000664 00000 n 
-0000000207 00000 n 
-0000000103 00000 n 
+0000000480 00000 n 
+0000000431 00000 n 
+0000000537 00000 n 
+0000000119 00000 n 
 0000000015 00000 n 
-0000000461 00000 n 
-0000000059 00000 n 
-0000000335 00000 n 
+0000000334 00000 n 
+0000000208 00000 n 
 trailer
 <<
-/Size 10
+/Size 8
 /Root 2 0 R
-/Info 9 0 R
+/Info 7 0 R
 >>
 startxref
-1044
+904
 %%EOF
