@@ -1,6 +1,6 @@
 {
   "name": "quence",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "main": "./lib/quence.js",
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
