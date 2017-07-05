@@ -45,9 +45,15 @@ test.cb('svg', t => {
     quence.draw(buf, 'svg', output, (er) => {
       t.ifError(er);
       let o = output.read().toString('utf-8');
+      // don't care about date
       o = o.replace(
         /<dc:date>[^<]+<\/dc:date>/g,
         '<dc:date>2017-06-27T06:26:23.547Z</dc:date>');
+      // don't care about version
+      o = o.replace(
+        />v\d+\.\d+\.\d+<\/tspan>/,
+        '>v0.2.1</tspan>'
+      );
       t.snapshot(o);
       t.end();
     });
