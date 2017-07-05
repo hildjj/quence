@@ -5,6 +5,7 @@ Create sequence diagrams with a domain-specific language.
 Usage: quence [-o type] [-v] [-h] FILE...
 
 Options:
+  -n  do not add project link to output
   -o  output type [pdf, svg, json]  [string]  [default: "pdf"]
   -v  verbose logging               [boolean]
   -h  Show help                     [boolean]
@@ -204,3 +205,6 @@ Supported Output Types
 
 Quence was formerly known as "arrow", until I was asked very nicely to let
 another project use that name.
+
+[![Build Status](https://travis-ci.org/hildjj/quence.svg?branch=master)](https://travis-ci.org/hildjj/quence)
+[![Coverage Status](https://coveralls.io/repos/github/hildjj/quence/badge.svg?branch=master)](https://coveralls.io/github/hildjj/quence?branch=master)
