@@ -31,7 +31,8 @@
     "live": "live-server --port=4002 --ignorePattern='(js|css|png)$' coverage",
     "predev": "if [ ! -f coverage/index.html ]; then mkdir coverage; cp .waiting.html coverage/index.html; fi;",
     "dev": "npm-run-all -p --silent watch live",
-    "watch": "watch 'npm run coveragehtml' lib/ test/"
+    "watch": "watch 'npm run coveragehtml' lib/ test/",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "bin": {
     "quence": "./bin/quence"
