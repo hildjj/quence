@@ -3,7 +3,9 @@ set auto_number
 set rung_width 10
 set rung_color blue
 set line_color red
-set font "/Library/Fonts/Tahoma.ttf"
+
+# not on Travis:
+#set font "/Library/Fonts/Tahoma.ttf"
 
 title that is that # test4
 participant "Bob's JS" as Bob
