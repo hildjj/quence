@@ -21,7 +21,7 @@
     "watch": "^1.0"
   },
   "scripts": {
-    "lint": "eslint bin/quence lib/",
+    "lint": "eslint bin/quence lib/ test/",
     "test": "ava",
     "coverage": "nyc npm test",
     "coveragehtml": "nyc report -r html",
