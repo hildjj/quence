@@ -5,20 +5,20 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
-    "log4js": "1.1",
+    "log4js": "^2.9.0",
     "optimist": "0.6",
     "pdfkit": "^0.8.3",
-    "xmlbuilder": "9.0"
+    "xmlbuilder": "^10.0"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
-    "ava": "^0.20",
-    "eslint": "^4.1.1",
-    "live-server": "^1.2",
-    "npm-run-all": "^4.0",
-    "nyc": "^11.0",
+    "ava": "latest",
+    "eslint": "latest",
+    "live-server": "latest",
+    "npm-run-all": "latest",
+    "nyc": "latest",
     "pegjs": "0.10",
-    "watch": "^1.0"
+    "watch": "latest"
   },
   "scripts": {
     "lint": "eslint bin/quence lib/ test/",

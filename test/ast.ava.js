@@ -3,9 +3,8 @@
 const test = require('ava');
 const {Arrow, Diagram} = require('../lib/ast');
 const log = require('log4js').getLogger();
-log.setLevel('OFF');
+log.level = 'quiet';
 
-log.setLevel('QUIET');
 test('arrow create', t => {
   const a = new Arrow(null, '-', '>');
   t.truthy(a);

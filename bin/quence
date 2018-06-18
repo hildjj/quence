@@ -29,7 +29,7 @@ const path = require('path');
 const draw = require('../lib/quence');
 const grammar = require('../lib/grammar');
 
-log.setLevel(argv.v ? 'ALL' : 'WARN');
+log.level = argv.v ? 'ALL' : 'WARN';
 
 function newExt(name, ext) {
   // check extension now, so we don't create an empty file

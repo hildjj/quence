@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const quence = require('../lib/quence');
 const log = require('log4js').getLogger();
-log.setLevel('OFF');
+log.level = 'off';
 
 const EXAMPLE = path.join(__dirname, '..', 'examples', 'test.wsd');
 
