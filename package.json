@@ -5,10 +5,10 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
-    "log4js": "^2.9.0",
-    "optimist": "0.6",
-    "pdfkit": "^0.8.3",
-    "xmlbuilder": "^10.0"
+    "log4js": "^4.0.2",
+    "optimist": "0.6.1",
+    "pdfkit": "^0.9.0",
+    "xmlbuilder": "^11.0.0"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
@@ -23,15 +23,13 @@
   "scripts": {
     "lint": "eslint bin/quence lib/ test/",
     "test": "ava",
-    "coverage": "nyc npm test",
-    "coveragehtml": "nyc report -r html",
-    "precoveragehtml": "npm run coverage",
+    "coverage": "nyc -r html npm test",
     "prepare": "node_modules/.bin/pegjs lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
     "live": "live-server --port=4002 --ignorePattern='(js|css|png)$' coverage",
     "predev": "if [ ! -f coverage/index.html ]; then mkdir coverage; cp .waiting.html coverage/index.html; fi;",
     "dev": "npm-run-all -p --silent watch live",
-    "watch": "watch 'npm run coveragehtml' lib/ test/",
+    "watch": "watch 'npm run coverage' lib/ test/",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "bin": {

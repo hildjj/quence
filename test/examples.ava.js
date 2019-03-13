@@ -40,10 +40,10 @@ test.cb('Store', t => {
 
 test.cb('svg', t => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.ifError(er);
+    t.falsy(er);
     const output = new Store();
     quence.draw(buf, 'svg', output, (er) => {
-      t.ifError(er);
+      t.falsy(er);
       let o = output.read().toString('utf-8');
       // don't care about date
       o = o.replace(
@@ -62,7 +62,7 @@ test.cb('svg', t => {
 
 test.cb('pdf', t => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.ifError(er);
+    t.falsy(er);
     const output = new Store();
     output.on('finish', () => {
       const o = output.read();
@@ -71,19 +71,19 @@ test.cb('pdf', t => {
       // TODO: do some kind of better testing
       t.end();
     });
-    output.on('error', (er) => t.ifError(er));
+    output.on('error', (er) => t.falsy(er));
     quence.draw(buf, {o: 'pdf'}, output, (er) => {
-      t.ifError(er);
+      t.falsy(er);
     });
   });
 });
 
 test.cb('json', t => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.ifError(er);
+    t.falsy(er);
     const output = new Store();
     quence.draw(buf, {o: 'json'}, output, (er) => {
-      t.ifError(er);
+      t.falsy(er);
       const buf = output.read();
       t.snapshot(buf.toString('utf-8'));
       t.end();
