@@ -41,7 +41,7 @@ input to the quence processor.
 Comments
 --------
 
-`# [comment]` Place a comment on a line by itself, or at the end of any line.  
+`# [comment]` Place a comment on a line by itself, or at the end of any line.
 If you need a `#` in a string, enclose the string in double quotes (`"`).
 
 
@@ -206,5 +206,5 @@ Supported Output Types
 Quence was formerly known as "arrow", until I was asked very nicely to let
 another project use that name.
 
-[![Build Status](https://travis-ci.org/hildjj/quence.svg?branch=master)](https://travis-ci.org/hildjj/quence)
+[![Tests](https://github.com/hildjj/quence/actions/workflows/node.js.yml/badge.svg)](https://github.com/hildjj/quence/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/hildjj/quence/badge.svg?branch=master)](https://coveralls.io/github/hildjj/quence?branch=master)
