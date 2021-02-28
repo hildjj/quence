@@ -41,7 +41,7 @@ input to the quence processor.
 Comments
 --------
 
-`# [comment]` Place a comment on a line by iteself, or at the end of any line.  
+`# [comment]` Place a comment on a line by itself, or at the end of any line.  
 If you need a `#` in a string, enclose the string in double quotes (`"`).
 
 
@@ -95,7 +95,7 @@ A<-->>B
 Messages
 --------
 
-The minimum messsage looks like `participant arrow participant`, but a full description is:
+The minimum message looks like `participant arrow participant`, but a full description is:
 
 ```
 [label:] participant[@time] arrow participant[@time] [:title] [[message options]]
@@ -127,7 +127,7 @@ A->B: The title
 Each message start time can have a timestamp associated with it by prefixing
 the messagewith `label:`.  Subsequent messages can be declared to start or end
 at a given label by suffixing the participant name with `@time`, where `time` is
-the lable from a previous message.
+the label from a previous message.
 This will usually result in a diagonal line.
 
 Example:
