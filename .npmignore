@@ -16,3 +16,4 @@ doc/
 .travis.yml
 .vscode/
 .waiting.html
+.github/
