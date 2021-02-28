@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /* jslint node: true */
-'use strict';
+'use strict'
 
-const opt = require('optimist');
-const argv = opt
+const opt = require('optimist')
+const {argv} = opt
   .usage('Usage: $0 [-o type] [-v] [-h] [-n] FILE...')
   .boolean('n')
   .describe('n', 'do not add project link to output')
@@ -15,63 +15,61 @@ const argv = opt
   .describe('v', 'verbose logging')
   .boolean('h')
   .describe('h', 'Show help')
-  .argv;
 
 if (argv.h) {
-  opt.showHelp();
-  process.exit(64);
+  opt.showHelp()
+  process.exit(64)
 }
 
-const log = require('log4js').getLogger();
-const fs = require('fs');
-const path = require('path');
+const log = require('log4js').getLogger()
+const fs = require('fs')
+const path = require('path')
 
-const draw = require('../lib/quence');
-const grammar = require('../lib/grammar');
+const draw = require('../lib/quence')
+const grammar = require('../lib/grammar')
 
-log.level = argv.v ? 'ALL' : 'WARN';
+log.level = argv.v ? 'ALL' : 'WARN'
 
 function newExt(name, ext) {
   // check extension now, so we don't create an empty file
   if (!draw.supported(ext)) {
-    log.fatal('Unknown output type:', ext);
-    process.exit(1);
+    log.fatal('Unknown output type:', ext)
+    process.exit(1)
   }
 
   return path.dirname(name) +
     path.sep +
     path.basename(name, path.extname(name)) +
-    '.' + ext;
+    '.' + ext
 }
 
 function readFile(name) {
   fs.readFile(name, {encoding: 'utf8'}, (er, data) => {
     if (er) {
-      log.error(name, er);
-      return;
+      log.error(name, er)
+      return
     }
 
-    const outf = newExt(name, argv.o);
-    const out = fs.createWriteStream(outf);
+    const outf = newExt(name, argv.o)
+    const out = fs.createWriteStream(outf)
     // TODO: Switch to promises
-    draw.draw(data, argv, out, (er) => {
-      if (er) {
-        fs.unlinkSync(outf);
-        if (er instanceof grammar.SyntaxError) {
-          log.error(name + '(' + er.location.start.line + ':' +
-                    er.location.start.column + '): ' + er.message);
-          return;
+    draw.draw(data, argv, out, err => {
+      if (err) {
+        fs.unlinkSync(outf)
+        if (err instanceof grammar.SyntaxError) {
+          log.error(name + '(' + err.location.start.line + ':' +
+                    err.location.start.column + '): ' + err.message)
         } else {
-          log.fatal(er);
-          process.exit(1);
+          log.fatal(err)
+          process.exit(1)
         }
       } else {
-        log.debug('finished');
+        log.debug('finished')
       }
-    });
-  });
+    })
+  })
 }
 
-for (let i=0; i<argv._.length; i++) {
-  readFile(argv._[i]);
+for (let i = 0; i < argv._.length; i++) {
+  readFile(argv._[i])
 }
