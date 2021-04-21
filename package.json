@@ -7,26 +7,26 @@
   "dependencies": {
     "log4js": "^6.3.0",
     "optimist": "0.6.1",
-    "pdfkit": "^0.11.0",
+    "pdfkit": "^0.12.1",
     "xmlbuilder": "^15.1.1"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
-    "@cto.af/eslint-config": "^0.0.3",
+    "@cto.af/eslint-config": "^0.0.5",
     "ava": "latest",
     "eslint": "latest",
-    "eslint-plugin-ava": "^11.0.0",
+    "eslint-plugin-ava": "^12.0.0",
     "eslint-plugin-node": "^11.1.0",
     "npm-run-all": "latest",
     "nyc": "latest",
-    "pegjs": "0.10",
+    "peggy": "^1.0.0",
     "watch": "latest"
   },
   "scripts": {
     "lint": "eslint bin/quence lib/ test/",
     "test": "ava",
     "coverage": "nyc -r lcov npm test",
-    "prepare": "node_modules/.bin/pegjs lib/grammar.pegjs",
+    "prepare": "node_modules/.bin/peggy lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
     "predev": "npm run coverage",
     "dev": "light-server -q -s. -w 'lib/* # npm run coverate' -o /coverage/lcov-report/index.html",
