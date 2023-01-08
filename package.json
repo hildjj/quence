@@ -25,6 +25,7 @@
   "scripts": {
     "lint": "eslint bin/quence lib/ test/",
     "test": "ava",
+    "snaps": "ava --update-snapshots",
     "coverage": "nyc -r lcov npm test",
     "prepare": "node_modules/.bin/peggy lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
