@@ -30,7 +30,7 @@ test('arrow classes', t => {
     ['<<', '-', '>', '<<->', 'open_back solid closed_forward'],
     ['<<', '-', '>>', '<<->>', 'open_back solid open_forward'],
     ['<<', '--', '>', '<<-->', 'open_back dashed closed_forward'],
-    ['<<', '--', '>>', '<<-->>', 'open_back dashed open_forward']
+    ['<<', '--', '>>', '<<-->>', 'open_back dashed open_forward'],
   ]
   for (const arr of arrows) {
     const a = new Arrow(arr[0], arr[1], arr[2])

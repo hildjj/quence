@@ -36,7 +36,7 @@ test('participant', t => {
 })
 
 test('send', t => {
-  // here: Bob -> Alice: Test duration=2[duration=2]
+  // Here: Bob -> Alice: Test duration=2[duration=2]
   t.throws(() => parse('Bob '))
   t.throws(() => parse('Bob @'))
   t.throws(() => parse('Bob @ '))
