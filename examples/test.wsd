@@ -21,6 +21,7 @@ Bob -# Alice: miss LtoR
 Bob --# Alice: dash miss LtoR
 Alice -# Bob: miss RtoL
 Alice --# Bob: dash miss RtoL
+Bob -# Bob: Self-drop
 Bob <-> Alice: <->
 Bob <->> Alice: <->>
 Bob <<-> Alice: <<->
