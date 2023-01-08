@@ -17,6 +17,10 @@ Bob ->> Alice: open
 Alice ->> Bob: back open
 Bob -->> Alice: Dash Open
 Alice -->> Bob: dash back open
+Bob -# Alice: miss LtoR
+Bob --# Alice: dash miss LtoR
+Alice -# Bob: miss RtoL
+Alice --# Bob: dash miss RtoL
 Bob <-> Alice: <->
 Bob <->> Alice: <->>
 Bob <<-> Alice: <<->
