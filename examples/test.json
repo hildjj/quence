@@ -17,7 +17,7 @@
     }
   ],
   "timepoints": {
-    "here": 27
+    "here": 33
   },
   "title": "that is that",
   "data": [
@@ -193,17 +193,17 @@
         "tm": 8
       },
       "arrow": {
-        "begin": "<",
+        "begin": null,
         "dash": "-",
-        "end": ">"
+        "end": "#"
       },
-      "classes": "closed_back solid closed_forward",
+      "classes": "solid",
       "to": {
         "nm": "Alice",
         "col": 1,
         "tm": 8
       },
-      "msg": "<->"
+      "msg": "miss LtoR"
     },
     {
       "_line": 21,
@@ -216,17 +216,17 @@
         "tm": 9
       },
       "arrow": {
-        "begin": "<",
-        "dash": "-",
-        "end": ">>"
+        "begin": null,
+        "dash": "--",
+        "end": "#"
       },
-      "classes": "closed_back solid open_forward",
+      "classes": "dashed",
       "to": {
         "nm": "Alice",
         "col": 1,
         "tm": 9
       },
-      "msg": "<->>"
+      "msg": "dash miss LtoR"
     },
     {
       "_line": 22,
@@ -234,22 +234,22 @@
       "opts": {},
       "timepoint": null,
       "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 10
-      },
-      "arrow": {
-        "begin": "<<",
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "open_back solid closed_forward",
-      "to": {
         "nm": "Alice",
         "col": 1,
         "tm": 10
       },
-      "msg": "<<->"
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 10
+      },
+      "msg": "miss RtoL"
     },
     {
       "_line": 23,
@@ -257,26 +257,26 @@
       "opts": {},
       "timepoint": null,
       "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 11
-      },
-      "arrow": {
-        "begin": "<<",
-        "dash": "-",
-        "end": ">>"
-      },
-      "classes": "open_back solid open_forward",
-      "to": {
         "nm": "Alice",
         "col": 1,
         "tm": 11
       },
-      "msg": "<<->>"
+      "arrow": {
+        "begin": null,
+        "dash": "--",
+        "end": "#"
+      },
+      "classes": "dashed",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 11
+      },
+      "msg": "dash miss RtoL"
     },
     {
       "_line": 24,
-      "kind": "MESSAGE",
+      "kind": "SELF",
       "opts": {},
       "timepoint": null,
       "from": {
@@ -285,17 +285,17 @@
         "tm": 12
       },
       "arrow": {
-        "begin": "<",
-        "dash": "--",
-        "end": ">"
+        "begin": null,
+        "dash": "-",
+        "end": "#"
       },
-      "classes": "closed_back dashed closed_forward",
+      "classes": "solid",
       "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 12
+        "nm": "Bob",
+        "col": 0,
+        "tm": 13
       },
-      "msg": "<-->"
+      "msg": "Self-drop"
     },
     {
       "_line": 25,
@@ -305,452 +305,7 @@
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 13
-      },
-      "arrow": {
-        "begin": "<",
-        "dash": "--",
-        "end": ">>"
-      },
-      "classes": "closed_back dashed open_forward",
-      "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 13
-      },
-      "msg": "<-->>"
-    },
-    {
-      "_line": 26,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Bob",
-        "col": 0,
         "tm": 14
-      },
-      "arrow": {
-        "begin": "<<",
-        "dash": "--",
-        "end": ">"
-      },
-      "classes": "open_back dashed closed_forward",
-      "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 14
-      },
-      "msg": "<<-->"
-    },
-    {
-      "_line": 27,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 15
-      },
-      "arrow": {
-        "begin": "<<",
-        "dash": "--",
-        "end": ">>"
-      },
-      "classes": "open_back dashed open_forward",
-      "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 15
-      },
-      "msg": "<<-->>"
-    },
-    {
-      "_line": 29,
-      "kind": "BLOCK",
-      "depth": 3,
-      "typ": "loop",
-      "msg": "outer",
-      "start": 16,
-      "end": 42
-    },
-    {
-      "_line": 30,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "first ",
-      "start": 17,
-      "end": 18
-    },
-    {
-      "_line": 31,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 30,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "first ",
-        "start": 17,
-        "end": 18
-      }
-    },
-    {
-      "_line": 32,
-      "kind": "BLOCK",
-      "depth": 2,
-      "typ": "loop",
-      "msg": "second",
-      "start": 19,
-      "end": 24
-    },
-    {
-      "_line": 33,
-      "kind": "BLOCK",
-      "depth": 1,
-      "typ": "loop",
-      "msg": "inner",
-      "start": 20,
-      "end": 23
-    },
-    {
-      "_line": 34,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "inner inner",
-      "start": 21,
-      "end": 22
-    },
-    {
-      "_line": 35,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 34,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "inner inner",
-        "start": 21,
-        "end": 22
-      }
-    },
-    {
-      "_line": 36,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 33,
-        "kind": "BLOCK",
-        "depth": 1,
-        "typ": "loop",
-        "msg": "inner",
-        "start": 20,
-        "end": 23
-      }
-    },
-    {
-      "_line": 37,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 32,
-        "kind": "BLOCK",
-        "depth": 2,
-        "typ": "loop",
-        "msg": "second",
-        "start": 19,
-        "end": 24
-      }
-    },
-    {
-      "_line": 38,
-      "kind": "BLOCK",
-      "depth": 1,
-      "typ": "loop",
-      "msg": "at least once",
-      "start": 25,
-      "end": 41
-    },
-    {
-      "_line": 39,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "lots of times",
-      "start": 26,
-      "end": 31
-    },
-    {
-      "_line": 40,
-      "kind": "MESSAGE",
-      "opts": {
-        "duration": 2
-      },
-      "timepoint": "here",
-      "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 27
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "solid closed_forward",
-      "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 29
-      },
-      "msg": "Test duration=2",
-      "tm": 27
-    },
-    {
-      "_line": 41,
-      "kind": "MESSAGE",
-      "opts": {
-        "duration": 1
-      },
-      "timepoint": null,
-      "from": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 27
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">>"
-      },
-      "classes": "solid open_forward",
-      "to": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 28
-      },
-      "msg": "Another test duration=1"
-    },
-    {
-      "_line": 42,
-      "kind": "ADVANCE",
-      "distance": 1
-    },
-    {
-      "_line": 43,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 30
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "solid closed_forward",
-      "to": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 30
-      }
-    },
-    {
-      "_line": 44,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 39,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "lots of times",
-        "start": 26,
-        "end": 31
-      }
-    },
-    {
-      "_line": 45,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "once",
-      "start": 32,
-      "end": 34
-    },
-    {
-      "_line": 46,
-      "kind": "MESSAGE",
-      "opts": {
-        "color": "yellow"
-      },
-      "timepoint": null,
-      "from": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 33
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "solid closed_forward",
-      "to": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 33
-      }
-    },
-    {
-      "_line": 47,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 45,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "once",
-        "start": 32,
-        "end": 34
-      }
-    },
-    {
-      "_line": 48,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "twice",
-      "start": 35,
-      "end": 37
-    },
-    {
-      "_line": 49,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 36
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "solid closed_forward",
-      "to": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 36
-      },
-      "msg": "Hey!"
-    },
-    {
-      "_line": 50,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 48,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "twice",
-        "start": 35,
-        "end": 37
-      }
-    },
-    {
-      "_line": 51,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "loop",
-      "msg": "three times a lady",
-      "start": 38,
-      "end": 40
-    },
-    {
-      "_line": 52,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Alice",
-        "col": 1,
-        "tm": 39
-      },
-      "arrow": {
-        "begin": null,
-        "dash": "-",
-        "end": ">"
-      },
-      "classes": "solid closed_forward",
-      "to": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 39
-      }
-    },
-    {
-      "_line": 53,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 51,
-        "kind": "BLOCK",
-        "depth": 0,
-        "typ": "loop",
-        "msg": "three times a lady",
-        "start": 38,
-        "end": 40
-      }
-    },
-    {
-      "_line": 54,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 38,
-        "kind": "BLOCK",
-        "depth": 1,
-        "typ": "loop",
-        "msg": "at least once",
-        "start": 25,
-        "end": 41
-      }
-    },
-    {
-      "_line": 55,
-      "kind": "END_BLOCK",
-      "start": {
-        "_line": 29,
-        "kind": "BLOCK",
-        "depth": 3,
-        "typ": "loop",
-        "msg": "outer",
-        "start": 16,
-        "end": 42
-      }
-    },
-    {
-      "_line": 57,
-      "kind": "BLOCK",
-      "depth": 0,
-      "typ": "opt",
-      "msg": "Double arrows",
-      "start": 43,
-      "end": 54
-    },
-    {
-      "_line": 59,
-      "kind": "MESSAGE",
-      "opts": {},
-      "timepoint": null,
-      "from": {
-        "nm": "Bob",
-        "col": 0,
-        "tm": 44
       },
       "arrow": {
         "begin": "<",
@@ -761,20 +316,485 @@
       "to": {
         "nm": "Alice",
         "col": 1,
-        "tm": 44
+        "tm": 14
       },
-      "msg": "xxxy"
+      "msg": "<->"
     },
     {
-      "_line": 60,
-      "kind": "SELF",
-      "opts": {
-        "duration": 2
-      },
+      "_line": 26,
+      "kind": "MESSAGE",
+      "opts": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
         "col": 0,
+        "tm": 15
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">>"
+      },
+      "classes": "closed_back solid open_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 15
+      },
+      "msg": "<->>"
+    },
+    {
+      "_line": 27,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 16
+      },
+      "arrow": {
+        "begin": "<<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "open_back solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 16
+      },
+      "msg": "<<->"
+    },
+    {
+      "_line": 28,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 17
+      },
+      "arrow": {
+        "begin": "<<",
+        "dash": "-",
+        "end": ">>"
+      },
+      "classes": "open_back solid open_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 17
+      },
+      "msg": "<<->>"
+    },
+    {
+      "_line": 29,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 18
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "--",
+        "end": ">"
+      },
+      "classes": "closed_back dashed closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 18
+      },
+      "msg": "<-->"
+    },
+    {
+      "_line": 30,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 19
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "--",
+        "end": ">>"
+      },
+      "classes": "closed_back dashed open_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 19
+      },
+      "msg": "<-->>"
+    },
+    {
+      "_line": 31,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 20
+      },
+      "arrow": {
+        "begin": "<<",
+        "dash": "--",
+        "end": ">"
+      },
+      "classes": "open_back dashed closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 20
+      },
+      "msg": "<<-->"
+    },
+    {
+      "_line": 32,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 21
+      },
+      "arrow": {
+        "begin": "<<",
+        "dash": "--",
+        "end": ">>"
+      },
+      "classes": "open_back dashed open_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 21
+      },
+      "msg": "<<-->>"
+    },
+    {
+      "_line": 34,
+      "kind": "BLOCK",
+      "depth": 3,
+      "typ": "loop",
+      "msg": "outer",
+      "start": 22,
+      "end": 48
+    },
+    {
+      "_line": 35,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "first ",
+      "start": 23,
+      "end": 24
+    },
+    {
+      "_line": 36,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 35,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "first ",
+        "start": 23,
+        "end": 24
+      }
+    },
+    {
+      "_line": 37,
+      "kind": "BLOCK",
+      "depth": 2,
+      "typ": "loop",
+      "msg": "second",
+      "start": 25,
+      "end": 30
+    },
+    {
+      "_line": 38,
+      "kind": "BLOCK",
+      "depth": 1,
+      "typ": "loop",
+      "msg": "inner",
+      "start": 26,
+      "end": 29
+    },
+    {
+      "_line": 39,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "inner inner",
+      "start": 27,
+      "end": 28
+    },
+    {
+      "_line": 40,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 39,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "inner inner",
+        "start": 27,
+        "end": 28
+      }
+    },
+    {
+      "_line": 41,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 38,
+        "kind": "BLOCK",
+        "depth": 1,
+        "typ": "loop",
+        "msg": "inner",
+        "start": 26,
+        "end": 29
+      }
+    },
+    {
+      "_line": 42,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 37,
+        "kind": "BLOCK",
+        "depth": 2,
+        "typ": "loop",
+        "msg": "second",
+        "start": 25,
+        "end": 30
+      }
+    },
+    {
+      "_line": 43,
+      "kind": "BLOCK",
+      "depth": 1,
+      "typ": "loop",
+      "msg": "at least once",
+      "start": 31,
+      "end": 47
+    },
+    {
+      "_line": 44,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "lots of times",
+      "start": 32,
+      "end": 37
+    },
+    {
+      "_line": 45,
+      "kind": "MESSAGE",
+      "opts": {
+        "duration": 2
+      },
+      "timepoint": "here",
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 33
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 35
+      },
+      "msg": "Test duration=2",
+      "tm": 33
+    },
+    {
+      "_line": 46,
+      "kind": "MESSAGE",
+      "opts": {
+        "duration": 1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 33
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">>"
+      },
+      "classes": "solid open_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 34
+      },
+      "msg": "Another test duration=1"
+    },
+    {
+      "_line": 47,
+      "kind": "ADVANCE",
+      "distance": 1
+    },
+    {
+      "_line": 48,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 36
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 36
+      }
+    },
+    {
+      "_line": 49,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 44,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "lots of times",
+        "start": 32,
+        "end": 37
+      }
+    },
+    {
+      "_line": 50,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "once",
+      "start": 38,
+      "end": 40
+    },
+    {
+      "_line": 51,
+      "kind": "MESSAGE",
+      "opts": {
+        "color": "yellow"
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 39
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 39
+      }
+    },
+    {
+      "_line": 52,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 50,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "once",
+        "start": 38,
+        "end": 40
+      }
+    },
+    {
+      "_line": 53,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "twice",
+      "start": 41,
+      "end": 43
+    },
+    {
+      "_line": 54,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 42
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 42
+      },
+      "msg": "Hey!"
+    },
+    {
+      "_line": 55,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 53,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "twice",
+        "start": 41,
+        "end": 43
+      }
+    },
+    {
+      "_line": 56,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "loop",
+      "msg": "three times a lady",
+      "start": 44,
+      "end": 46
+    },
+    {
+      "_line": 57,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 1,
         "tm": 45
       },
       "arrow": {
@@ -786,19 +806,114 @@
       "to": {
         "nm": "Bob",
         "col": 0,
-        "tm": 47
+        "tm": 45
+      }
+    },
+    {
+      "_line": 58,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 56,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "loop",
+        "msg": "three times a lady",
+        "start": 44,
+        "end": 46
+      }
+    },
+    {
+      "_line": 59,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 43,
+        "kind": "BLOCK",
+        "depth": 1,
+        "typ": "loop",
+        "msg": "at least once",
+        "start": 31,
+        "end": 47
+      }
+    },
+    {
+      "_line": 60,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 34,
+        "kind": "BLOCK",
+        "depth": 3,
+        "typ": "loop",
+        "msg": "outer",
+        "start": 22,
+        "end": 48
+      }
+    },
+    {
+      "_line": 62,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "opt",
+      "msg": "Double arrows",
+      "start": 49,
+      "end": 60
+    },
+    {
+      "_line": 64,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 50
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 50
+      },
+      "msg": "xxxy"
+    },
+    {
+      "_line": 65,
+      "kind": "SELF",
+      "opts": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 51
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 53
       },
       "msg": "This is a long label (TODO: wrap)"
     },
     {
-      "_line": 61,
+      "_line": 66,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 48
+        "tm": 54
       },
       "arrow": {
         "begin": null,
@@ -809,19 +924,19 @@
       "to": {
         "nm": "Bob",
         "col": 0,
-        "tm": 49
+        "tm": 55
       },
       "msg": "-->"
     },
     {
-      "_line": 62,
+      "_line": 67,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 50
+        "tm": 56
       },
       "arrow": {
         "begin": null,
@@ -832,19 +947,19 @@
       "to": {
         "nm": "Bob",
         "col": 0,
-        "tm": 51
+        "tm": 57
       },
       "msg": "->>"
     },
     {
-      "_line": 63,
+      "_line": 68,
       "kind": "SELF",
       "opts": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 52
+        "tm": 58
       },
       "arrow": {
         "begin": "<",
@@ -855,32 +970,32 @@
       "to": {
         "nm": "Bob",
         "col": 0,
-        "tm": 53
+        "tm": 59
       },
       "msg": "<->"
     },
     {
-      "_line": 64,
+      "_line": 69,
       "kind": "END_BLOCK",
       "start": {
-        "_line": 57,
+        "_line": 62,
         "kind": "BLOCK",
         "depth": 0,
         "typ": "opt",
         "msg": "Double arrows",
-        "start": 43,
-        "end": 54
+        "start": 49,
+        "end": 60
       }
     },
     {
-      "_line": 66,
+      "_line": 71,
       "kind": "MESSAGE",
       "opts": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 55
+        "tm": 61
       },
       "arrow": {
         "begin": null,
@@ -891,11 +1006,11 @@
       "to": {
         "nm": "carlos",
         "col": 2,
-        "tm": 55
+        "tm": 61
       }
     },
     {
-      "_line": 67,
+      "_line": 72,
       "kind": "MESSAGE",
       "opts": {
         "duration": 1
@@ -904,7 +1019,7 @@
       "from": {
         "nm": "Bob",
         "col": 0,
-        "tm": 56
+        "tm": 62
       },
       "arrow": {
         "begin": "<",
@@ -915,7 +1030,7 @@
       "to": {
         "nm": "carlos",
         "col": 2,
-        "tm": 57
+        "tm": 63
       }
     }
   ],
@@ -943,7 +1058,7 @@
     "text_size": 13,
     "time_height": 20
   },
-  "current_time": 58,
-  "max_time": 57,
+  "current_time": 64,
+  "max_time": 63,
   "current_arrow": 0
 }

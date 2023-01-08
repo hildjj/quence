@@ -31,16 +31,16 @@ const grammar = require('../lib/grammar')
 log.level = argv.v ? 'ALL' : 'WARN'
 
 function newExt(name, ext) {
-  // check extension now, so we don't create an empty file
+  // Check extension now, so we don't create an empty file
   if (!draw.supported(ext)) {
     log.fatal('Unknown output type:', ext)
     process.exit(1)
   }
 
-  return path.dirname(name) +
-    path.sep +
-    path.basename(name, path.extname(name)) +
-    '.' + ext
+  return path.join(
+    path.dirname(name),
+    `${path.basename(name, path.extname(name))}.${ext}`
+  )
 }
 
 function readFile(name) {
@@ -57,8 +57,7 @@ function readFile(name) {
       if (err) {
         fs.unlinkSync(outf)
         if (err instanceof grammar.SyntaxError) {
-          log.error(name + '(' + err.location.start.line + ':' +
-                    err.location.start.column + '): ' + err.message)
+          log.error(`${name}(${err.location.start.line}:${err.location.start.column}): ${err.message}`)
         } else {
           log.fatal(err)
           process.exit(1)

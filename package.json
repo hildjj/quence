@@ -5,26 +5,27 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
-    "log4js": "^6.3.0",
+    "log4js": "^6.7.1",
     "optimist": "0.6.1",
-    "pdfkit": "^0.12.1",
+    "pdfkit": "^0.13.0",
     "xmlbuilder": "^15.1.1"
   },
   "description": "Create sequence diagrams",
   "devDependencies": {
-    "@cto.af/eslint-config": "^0.0.5",
+    "@cto.af/eslint-config": "^0.1.8",
     "ava": "latest",
     "eslint": "latest",
-    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-node": "^11.1.0",
     "npm-run-all": "latest",
     "nyc": "latest",
-    "peggy": "^1.0.0",
+    "peggy": "^2.0.1",
     "watch": "latest"
   },
   "scripts": {
     "lint": "eslint bin/quence lib/ test/",
     "test": "ava",
+    "snaps": "ava --update-snapshots",
     "coverage": "nyc -r lcov npm test",
     "prepare": "node_modules/.bin/peggy lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
@@ -65,6 +66,6 @@
   "license": "BSD-2-Clause",
   "readmeFilename": "README.md",
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=14"
   }
 }

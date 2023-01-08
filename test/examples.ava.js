@@ -1,5 +1,6 @@
 'use strict'
 
+const {Buffer} = require('buffer')
 const test = require('ava')
 const fs = require('fs')
 const path = require('path')
@@ -27,43 +28,43 @@ class Store extends require('stream').Writable {
   }
 }
 
-test.cb('Store', t => {
+test('Store', t => new Promise(resolve => {
   const s = new Store()
   s.on('finish', () => {
     const buf = s.read()
     t.truthy(buf)
     t.truthy(Buffer.isBuffer(buf))
     t.is(buf.length, 6)
-    t.end()
+    resolve()
   })
   s.write('foo')
   s.end('bar')
-})
+}))
 
-test.cb('svg', t => {
+test('svg', t => new Promise(resolve => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
     t.falsy(er)
     const output = new Store()
     quence.draw(buf, 'svg', output, err => {
       t.falsy(err)
       let o = output.read().toString('utf-8')
-      // don't care about date
+      // Don't care about date
       o = o.replace(
         /<dc:date>[^<]+<\/dc:date>/g,
         '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
       )
-      // don't care about version
+      // Don't care about version
       o = o.replace(
         />v\d+\.\d+\.\d+<\/tspan>/,
         '>v0.2.1</tspan>'
       )
       t.snapshot(o)
-      t.end()
+      resolve()
     })
   })
-})
+}))
 
-test.cb('pdf', t => {
+test('pdf', t => new Promise(resolve => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
     t.falsy(er)
     const output = new Store()
@@ -72,16 +73,16 @@ test.cb('pdf', t => {
       t.truthy(Buffer.isBuffer(o))
       t.true(o.length > 0)
       // TODO: do some kind of better testing
-      t.end()
+      resolve()
     })
     output.on('error', err => t.falsy(err))
     quence.draw(buf, {o: 'pdf'}, output, err => {
       t.falsy(err)
     })
   })
-})
+}))
 
-test.cb('json', t => {
+test('json', t => new Promise(resolve => {
   fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
     t.falsy(er)
     const output = new Store()
@@ -89,7 +90,7 @@ test.cb('json', t => {
       t.falsy(err)
       const buff = output.read()
       t.snapshot(buff.toString('utf-8'))
-      t.end()
+      resolve()
     })
   })
-})
+}))
