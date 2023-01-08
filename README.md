@@ -73,6 +73,11 @@ dashed lines, and may be bi-directional.
 
 `<<` or `>>` open arrow end
 
+You can also use the `#` indicator to show that a packet is lost.
+This will create an "X" arrowhead and only draw the line halfway
+across.
+
+
 ### lines
 
 `-` solid line
