@@ -1,4 +1,4 @@
-ARROW = ../bin/quence
+ARROW = ../bin/quence.js
 SRCS = $(wildcard *.wsd)
 PDFS = ${SRCS:.wsd=.pdf}
 JSONS = ${SRCS:.wsd=.json}

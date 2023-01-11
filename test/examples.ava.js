@@ -1,16 +1,16 @@
-'use strict'
-
-const {Buffer} = require('buffer')
-const test = require('ava')
-const fs = require('fs')
-const path = require('path')
-const quence = require('../lib/quence')
-const log = require('log4js').getLogger()
+import * as quence from '../lib/quence.js'
+import {Buffer} from 'buffer'
+import {Writable} from 'stream'
+import fs from 'fs'
+import l4js from 'log4js'
+// eslint-disable-next-line node/no-missing-import
+import test from 'ava'
+const log = l4js.getLogger()
 log.level = 'off'
 
-const EXAMPLE = path.join(__dirname, '..', 'examples', 'test.wsd')
+const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
 
-class Store extends require('stream').Writable {
+class Store extends Writable {
   constructor(...args) {
     super(...args)
     this.bufs = []

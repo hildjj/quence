@@ -1,9 +1,12 @@
 #!/usr/bin/env node
+import {draw, supported} from '../lib/quence.js'
+import {SyntaxError} from '../lib/grammar.js'
+import fs from 'fs'
+import l4js from 'log4js'
+import opt from 'optimist'
+import path from 'path'
+const log = l4js.getLogger()
 
-/* jslint node: true */
-'use strict'
-
-const opt = require('optimist')
 const {argv} = opt
   .usage('Usage: $0 [-o type] [-v] [-h] [-n] FILE...')
   .boolean('n')
@@ -21,18 +24,11 @@ if (argv.h) {
   process.exit(64)
 }
 
-const log = require('log4js').getLogger()
-const fs = require('fs')
-const path = require('path')
-
-const draw = require('../lib/quence')
-const grammar = require('../lib/grammar')
-
 log.level = argv.v ? 'ALL' : 'WARN'
 
 function newExt(name, ext) {
   // Check extension now, so we don't create an empty file
-  if (!draw.supported(ext)) {
+  if (!supported(ext)) {
     log.fatal('Unknown output type:', ext)
     process.exit(1)
   }
@@ -53,10 +49,10 @@ function readFile(name) {
     const outf = newExt(name, argv.o)
     const out = fs.createWriteStream(outf)
     // TODO: Switch to promises
-    draw.draw(data, argv, out, err => {
+    draw(data, argv, out, err => {
       if (err) {
         fs.unlinkSync(outf)
-        if (err instanceof grammar.SyntaxError) {
+        if (err instanceof SyntaxError) {
           log.error(`${name}(${err.location.start.line}:${err.location.start.column}): ${err.message}`)
         } else {
           log.fatal(err)

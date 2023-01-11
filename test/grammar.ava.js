@@ -1,7 +1,6 @@
-'use strict'
-
-const test = require('ava')
-const {parse} = require('../lib/grammar')
+import {parse} from '../lib/grammar.js'
+// eslint-disable-next-line node/no-missing-import
+import test from 'ava'
 
 test('parse error', t => {
   t.throws(() => parse('Bob'))
