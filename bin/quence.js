@@ -39,32 +39,28 @@ function newExt(name, ext) {
   )
 }
 
-function readFile(name) {
-  fs.readFile(name, {encoding: 'utf8'}, (er, data) => {
-    if (er) {
-      log.error(name, er)
-      return
-    }
-
-    const outf = newExt(name, argv.o)
+async function readFile(name) {
+  const outf = newExt(name, argv.o)
+  argv.fileName = name
+  let text = null
+  try {
+    text = await fs.promises.readFile(name, 'utf8')
     const out = fs.createWriteStream(outf)
-    // TODO: Switch to promises
-    draw(data, argv, out, err => {
-      if (err) {
-        fs.unlinkSync(outf)
-        if (err instanceof SyntaxError) {
-          log.error(`${name}(${err.location.start.line}:${err.location.start.column}): ${err.message}`)
-        } else {
-          log.fatal(err)
-          process.exit(1)
-        }
-      } else {
-        log.debug('finished')
-      }
-    })
-  })
+    await draw(text, argv, out)
+  } catch (er) {
+    try {
+      await fs.promises.unlink(outf)
+    } catch (ignored) {
+      // Ignore
+    }
+    if (er instanceof SyntaxError) {
+      log.error(er.format([{source: name, text}]))
+    } else {
+      log.fatal(name, er)
+    }
+    throw er
+  }
+  log.debug('finished')
 }
 
-for (let i = 0; i < argv._.length; i++) {
-  readFile(argv._[i])
-}
+Promise.all(argv._.map(readFile)).catch(() => process.exit(1))

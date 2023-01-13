@@ -26,6 +26,13 @@ class Store extends Writable {
     this.bufs = []
     return res
   }
+
+  readFull() {
+    return new Promise((resolve, reject) => {
+      this.once('finish', () => resolve(this.read()))
+      this.once('error', reject)
+    })
+  }
 }
 
 test('Store', t => new Promise(resolve => {
@@ -41,56 +48,44 @@ test('Store', t => new Promise(resolve => {
   s.end('bar')
 }))
 
-test('svg', t => new Promise(resolve => {
-  fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.falsy(er)
-    const output = new Store()
-    quence.draw(buf, 'svg', output, err => {
-      t.falsy(err)
-      let o = output.read().toString('utf-8')
-      // Don't care about date
-      o = o.replace(
-        /<dc:date>[^<]+<\/dc:date>/g,
-        '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
-      )
-      // Don't care about version
-      o = o.replace(
-        />v\d+\.\d+\.\d+<\/tspan>/,
-        '>v0.2.1</tspan>'
-      )
-      t.snapshot(o)
-      resolve()
-    })
-  })
-}))
+test('StoreFull', async t => {
+  const s = new Store()
+  s.write('foo')
+  s.end('bar')
+  const buf = await s.readFull()
+  t.truthy(buf)
+  t.truthy(Buffer.isBuffer(buf))
+  t.is(buf.length, 6)
+})
 
-test('pdf', t => new Promise(resolve => {
-  fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.falsy(er)
-    const output = new Store()
-    output.on('finish', () => {
-      const o = output.read()
-      t.truthy(Buffer.isBuffer(o))
-      t.true(o.length > 0)
-      // TODO: do some kind of better testing
-      resolve()
-    })
-    output.on('error', err => t.falsy(err))
-    quence.draw(buf, {o: 'pdf'}, output, err => {
-      t.falsy(err)
-    })
-  })
-}))
+test('svg', async t => {
+  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
+  const output = await quence.draw(buf, 'svg', new Store())
+  let o = output.read().toString('utf-8')
+  // Don't care about date
+  o = o.replace(
+    /<dc:date>[^<]+<\/dc:date>/g,
+    '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
+  )
+  // Don't care about version
+  o = o.replace(
+    />v\d+\.\d+\.\d+<\/tspan>/,
+    '>v0.2.1</tspan>'
+  )
+  t.snapshot(o)
+})
 
-test('json', t => new Promise(resolve => {
-  fs.readFile(EXAMPLE, 'utf-8', (er, buf) => {
-    t.falsy(er)
-    const output = new Store()
-    quence.draw(buf, {o: 'json'}, output, err => {
-      t.falsy(err)
-      const buff = output.read()
-      t.snapshot(buff.toString('utf-8'))
-      resolve()
-    })
-  })
-}))
+test('pdf', async t => {
+  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
+  const output = await quence.draw(buf, {o: 'pdf'}, new Store())
+  const o = await output.readFull() // Wait for `finish` event
+  t.assert(o.length > 0)
+  t.is(o.toString('utf8', 0, 5), '%PDF-')
+})
+
+test('json', async t => {
+  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
+  const output = await quence.draw(buf, {o: 'json'}, new Store())
+  const o = output.read()
+  t.snapshot(o.toString('utf-8'))
+})

@@ -89,7 +89,11 @@ endobj
 (quence: https://github.com/hildjj/quence)
 endobj
 17 0 obj
+<<<<<<< HEAD
 (D:20230116204233Z)
+=======
+(D:20230113225322Z)
+>>>>>>> dad6f50 (Modernize the API.  BREAKING CHANGE.  Fixes #22.)
 endobj
 14 0 obj
 <<
@@ -157,7 +161,11 @@ trailer
 /Size 18
 /Root 3 0 R
 /Info 14 0 R
+<<<<<<< HEAD
 /ID [<e4838c08e2437b6e4039be75d8eb2171> <e4838c08e2437b6e4039be75d8eb2171>]
+=======
+/ID [<46479a7e694c7a3566b2c61a50619395> <46479a7e694c7a3566b2c61a50619395>]
+>>>>>>> dad6f50 (Modernize the API.  BREAKING CHANGE.  Fixes #22.)
 >>
 startxref
 1945
