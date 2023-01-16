@@ -70,3 +70,9 @@ end
 
 Bob->carlos
 Bob<->carlos [duration=1]
+
+# Lost packet
+A -# B: Lost
+A -# A: Lost self
+
+
