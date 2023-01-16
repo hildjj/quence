@@ -1,8 +1,8 @@
-'use strict'
-
-const test = require('ava')
-const {Arrow, Diagram} = require('../lib/ast')
-const log = require('log4js').getLogger()
+import {Arrow, Diagram} from '../lib/ast.js'
+import l4js from 'log4js'
+// eslint-disable-next-line node/no-missing-import
+import test from 'ava'
+const log = l4js.getLogger()
 log.level = 'quiet'
 
 test('arrow create', t => {

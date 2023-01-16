@@ -38,6 +38,8 @@ jobs:
         with:
           version: 7.22.0
           run_install: true
+      - name: Lint
+        run: npm run lint
       - name: Test ${{ matrix.node-version }}
         run: npm run coverage
       - name: Coveralls Parallel
