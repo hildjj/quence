@@ -130,7 +130,7 @@ A->B: The title
 ### Timestamps
 
 Each message start time can have a timestamp associated with it by prefixing
-the messagewith `label:`.  Subsequent messages can be declared to start or end
+the message with `label:`.  Subsequent messages can be declared to start or end
 at a given label by suffixing the participant name with `@time`, where `time` is
 the label from a previous message.
 This will usually result in a diagonal line.
@@ -141,6 +141,14 @@ Example:
 early: A-->>B
 late: B-->>A
 A@early->B@late
+```
+
+## Notes
+
+You can put a note on an endpoint using `note`, as in:
+
+```
+note A: This is a note
 ```
 
 ### Message options
@@ -162,6 +170,8 @@ Example:
 A->B [duration=2, advance=2]
 B->A [duration=2]
 ```
+
+
 
 Options
 -------
