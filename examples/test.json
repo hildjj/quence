@@ -14,6 +14,16 @@
       "col": 2,
       "nm": "carlos",
       "desc": "carlos"
+    },
+    {
+      "col": 3,
+      "nm": "A",
+      "desc": "A"
+    },
+    {
+      "col": 4,
+      "nm": "B",
+      "desc": "B"
     }
   ],
   "timepoints": {
@@ -1032,6 +1042,52 @@
         "col": 2,
         "tm": 63
       }
+    },
+    {
+      "_line": 75,
+      "kind": "MESSAGE",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "A",
+        "col": 3,
+        "tm": 64
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "B",
+        "col": 4,
+        "tm": 64
+      },
+      "msg": "Lost"
+    },
+    {
+      "_line": 76,
+      "kind": "SELF",
+      "opts": {},
+      "timepoint": null,
+      "from": {
+        "nm": "A",
+        "col": 3,
+        "tm": 65
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "A",
+        "col": 3,
+        "tm": 66
+      },
+      "msg": "Lost self"
     }
   ],
   "blockStack": [],
@@ -1058,7 +1114,7 @@
     "text_size": 13,
     "time_height": 20
   },
-  "current_time": 64,
-  "max_time": 63,
+  "current_time": 67,
+  "max_time": 66,
   "current_arrow": 0
 }
