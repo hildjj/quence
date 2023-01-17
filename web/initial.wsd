@@ -1,0 +1,13 @@
+set arrow_color lightgray
+set auto_number
+set line_color gray
+set rung_color "#66CDAA"
+set rung_width 5
+
+title This is an example
+participant Browser
+participant "Web Server" as Server
+
+Browser -> Server: Give me quence
+Server -> Browser: Here's a bunch of JS
+Browser -> Browser: Render locally

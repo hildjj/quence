@@ -25,7 +25,7 @@
     "watch": "latest"
   },
   "scripts": {
-    "lint": "eslint bin/quence.js lib/ test/",
+    "lint": "eslint . --ext js",
     "test": "ava",
     "snaps": "ava --update-snapshots",
     "coverage": "c8 -r lcov npm test",

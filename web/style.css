@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+
+.horiz {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#src {
+  width: 50%;
+  height: 30em;
+}
+
+a {
+  margin-left: 10px;
+}
+
+#downloadPDFhidden {
+  display: none;
+}
+
+#dest {
+  margin-left: 10px;
+  margin-top: 10px;
+}

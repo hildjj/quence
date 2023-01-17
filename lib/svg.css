@@ -3,7 +3,6 @@ text {
   font-size: [text_size]px;
   font-family: [font];
   fill: [text_color];
-  baseline-shift: 2px;
 }
 path {
   stroke: [line_color];
@@ -45,4 +44,7 @@ text.center {
 }
 text.rung_label {
   text-anchor: middle;
+}
+text.home {
+  opacity: 0.7;
 }

@@ -1,4 +1,4 @@
-import {Arrow, Diagram} from '../lib/ast.js'
+import {Arrow, Diagram, Step} from '../lib/ast.js'
 import l4js from 'log4js'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
@@ -56,7 +56,9 @@ test('diagram create', t => {
   const msg = d.addMessage(3, '', a1, new Arrow('<<', '--', '>>'), b1, null)
   t.is(msg.toString(), 'Alice <<-->> Bob: undefined')
   d.addBlock(4, 'loop', 'Fine')
+  t.throws(() => d.compute())
   d.addBlock(5, 'opt', '')
+  t.throws(() => d.compute())
   d.endBlock(6)
   d.endBlock(7)
   t.throws(() => d.endBlock(8))
@@ -66,4 +68,11 @@ test('diagram create', t => {
   t.throws(() => d.setProp('mumble12'))
   d.compute()
   t.snapshot(d)
+})
+
+test('Step', t => {
+  const s = new Step(null, null)
+  t.throws(() => {
+    s.compute()
+  })
 })

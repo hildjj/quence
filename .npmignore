@@ -17,3 +17,6 @@ doc/
 .vscode/
 .waiting.html
 .github/
+web/
+docs/
+ava.config.js
