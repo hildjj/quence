@@ -76,3 +76,7 @@ A -# B: Lost
 A -# A: Lost self
 
 
+# Notes
+note Alice: Alice note
+# This note will be right justified
+note B: B note

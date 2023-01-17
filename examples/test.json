@@ -1088,6 +1088,48 @@
         "tm": 66
       },
       "msg": "Lost self"
+    },
+    {
+      "_line": {
+        "start": {
+          "offset": 1449,
+          "line": 80,
+          "column": 1
+        },
+        "end": {
+          "offset": 1471,
+          "line": 80,
+          "column": 23
+        }
+      },
+      "kind": "NOTE",
+      "from": {
+        "nm": "Alice",
+        "col": 1,
+        "tm": 67
+      },
+      "msg": "Alice note"
+    },
+    {
+      "_line": {
+        "start": {
+          "offset": 1508,
+          "line": 82,
+          "column": 1
+        },
+        "end": {
+          "offset": 1522,
+          "line": 82,
+          "column": 15
+        }
+      },
+      "kind": "NOTE",
+      "from": {
+        "nm": "B",
+        "col": 4,
+        "tm": 68
+      },
+      "msg": "B note"
     }
   ],
   "blockStack": [],
@@ -1114,7 +1156,7 @@
     "text_size": 13,
     "time_height": 20
   },
-  "current_time": 67,
-  "max_time": 66,
+  "current_time": 69,
+  "max_time": 68,
   "current_arrow": 0
 }
