@@ -23,6 +23,11 @@ Bob -> Alice: World
 Bob -> Bob: !
 ```
 
+Try it online
+=============
+
+There is  a client [editor](https://hildjj.github.io/quence/).
+
 Installation
 ============
 
