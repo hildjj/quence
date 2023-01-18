@@ -16,6 +16,8 @@ const {argv} = opt
   .default('o', 'pdf')
   .boolean('v')
   .describe('v', 'verbose logging')
+  .string('O')
+  .describe('O', 'options in the form key=val')
   .boolean('h')
   .describe('h', 'Show help')
 
