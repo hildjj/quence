@@ -179,6 +179,12 @@ Options
 `set [option] [value]` set an option governing the production of the diagram to
 the given value.  If the value is omitted, it defaults to `true`.
 
+You can also set an option with the `-O` a command line flag, as in:
+
+`-O option=value`
+
+
+
 ### Defaults
 
 The following options may be set (followed by their defaults):
@@ -199,6 +205,7 @@ The following options may be set (followed by their defaults):
  * `text_color`: black
  * `text_size`: 13
  * `time_height`: 20
+
 
 Programmatic Interface
 ======================
