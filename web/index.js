@@ -3,8 +3,8 @@ import './registerStaticFiles.js'
 import * as SvgCss from 'bundle-text:../lib/svg.css'
 import * as initial from 'bundle-text:./initial.wsd'
 import * as monaco from 'monaco-editor'
+import {SyntaxError, draw} from 'quence'
 import {config, theme, tokenizer} from './wsd_language.js'
-import {draw, SyntaxError} from 'quence'
 import Store from '../test/store.js'
 
 self.MonacoEnvironment = {
