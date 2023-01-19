@@ -1,13 +1,13 @@
 {
   "name": "quence",
   "version": "1.1.1",
-  "main": "./lib/quence.js",
+  "main": "./lib/index.js",
   "type": "module",
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "dependencies": {
+    "commander": "10.0.0",
     "log4js": "^6.7.1",
-    "optimist": "0.6.1",
     "pdfkit": "^0.13.0",
     "xmlbuilder": "^15.1.1"
   },
@@ -19,10 +19,9 @@
     "eslint": "latest",
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-node": "^11.1.0",
-    "npm-run-all": "latest",
+    "execa": "6.1.0",
     "package-extract": "1.0.2",
-    "peggy": "^2.0.1",
-    "watch": "latest"
+    "peggy": "^2.0.1"
   },
   "scripts": {
     "lint": "eslint . --ext js",
@@ -31,9 +30,6 @@
     "coverage": "c8 -r lcov npm test",
     "build": "peggy --format es lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
-    "predev": "npm run coverage",
-    "dev": "light-server -q -s. -w 'lib/* # npm run coverate' -o /coverage/lcov-report/index.html",
-    "watch": "watch 'npm run coverage' lib/ test/",
     "version": "package-extract name homepage version && (cd examples && make clean && make) && git add examples package.js"
   },
   "bin": {
