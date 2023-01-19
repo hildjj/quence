@@ -1,28 +1,14 @@
 {
   "name": "quence",
+  "description": "Create sequence diagrams",
   "version": "1.1.1",
-  "main": "./lib/index.js",
   "type": "module",
+  "main": "./lib/index.js",
+  "bin": {
+    "quence": "bin/quence.js"
+  },
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
-  "dependencies": {
-    "commander": "10.0.0",
-    "log4js": "^6.7.1",
-    "pdfkit": "^0.13.0",
-    "xmlbuilder": "^15.1.1"
-  },
-  "description": "Create sequence diagrams",
-  "devDependencies": {
-    "@cto.af/eslint-config": "^1.0.1",
-    "ava": "latest",
-    "c8": "7.12.0",
-    "eslint": "latest",
-    "eslint-plugin-ava": "^13.2.0",
-    "eslint-plugin-node": "^11.1.0",
-    "execa": "6.1.0",
-    "package-extract": "1.0.2",
-    "peggy": "^2.0.1"
-  },
   "scripts": {
     "lint": "eslint . --ext js",
     "test": "ava",
@@ -31,9 +17,6 @@
     "build": "peggy --format es lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
     "version": "package-extract name homepage version && (cd examples && make clean && make) && git add examples package.js"
-  },
-  "bin": {
-    "quence": "bin/quence.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +27,8 @@
     "sequence",
     "diagram"
   ],
+  "license": "BSD-2-Clause",
+  "readmeFilename": "README.md",
   "contributors": [
     {
       "name": "Cullen Jennings",
@@ -62,8 +47,24 @@
       "email": "joe-github@cursive.net"
     }
   ],
-  "license": "BSD-2-Clause",
-  "readmeFilename": "README.md",
+  "dependencies": {
+    "commander": "10.0.0",
+    "log4js": "^6.7.1",
+    "pdfkit": "^0.13.0",
+    "xmlbuilder": "^15.1.1"
+  },
+  "devDependencies": {
+    "@cto.af/eslint-config": "^1.0.1",
+    "ava": "latest",
+    "c8": "7.12.0",
+    "eslint": "latest",
+    "eslint-plugin-ava": "^13.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "execa": "6.1.0",
+    "package-extract": "1.0.2",
+    "peggy": "^2.0.1",
+    "typescript": "4.9.4"
+  },
   "engines": {
     "node": ">=14"
   }
