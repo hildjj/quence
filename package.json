@@ -19,6 +19,7 @@
     "eslint": "latest",
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-node": "^11.1.0",
+    "execa": "6.1.0",
     "package-extract": "1.0.2",
     "peggy": "^2.0.1"
   },

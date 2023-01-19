@@ -1,14 +1,23 @@
 
 Create sequence diagrams with a domain-specific language.
 
-```
-Usage: quence [-o type] [-v] [-h] FILE...
+```text
+Usage: quence [options] <FILE...>
+
+Arguments:
+  FILE                        file names to process, "-" for stdin
 
 Options:
-  -n  do not add project link to output
-  -o  output type [pdf, svg, json]  [string]  [default: "pdf"]
-  -v  verbose logging               [boolean]
-  -h  Show help                     [boolean]
+  -n, --nolink                do not add project link to output
+  -o, --output <type>         output type (choices: "js", "json", "pdf", "svg",
+                              default: "pdf")
+  -O, --out <FILE>            output file name, "-" for stdout. Not valid with
+                              more than one input file.
+  -p, --property <key=value>  diagram property in the form key=value.  May be
+                              specified multiple times. (default: [])
+  -v, --verbose               verbose logging
+  -V, --version               output the version number
+  -h, --help                  display help for command
 ```
 
 <img src='https://raw.github.com/hildjj/quence/main/doc/small.png' align='right'/>
@@ -156,13 +165,13 @@ You can put a note on an endpoint using `note`, as in:
 note A: This is a note
 ```
 
-### Message options
+### Message properties
 
 <img src='https://raw.github.com/hildjj/quence/main/doc/messages.png' align='right'/>
 
-Message options modify the message, and are of the form `name [= value]`, with
-multiple options separated by a comma (`,`).  The following message options
-may be set:
+Message properties modify the message, and are of the form `name [= value]`,
+with multiple properties separated by a comma (`,`).  The following message
+properties may be set:
 
  * `duration`: The number of time slices that this message takes up.  If this is
     not `1`, a diagonal line will result.  [Default: `1`]
@@ -176,38 +185,36 @@ A->B [duration=2, advance=2]
 B->A [duration=2]
 ```
 
+## Diagram Properties
+
+`set [property] [value]` set a property governing the production of the
+diagram to the given value.  If the value is omitted, it defaults to `true`.
+Colors can be [named colors](https://www.w3.org/TR/css-color-4/#named-colors)
+or specified in hex, surrounded by quotes, like `'#f0f8ff'`.
+
+You can also set an option with the `-p` a command line flag, as in:
+
+`-p property[=value]`
 
 
-Options
--------
-
-`set [option] [value]` set an option governing the production of the diagram to
-the given value.  If the value is omitted, it defaults to `true`.
-
-You can also set an option with the `-O` a command line flag, as in:
-
-`-O option=value`
-
-
-
-### Defaults
+### Diagram Property Defaults
 
 The following options may be set (followed by their defaults):
 
- * `arrow_color`: black
+ * `arrow_color`: 'black'
  * `arrow_height`: 10
  * `arrow_width`: 15
  * `auto_number`: false
- * `background`: white
- * `block_tab_fill`: gray
- * `block_stroke`: gray
+ * `background`: 'white'
+ * `block_tab_fill`: 'gray'
+ * `block_stroke`: 'gray'
  * `column_width`: 150
- * `font`: Helvetica
- * `line_color`: black
+ * `font`: 'Helvetica'
+ * `line_color`: 'black'
  * `line_width`: 1
- * `rung_color`: black
+ * `rung_color`: 'black'
  * `rung_width`: 1
- * `text_color`: black
+ * `text_color`: 'black'
  * `text_size`: 13
  * `time_height`: 20
 
@@ -216,11 +223,14 @@ Programmatic Interface
 ======================
 
 ```javascript
-var quence = require('quence');
-quence.draw("A->B", "pdf", function(error, out) {
-	// err is `null` or an `Error`
-	// out is a `String` or `Buffer`
-});
+import {draw} from 'quence'
+import fs from 'fs'
+const out = fs.createWriteStream('output.pdf')
+await draw("A->B", "pdf", out);
+
+// Note that the promise completes when processing completes, not when the
+// stream is finished being written.  Wait on the stream's `finish` event
+// if you need that.
 ```
 
 Supported Output Types
