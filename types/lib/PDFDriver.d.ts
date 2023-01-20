@@ -80,16 +80,12 @@ export default class PDFDriver extends Driver {
      */
     style(klasses: string): object;
     /**
-     * @returns {PDF}
-     */
-    document(): PDFKit.PDFDocument;
-    /**
-     * @param {import('./point.js').Point} p
+     * @param {import('./point.js').Point} p Center bottom of the text
      * @param {string} str
-     * @param {object} opts
-     * @returns {[number, number]}
+     * @param {PDFKit.Mixins.TextOptions} opts
+     * @returns {[number, number]} width, height
      */
-    draw_string(p: import('./point.js').Point, str: string, opts: object): [number, number];
+    draw_string(p: import('./point.js').Point, str: string, opts?: PDFKit.Mixins.TextOptions): [number, number];
     /**
      * @param {import('./point.js').Point} p Center
      * @param {string} str

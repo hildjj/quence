@@ -1,18 +1,20 @@
 export default class SVGDriver extends Driver {
     path_count: number;
-    /**
-     * @type {xml.XMLElement}
-     */
     doc: xml.XMLElement;
-    /**
-     * @returns {xml.XMLElement}
-     */
-    document(): xml.XMLElement;
+    /** @type {xml.XMLElement} */
+    top: xml.XMLElement;
     /**
      * @param {string} [name]
      * @returns {xml.XMLElement}
      */
     draw_group(name?: string): xml.XMLElement;
+    /**
+     * @param {string|(string|Point)[]} cmds
+     * @param {string} klasses Space-separated CSS classes
+     * @returns {any} Ignored
+     */
+    draw_path(cmds: string | (string | Point)[], klasses: string): any;
 }
 import Driver from "./driver.js";
-import * as xml from "xmlbuilder";
+import xml from "xmlbuilder";
+import { Point } from "./point.js";

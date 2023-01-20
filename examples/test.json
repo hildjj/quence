@@ -34,7 +34,7 @@
     {
       "_line": 13,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -57,7 +57,7 @@
     {
       "_line": 14,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -80,7 +80,7 @@
     {
       "_line": 15,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -103,7 +103,7 @@
     {
       "_line": 16,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -126,7 +126,7 @@
     {
       "_line": 17,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -149,7 +149,7 @@
     {
       "_line": 18,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -172,7 +172,7 @@
     {
       "_line": 19,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -195,7 +195,7 @@
     {
       "_line": 20,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -218,7 +218,7 @@
     {
       "_line": 21,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -241,7 +241,7 @@
     {
       "_line": 22,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -264,7 +264,7 @@
     {
       "_line": 23,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -287,7 +287,7 @@
     {
       "_line": 24,
       "kind": "SELF",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -310,7 +310,7 @@
     {
       "_line": 25,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -333,7 +333,7 @@
     {
       "_line": 26,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -356,7 +356,7 @@
     {
       "_line": 27,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -379,7 +379,7 @@
     {
       "_line": 28,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -402,7 +402,7 @@
     {
       "_line": 29,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -425,7 +425,7 @@
     {
       "_line": 30,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -448,7 +448,7 @@
     {
       "_line": 31,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -471,7 +471,7 @@
     {
       "_line": 32,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -609,7 +609,7 @@
     {
       "_line": 45,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 2
       },
       "timepoint": "here",
@@ -635,7 +635,7 @@
     {
       "_line": 46,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 1
       },
       "timepoint": null,
@@ -665,7 +665,7 @@
     {
       "_line": 48,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -709,7 +709,7 @@
     {
       "_line": 51,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "color": "yellow"
       },
       "timepoint": null,
@@ -755,7 +755,7 @@
     {
       "_line": 54,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -800,7 +800,7 @@
     {
       "_line": 57,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Alice",
@@ -870,7 +870,7 @@
     {
       "_line": 64,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -893,7 +893,7 @@
     {
       "_line": 65,
       "kind": "SELF",
-      "opts": {
+      "props": {
         "duration": 2
       },
       "timepoint": null,
@@ -918,7 +918,7 @@
     {
       "_line": 66,
       "kind": "SELF",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -941,7 +941,7 @@
     {
       "_line": 67,
       "kind": "SELF",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -964,7 +964,7 @@
     {
       "_line": 68,
       "kind": "SELF",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -1000,7 +1000,7 @@
     {
       "_line": 71,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -1022,7 +1022,7 @@
     {
       "_line": 72,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 1
       },
       "timepoint": null,
@@ -1046,7 +1046,7 @@
     {
       "_line": 75,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "A",
@@ -1069,7 +1069,7 @@
     {
       "_line": 76,
       "kind": "SELF",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "A",
@@ -1090,18 +1090,7 @@
       "msg": "Lost self"
     },
     {
-      "_line": {
-        "start": {
-          "offset": 1449,
-          "line": 80,
-          "column": 1
-        },
-        "end": {
-          "offset": 1471,
-          "line": 80,
-          "column": 23
-        }
-      },
+      "_line": 80,
       "kind": "NOTE",
       "from": {
         "nm": "Alice",
@@ -1111,18 +1100,7 @@
       "msg": "Alice note"
     },
     {
-      "_line": {
-        "start": {
-          "offset": 1508,
-          "line": 82,
-          "column": 1
-        },
-        "end": {
-          "offset": 1522,
-          "line": 82,
-          "column": 15
-        }
-      },
+      "_line": 82,
       "kind": "NOTE",
       "from": {
         "nm": "B",

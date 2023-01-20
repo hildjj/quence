@@ -10,6 +10,37 @@ export namespace Kind {
     const END_BLOCK: string;
     const NOTE: string;
 }
+export class Endpoint {
+    /**
+     * One end of a line.
+     *
+     * @param {string} nm Name
+     * @param {number} col Column
+     * @param {string|number} [tm] Timestamp for this endpoint
+     */
+    constructor(nm: string, col: number, tm?: string | number);
+    nm: string;
+    col: number;
+    tm: string | number;
+    /**
+     * @returns {number}
+     */
+    get TM(): number;
+    /**
+     * Compute the associated timestamp, if needed
+     *
+     * @param {Diagram} diag
+     * @param {number} [start] Start
+     * @param {number} [duration=0]
+     */
+    compute(diag: Diagram, start?: number, duration?: number): void;
+    /**
+     * Convert to string.
+     *
+     * @returns {string}
+     */
+    toString(): string;
+}
 export class Arrow {
     /**
      * Arrowheads
@@ -78,13 +109,13 @@ export class Message extends Step {
      * @param {Arrow} arrow
      * @param {Endpoint} to
      * @param {string} msg
-     * @param {MessageProperties} [opts]
+     * @param {MessageProperties} [props]
      */
-    constructor(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, opts?: MessageProperties);
+    constructor(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, props?: MessageProperties);
     /**
      * @type {MessageProperties}
      */
-    opts: MessageProperties;
+    props: MessageProperties;
     timepoint: string;
     from: Endpoint;
     arrow: Arrow;
@@ -101,9 +132,9 @@ export class SelfMessage extends Message {
      * @param {Arrow} arrow
      * @param {Endpoint} to
      * @param {string} msg
-     * @param {object} [opts]
+     * @param {object} [props]
      */
-    constructor(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, opts?: object);
+    constructor(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, props?: object);
 }
 export class Block extends Step {
     /**
@@ -200,18 +231,18 @@ export class Diagram {
     addEndpoint(nm: string, tm?: string | number): Endpoint;
     /**
      * Add a message from one endpoint throun an arrow to another endpoint,
-     * perhaps with a message and some options.
+     * perhaps with a message and some message properties.
      *
      * @param {number} line Line number from the source file
      * @param {string} tm
      * @param {Endpoint} frm
      * @param {Arrow} arrow
      * @param {Endpoint} to
-     * @param {string} msg
-     * @param {object} [opts]
+     * @param {string} msg Text along the line
+     * @param {object} [props] Message properties
      * @returns
      */
-    addMessage(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, opts?: object): Message;
+    addMessage(line: number, tm: string, frm: Endpoint, arrow: Arrow, to: Endpoint, msg: string, props?: object): Message;
     /**
      * Start a new block at the current time.
      *
@@ -283,37 +314,6 @@ export type MessageProperties = {
     advance?: number;
     duration?: number;
 };
-declare class Endpoint {
-    /**
-     * One end of a line.
-     *
-     * @param {string} nm Name
-     * @param {number} col Column
-     * @param {string|number} [tm] Timestamp for this endpoint
-     */
-    constructor(nm: string, col: number, tm?: string | number);
-    nm: string;
-    col: number;
-    tm: string | number;
-    /**
-     * @returns {number}
-     */
-    get TM(): number;
-    /**
-     * Compute the associated timestamp, if needed
-     *
-     * @param {Diagram} diag
-     * @param {number} [start] Start
-     * @param {number} [duration=0]
-     */
-    compute(diag: Diagram, start?: number, duration?: number): void;
-    /**
-     * Convert to string.
-     *
-     * @returns {string}
-     */
-    toString(): string;
-}
 declare class Participants {
     /**
      * @type {Record<string,Participant>}
