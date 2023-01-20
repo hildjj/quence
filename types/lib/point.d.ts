@@ -24,8 +24,6 @@ export class Point {
     constructor(x: number, y: number);
     x: number;
     y: number;
-    col: any;
-    time: any;
     /**
      * @param {string} suffix
      * @returns {string}

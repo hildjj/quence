@@ -1,0 +1,474 @@
+{
+  "parts": [
+    {
+      "col": 0,
+      "nm": "Alice",
+      "desc": "Alice"
+    },
+    {
+      "col": 1,
+      "nm": "Bob",
+      "desc": "Bob"
+    },
+    {
+      "col": 2,
+      "nm": "Mallory",
+      "desc": "Mallory"
+    }
+  ],
+  "timepoints": {},
+  "title": null,
+  "data": [
+    {
+      "_line": 1,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 1
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 1
+      }
+    },
+    {
+      "_line": 2,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 2
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 2
+      },
+      "msg": "Adjacent"
+    },
+    {
+      "_line": 3,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 3
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 3
+      }
+    },
+    {
+      "_line": 4,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 4
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 4
+      },
+      "msg": "Skip"
+    },
+    {
+      "_line": 5,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2,
+        "advance": -1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 5
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 7
+      }
+    },
+    {
+      "_line": 6,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2,
+        "advance": -2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 6
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 8
+      }
+    },
+    {
+      "_line": 7,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2,
+        "advance": -1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 6
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 8
+      }
+    },
+    {
+      "_line": 8,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 7
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 9
+      }
+    },
+    {
+      "_line": 9,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 3,
+        "advance": -1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 10
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 13
+      }
+    },
+    {
+      "_line": 10,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 3
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 12
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "--",
+        "end": "#"
+      },
+      "classes": "dashed",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 15
+      }
+    },
+    {
+      "_line": 12,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 16
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 16
+      }
+    },
+    {
+      "_line": 13,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 17
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 17
+      }
+    },
+    {
+      "_line": 14,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2,
+        "advance": -1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 18
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 20
+      }
+    },
+    {
+      "_line": 15,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 19
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 21
+      }
+    },
+    {
+      "_line": 17,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 22
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 22
+      }
+    },
+    {
+      "_line": 18,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 23
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 23
+      }
+    },
+    {
+      "_line": 19,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2,
+        "advance": -1
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 24
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 26
+      }
+    },
+    {
+      "_line": 20,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Mallory",
+        "col": 2,
+        "tm": 25
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": "#"
+      },
+      "classes": "solid",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 27
+      }
+    }
+  ],
+  "blockStack": [],
+  "props": {
+    "arrow_color": "black",
+    "arrow_height": 10,
+    "arrow_width": 15,
+    "auto_number": false,
+    "background": "white",
+    "block_tab_fill": "gray",
+    "block_stroke": "gray",
+    "column_width": 150,
+    "font": "Helvetica",
+    "label_space_x": 3,
+    "label_space_y": -3,
+    "line_color": "black",
+    "line_width": 1,
+    "no_clear": false,
+    "no_feet": false,
+    "no_link": false,
+    "rung_color": "black",
+    "rung_width": 1,
+    "text_color": "black",
+    "text_size": 13,
+    "time_height": 20
+  },
+  "current_time": 28,
+  "max_time": 27,
+  "current_arrow": 0
+}

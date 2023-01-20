@@ -1,0 +1,20 @@
+Alice -> Bob
+Alice -# Bob: Adjacent
+Alice -> Mallory
+Alice -# Mallory: Skip
+Alice -> Mallory [duration=2, advance=-1]
+Alice -# Mallory [duration=2, advance=-2]
+Alice -> Bob [duration=2, advance=-1]
+Alice -# Bob [duration=2]
+Alice -> Bob [duration=3, advance=-1]
+Alice --# Bob [duration=3]
+
+Mallory -> Bob
+Mallory -# Bob
+Mallory -> Bob [duration=2, advance=-1]
+Mallory -# Bob [duration=2]
+
+Mallory -> Alice
+Mallory -# Alice
+Mallory -> Alice [duration=2, advance=-1]
+Mallory -# Alice [duration=2]
