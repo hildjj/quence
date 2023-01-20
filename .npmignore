@@ -20,3 +20,7 @@ doc/
 web/
 docs/
 ava.config.js
+tsconfig.json
+.eslintrc.cjs
+.gitattributes
+ava.config.cjs

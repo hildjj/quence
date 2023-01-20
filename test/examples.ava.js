@@ -11,7 +11,7 @@ const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
 
 test('svg', async t => {
   const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = await quence.draw(buf, 'svg', new Store())
+  const output = quence.draw(buf, 'svg', new Store())
   let o = output.read().toString('utf-8')
   // Don't care about date
   o = o.replace(
@@ -28,7 +28,7 @@ test('svg', async t => {
 
 test('pdf', async t => {
   const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = await quence.draw(buf, {output: 'pdf'}, new Store())
+  const output = quence.draw(buf, {output: 'pdf'}, new Store())
   const o = await output.readFull() // Wait for `finish` event
   t.assert(o.length > 0)
   t.is(o.toString('utf8', 0, 5), '%PDF-')
@@ -36,20 +36,20 @@ test('pdf', async t => {
 
 test('json', async t => {
   const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = await quence.draw(buf, {output: 'json'}, new Store())
+  const output = quence.draw(buf, {output: 'json'}, new Store())
   const o = output.read()
   t.snapshot(o.toString('utf-8'))
 })
 
 test('edges', async t => {
-  await t.throwsAsync(() => quence.draw(`
+  await t.throws(() => quence.draw(`
 dup: A->B
 dup: A->B
   `, {output: 'json'}, new Store()))
 
-  await t.throwsAsync(() => quence.draw(`
+  await t.throws(() => quence.draw(`
 A@doesNotExist->B
   `, {output: 'json'}, new Store()))
 
-  await t.throwsAsync(() => quence.draw('', {output: 'not valid'}))
+  await t.throws(() => quence.draw('', {output: 'not valid'}))
 })

@@ -19,7 +19,7 @@
     {
       "_line": 1,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 2
       },
       "timepoint": "here",

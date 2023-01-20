@@ -117,7 +117,7 @@ Messages
 The minimum message looks like `participant arrow participant`, but a full description is:
 
 ```
-[label:] participant[@time] arrow participant[@time] [:title] [[message options]]
+[label:] participant[@time] arrow participant[@time] [:title] [[message properties]]
 ```
 
 Draw a line with

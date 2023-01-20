@@ -1,0 +1,14 @@
+{
+  "include": ["lib/*.js"],
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "outDir": "types",
+    "target": "ES2020",
+  }
+}

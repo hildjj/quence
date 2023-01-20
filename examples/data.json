@@ -19,7 +19,7 @@
     {
       "_line": 3,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
@@ -42,7 +42,7 @@
     {
       "_line": 4,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 2
       },
       "timepoint": "here",
@@ -68,7 +68,7 @@
     {
       "_line": 5,
       "kind": "MESSAGE",
-      "opts": {
+      "props": {
         "duration": 1
       },
       "timepoint": null,
@@ -93,7 +93,7 @@
     {
       "_line": 6,
       "kind": "MESSAGE",
-      "opts": {},
+      "props": {},
       "timepoint": null,
       "from": {
         "nm": "Bob",
