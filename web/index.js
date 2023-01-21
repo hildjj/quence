@@ -81,7 +81,7 @@ async function drawWeb(type) {
     const s = await draw(text, {
       CSS: SvgCss,
       fileName: 'web',
-      o: type,
+      output: type,
     }, new Store())
     return s
   } catch (er) {

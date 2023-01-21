@@ -1,11 +1,8 @@
 import * as quence from '../lib/index.js'
 import Store from './store.js'
 import fs from 'fs'
-import l4js from 'log4js'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
-const log = l4js.getLogger()
-log.level = 'off'
 
 const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
 const DROPS = new URL('../examples/drops.wsd', import.meta.url)
@@ -57,6 +54,16 @@ test('json', async t => {
   const output = quence.draw(buf, {output: 'json'}, new Store())
   const o = output.read()
   t.snapshot(o.toString('utf-8'))
+})
+
+test('web svg', async t => {
+  const CSS = `
+text {
+  fill: purple
+}
+`
+  const store = await quence.draw('A->B', {output: 'svg', CSS}, new Store())
+  t.regex(store.read().toString(), /purple/)
 })
 
 test('edges', async t => {

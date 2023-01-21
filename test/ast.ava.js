@@ -1,9 +1,6 @@
 import {Arrow, Diagram, Step} from '../lib/ast.js'
-import l4js from 'log4js'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
-const log = l4js.getLogger()
-log.level = 'quiet'
 
 test('arrow create', t => {
   const a = new Arrow(null, '-', '>')
@@ -52,6 +49,7 @@ test('diagram create', t => {
   const a1 = d.addEndpoint('Alice')
   const a2 = d.addEndpoint('Alice', 'here')
   const b1 = d.addEndpoint('Bob')
+  t.throws(() => d.parts.add('Bob'))
   d.addMessage(2, 'here', a1, new Arrow(null, '-', '>'), a2, 'Hi!')
   const msg = d.addMessage(3, '', a1, new Arrow('<<', '--', '>>'), b1, null)
   t.is(msg.toString(), 'Alice <<-->> Bob: undefined')
@@ -68,6 +66,18 @@ test('diagram create', t => {
   t.throws(() => d.setProp('mumble12'))
   d.compute()
   t.snapshot(d)
+
+  const that = {}
+  function fe1() {
+    // eslint-disable-next-line no-invalid-this
+    t.is(this, that)
+  }
+  function fe2() {
+    // eslint-disable-next-line no-invalid-this
+    t.is(this, d.parts)
+  }
+  d.parts.forEach(fe1, that)
+  d.parts.forEach(fe2)
 })
 
 test('Step', t => {
