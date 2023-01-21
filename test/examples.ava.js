@@ -8,9 +8,27 @@ const log = l4js.getLogger()
 log.level = 'off'
 
 const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
+const DROPS = new URL('../examples/drops.wsd', import.meta.url)
 
 test('svg', async t => {
   const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
+  const output = quence.draw(buf, 'svg', new Store())
+  let o = output.read().toString('utf-8')
+  // Don't care about date
+  o = o.replace(
+    /<dc:date>[^<]+<\/dc:date>/g,
+    '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
+  )
+  // Don't care about version
+  o = o.replace(
+    />v\d+\.\d+\.\d+<\/tspan>/,
+    '>v0.2.1</tspan>'
+  )
+  t.snapshot(o)
+})
+
+test('svg drops', async t => {
+  const buf = await fs.promises.readFile(DROPS, 'utf-8')
   const output = quence.draw(buf, 'svg', new Store())
   let o = output.read().toString('utf-8')
   // Don't care about date

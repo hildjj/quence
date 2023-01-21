@@ -1,0 +1,25 @@
+set rung_width 30
+set rung_color lightgray
+#set arrow_height 20
+#set arrow_width 10
+
+Alice -> Bob
+Alice -# Bob: Adjacent
+Alice ->> Mallory
+Alice -# Mallory: Skip
+Alice -> Mallory [duration=2, advance=-1]
+Alice -# Mallory [duration=2, advance=-2]
+Alice -> Bob [duration=2, advance=-1]
+Alice --# Bob [duration=2, advance=-1]
+Alice -> Bob [duration=3, advance=-2]
+Alice --# Bob [duration=3, advance=-4]
+
+Mallory -> Bob
+Mallory -# Bob [advance=0]
+Mallory -> Bob [duration=2, advance=-1]
+Mallory -# Bob [duration=2, advance=0]
+
+Mallory -> Alice
+Mallory --# Alice [advance=-1]
+Mallory -> Alice [duration=3, advance=-2]
+Mallory --# Alice [duration=3]

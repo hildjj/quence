@@ -118,7 +118,7 @@
   "props": {
     "arrow_color": "black",
     "arrow_height": 10,
-    "arrow_width": 15,
+    "arrow_width": 4,
     "auto_number": false,
     "background": "white",
     "block_tab_fill": "gray",
