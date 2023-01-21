@@ -1114,7 +1114,7 @@
   "props": {
     "arrow_color": "purple",
     "arrow_height": 10,
-    "arrow_width": 15,
+    "arrow_width": 4,
     "auto_number": null,
     "background": "white",
     "block_tab_fill": "gray",
