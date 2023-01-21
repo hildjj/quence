@@ -12,8 +12,8 @@
   "author": "Joe Hildebrand <joe-github@cursive.net>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "@parcel/core": "2.8.2",
-    "@parcel/transformer-inline-string": "2.8.2",
+    "@parcel/core": "2.8.3",
+    "@parcel/transformer-inline-string": "2.8.3",
     "assert": "2.0.0",
     "brfs": "2.0.2",
     "browserify-zlib": "0.2.0",
@@ -21,10 +21,10 @@
     "constants-browserify": "1.0.0",
     "events": "3.3.0",
     "monaco-editor": "0.35.0-dev.20230110",
-    "parcel": "2.8.2",
+    "parcel": "2.8.3",
     "path-browserify": "1.0.1",
     "process": "0.11.10",
-    "punycode": "^2.2.0",
+    "punycode": "^2.3.0",
     "quence": "link:..",
     "querystring-es3": "0.2.1",
     "stream-browserify": "3.0.0",
@@ -34,9 +34,6 @@
   },
   "alias": {
     "fs": "./virtual-fs.js",
-    "os": false,
-    "log4js": {
-      "global": "Log4js"
-    }
+    "os": false
   }
 }

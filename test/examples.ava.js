@@ -1,11 +1,8 @@
 import * as quence from '../lib/index.js'
 import Store from './store.js'
 import fs from 'fs'
-import l4js from 'log4js'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
-const log = l4js.getLogger()
-log.level = 'off'
 
 const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
 const DROPS = new URL('../examples/drops.wsd', import.meta.url)

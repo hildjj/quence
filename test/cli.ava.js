@@ -1,6 +1,5 @@
 import Store from './store.js'
 import {execa} from 'execa'
-import l4js from 'log4js'
 import {main} from '../lib/cli.js'
 import path from 'path'
 // eslint-disable-next-line node/no-missing-import
@@ -33,24 +32,6 @@ async function run(...argv) {
     error,
   }
 }
-
-test.before('Capture log events', () => {
-  l4js.configure({
-    appenders: {test: {type: 'recording'}},
-    categories: {default: {appenders: ['test'], level: 'WARN'}},
-  })
-})
-
-test.after('Reset logging', () => {
-  l4js.configure({
-    appenders: {out: {type: 'stdout'}},
-    categories: {default: {appenders: ['out'], level: 'WARN'}},
-  })
-})
-
-test.afterEach('clear logger', () => {
-  l4js.recording().erase()
-})
 
 test('cli', async t => {
   const help = await run('-h')

@@ -52,7 +52,7 @@
         "col": 1,
         "tm": 1
       },
-      "msg": "Test"
+      "msg": "[0] Test"
     },
     {
       "_line": 14,
@@ -75,7 +75,7 @@
         "col": 1,
         "tm": 2
       },
-      "msg": "dash it all"
+      "msg": "[1] dash it all"
     },
     {
       "_line": 15,
@@ -98,7 +98,7 @@
         "col": 0,
         "tm": 3
       },
-      "msg": "back dash"
+      "msg": "[2] back dash"
     },
     {
       "_line": 16,
@@ -121,7 +121,7 @@
         "col": 1,
         "tm": 4
       },
-      "msg": "open"
+      "msg": "[3] open"
     },
     {
       "_line": 17,
@@ -144,7 +144,7 @@
         "col": 0,
         "tm": 5
       },
-      "msg": "back open"
+      "msg": "[4] back open"
     },
     {
       "_line": 18,
@@ -167,7 +167,7 @@
         "col": 1,
         "tm": 6
       },
-      "msg": "Dash Open"
+      "msg": "[5] Dash Open"
     },
     {
       "_line": 19,
@@ -190,7 +190,7 @@
         "col": 0,
         "tm": 7
       },
-      "msg": "dash back open"
+      "msg": "[6] dash back open"
     },
     {
       "_line": 20,
@@ -213,7 +213,7 @@
         "col": 1,
         "tm": 8
       },
-      "msg": "miss LtoR"
+      "msg": "[7] miss LtoR"
     },
     {
       "_line": 21,
@@ -236,7 +236,7 @@
         "col": 1,
         "tm": 9
       },
-      "msg": "dash miss LtoR"
+      "msg": "[8] dash miss LtoR"
     },
     {
       "_line": 22,
@@ -259,7 +259,7 @@
         "col": 0,
         "tm": 10
       },
-      "msg": "miss RtoL"
+      "msg": "[9] miss RtoL"
     },
     {
       "_line": 23,
@@ -282,7 +282,7 @@
         "col": 0,
         "tm": 11
       },
-      "msg": "dash miss RtoL"
+      "msg": "[10] dash miss RtoL"
     },
     {
       "_line": 24,
@@ -305,7 +305,7 @@
         "col": 0,
         "tm": 13
       },
-      "msg": "Self-drop"
+      "msg": "[11] Self-drop"
     },
     {
       "_line": 25,
@@ -328,7 +328,7 @@
         "col": 1,
         "tm": 14
       },
-      "msg": "<->"
+      "msg": "[12] <->"
     },
     {
       "_line": 26,
@@ -351,7 +351,7 @@
         "col": 1,
         "tm": 15
       },
-      "msg": "<->>"
+      "msg": "[13] <->>"
     },
     {
       "_line": 27,
@@ -374,7 +374,7 @@
         "col": 1,
         "tm": 16
       },
-      "msg": "<<->"
+      "msg": "[14] <<->"
     },
     {
       "_line": 28,
@@ -397,7 +397,7 @@
         "col": 1,
         "tm": 17
       },
-      "msg": "<<->>"
+      "msg": "[15] <<->>"
     },
     {
       "_line": 29,
@@ -420,7 +420,7 @@
         "col": 1,
         "tm": 18
       },
-      "msg": "<-->"
+      "msg": "[16] <-->"
     },
     {
       "_line": 30,
@@ -443,7 +443,7 @@
         "col": 1,
         "tm": 19
       },
-      "msg": "<-->>"
+      "msg": "[17] <-->>"
     },
     {
       "_line": 31,
@@ -466,7 +466,7 @@
         "col": 1,
         "tm": 20
       },
-      "msg": "<<-->"
+      "msg": "[18] <<-->"
     },
     {
       "_line": 32,
@@ -489,7 +489,7 @@
         "col": 1,
         "tm": 21
       },
-      "msg": "<<-->>"
+      "msg": "[19] <<-->>"
     },
     {
       "_line": 34,
@@ -629,7 +629,7 @@
         "col": 1,
         "tm": 35
       },
-      "msg": "Test duration=2",
+      "msg": "[20] Test duration=2",
       "tm": 33
     },
     {
@@ -655,7 +655,7 @@
         "col": 0,
         "tm": 34
       },
-      "msg": "Another test duration=1"
+      "msg": "[21] Another test duration=1"
     },
     {
       "_line": 47,
@@ -682,7 +682,8 @@
         "nm": "Alice",
         "col": 1,
         "tm": 36
-      }
+      },
+      "msg": "[22]"
     },
     {
       "_line": 49,
@@ -728,7 +729,8 @@
         "nm": "Bob",
         "col": 0,
         "tm": 39
-      }
+      },
+      "msg": "[23]"
     },
     {
       "_line": 52,
@@ -773,7 +775,7 @@
         "col": 0,
         "tm": 42
       },
-      "msg": "Hey!"
+      "msg": "[24] Hey!"
     },
     {
       "_line": 55,
@@ -817,7 +819,8 @@
         "nm": "Bob",
         "col": 0,
         "tm": 45
-      }
+      },
+      "msg": "[25]"
     },
     {
       "_line": 58,
@@ -888,7 +891,7 @@
         "col": 1,
         "tm": 50
       },
-      "msg": "xxxy"
+      "msg": "[26] xxxy"
     },
     {
       "_line": 65,
@@ -913,7 +916,7 @@
         "col": 0,
         "tm": 53
       },
-      "msg": "This is a long label (TODO: wrap)"
+      "msg": "[27] This is a long label (TODO: wrap)"
     },
     {
       "_line": 66,
@@ -936,7 +939,7 @@
         "col": 0,
         "tm": 55
       },
-      "msg": "-->"
+      "msg": "[28] -->"
     },
     {
       "_line": 67,
@@ -959,7 +962,7 @@
         "col": 0,
         "tm": 57
       },
-      "msg": "->>"
+      "msg": "[29] ->>"
     },
     {
       "_line": 68,
@@ -982,7 +985,7 @@
         "col": 0,
         "tm": 59
       },
-      "msg": "<->"
+      "msg": "[30] <->"
     },
     {
       "_line": 69,
@@ -1017,7 +1020,8 @@
         "nm": "carlos",
         "col": 2,
         "tm": 61
-      }
+      },
+      "msg": "[31]"
     },
     {
       "_line": 72,
@@ -1041,7 +1045,8 @@
         "nm": "carlos",
         "col": 2,
         "tm": 63
-      }
+      },
+      "msg": "[32]"
     },
     {
       "_line": 75,
@@ -1064,7 +1069,7 @@
         "col": 4,
         "tm": 64
       },
-      "msg": "Lost"
+      "msg": "[33] Lost"
     },
     {
       "_line": 76,
@@ -1087,7 +1092,7 @@
         "col": 3,
         "tm": 66
       },
-      "msg": "Lost self"
+      "msg": "[34] Lost self"
     },
     {
       "_line": 80,
@@ -1097,7 +1102,7 @@
         "col": 1,
         "tm": 67
       },
-      "msg": "Alice note"
+      "msg": "[35] Alice note"
     },
     {
       "_line": 82,
@@ -1107,7 +1112,7 @@
         "col": 4,
         "tm": 68
       },
-      "msg": "B note"
+      "msg": "[36] B note"
     }
   ],
   "blockStack": [],
@@ -1115,7 +1120,7 @@
     "arrow_color": "purple",
     "arrow_height": 10,
     "arrow_width": 4,
-    "auto_number": null,
+    "auto_number": true,
     "background": "white",
     "block_tab_fill": "gray",
     "block_stroke": "gray",
@@ -1136,5 +1141,5 @@
   },
   "current_time": 69,
   "max_time": 68,
-  "current_arrow": 0
+  "current_arrow": 37
 }

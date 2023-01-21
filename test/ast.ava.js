@@ -1,9 +1,6 @@
 import {Arrow, Diagram, Step} from '../lib/ast.js'
-import l4js from 'log4js'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
-const log = l4js.getLogger()
-log.level = 'quiet'
 
 test('arrow create', t => {
   const a = new Arrow(null, '-', '>')

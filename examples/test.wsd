@@ -1,5 +1,5 @@
 set arrow_color purple
-set auto_number
+# set auto_number
 set rung_width 10
 set rung_color blue
 set line_color red

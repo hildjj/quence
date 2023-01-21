@@ -51,19 +51,18 @@
   ],
   "dependencies": {
     "commander": "10.0.0",
-    "log4js": "^6.7.1",
     "pdfkit": "^0.13.0",
     "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "^1.0.1",
+    "@cto.af/eslint-config": "^1.0.2",
     "@types/node": "18.11.18",
     "@types/pdfkit": "0.12.8",
     "@types/xmlbuilder": "11.0.1",
     "ava": "latest",
     "c8": "7.12.0",
     "eslint": "latest",
-    "eslint-plugin-ava": "^13.2.0",
+    "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-node": "^11.1.0",
     "execa": "6.1.0",
     "package-extract": "1.0.2",
