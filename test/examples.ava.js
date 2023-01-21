@@ -56,6 +56,16 @@ test('json', async t => {
   t.snapshot(o.toString('utf-8'))
 })
 
+test('web svg', async t => {
+  const CSS = `
+text {
+  fill: purple
+}
+`
+  const store = await quence.draw('A->B', {output: 'svg', CSS}, new Store())
+  t.regex(store.read().toString(), /purple/)
+})
+
 test('edges', async t => {
   await t.throws(() => quence.draw(`
 dup: A->B
