@@ -226,9 +226,9 @@ Programmatic Interface
 import {draw} from 'quence'
 import fs from 'fs'
 const out = fs.createWriteStream('output.pdf')
-await draw("A->B", "pdf", out);
+draw("A->B", "pdf", out);
 
-// Note that the promise completes when processing completes, not when the
+// Note that the draw function returns when processing completes, not when the
 // stream is finished being written.  Wait on the stream's `finish` event
 // if you need that.
 ```

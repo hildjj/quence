@@ -24,3 +24,4 @@ tsconfig.json
 .eslintrc.cjs
 .gitattributes
 ava.config.cjs
+CHANGELOG.md
