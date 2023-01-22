@@ -30,11 +30,11 @@ export class Point {
      */
     toString(suffix?: string): string;
     /**
-     * @param {import('xmlbuilder').XMLElement} el
+     * @param {import('xmlbuilder2/lib/interfaces').XMLBuilder} el
      * @param {*} suffix
      * @returns
      */
-    att(el: import('xmlbuilder').XMLElement, suffix?: any): import("xmlbuilder").XMLElement;
+    att(el: import('xmlbuilder2/lib/interfaces').XMLBuilder, suffix?: any): import("xmlbuilder2/lib/interfaces.js").XMLBuilder;
     /**
      * Translate a point by x, y.
      *

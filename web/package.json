@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "build": "parcel build index.html --no-content-hash --no-source-maps --public-url '.' --no-autoinstall --dist-dir ../docs",
-    "clean": "rm -rf ../docs .parcel-cache && mkdir ../docs && ./build_workers.sh"
+    "postbuild": "find ../docs -type f -name '*.js' -not -name 'index.*.js' -not -name 'editor.*.js' -delete",
+    "clean": "rm -rf ../docs .parcel-cache && mkdir ../docs"
   },
   "keywords": [],
   "author": "Joe Hildebrand <joe-github@cursive.net>",

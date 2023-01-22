@@ -52,13 +52,12 @@
   "dependencies": {
     "commander": "10.0.0",
     "pdfkit": "^0.13.0",
-    "xmlbuilder": "^15.1.1"
+    "xmlbuilder2": "3.0.2"
   },
   "devDependencies": {
     "@cto.af/eslint-config": "^1.0.2",
     "@types/node": "18.11.18",
     "@types/pdfkit": "0.12.8",
-    "@types/xmlbuilder": "11.0.1",
     "ava": "latest",
     "c8": "7.12.0",
     "eslint": "latest",

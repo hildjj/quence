@@ -5,23 +5,15 @@ import * as initial from 'bundle-text:./initial.wsd'
 import * as monaco from 'monaco-editor'
 import {SyntaxError, draw} from 'quence'
 import {config, theme, tokenizer} from './wsd_language.js'
+import EditorWorker from 'url:monaco-editor/esm/vs/editor/editor.worker.js'
 import Store from '../test/store.js'
 
 self.MonacoEnvironment = {
   getWorkerUrl(moduleId, label) {
-    if (label === 'json') {
-      return './json.worker.js'
+    if (label === 'editorWorkerService') {
+      return EditorWorker
     }
-    if (label === 'css' || label === 'scss' || label === 'less') {
-      return './css.worker.js'
-    }
-    if (label === 'html' || label === 'handlebars' || label === 'razor') {
-      return './html.worker.js'
-    }
-    if (label === 'typescript' || label === 'javascript') {
-      return './ts.worker.js'
-    }
-    return './editor.worker.js'
+    throw new Error(`Unknown worker: ${{moduleId, label}}`)
   },
 }
 

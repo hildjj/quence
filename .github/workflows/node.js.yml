@@ -4,7 +4,7 @@ name: Tests
 on:
   push:
     branches:
-      - '*'
+      - main
   pull_request:
     branches: [main]
 
@@ -40,6 +40,10 @@ jobs:
           run_install: true
       - name: Lint
         run: npm run lint
+      - name: Type check
+        run: |
+          npm run types
+          git diff --quiet --exit-code --cached
       - name: Test ${{ matrix.node-version }}
         run: npm run coverage
       - name: Coveralls Parallel

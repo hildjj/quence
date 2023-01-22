@@ -1,13 +1,21 @@
-export default class SVGDriver extends Driver {
-    path_count: number;
-    doc: xml.XMLElement;
-    /** @type {xml.XMLElement} */
-    top: xml.XMLElement;
+/**
+ * @extends {Driver<Builder>}
+ */
+export default class SVGDriver extends Driver<import("xmlbuilder2/lib/interfaces.js").XMLBuilder> {
     /**
-     * @param {string} [name]
-     * @returns {xml.XMLElement}
+     * @param {import('./ast.js').Diagram} diag
+     * @param {import('./index.js').DrawOptions} argv
      */
-    draw_group(name?: string): xml.XMLElement;
+    constructor(diag: import('./ast.js').Diagram, argv: import('./index.js').DrawOptions);
+    path_count: number;
+    /**
+     * @type {Builder}
+     */
+    doc2: Builder;
+    /**
+     * @type {Builder}
+     */
+    root: Builder;
     /**
      * @param {string|(string|Point)[]} cmds
      * @param {string} klasses Space-separated CSS classes
@@ -15,6 +23,6 @@ export default class SVGDriver extends Driver {
      */
     draw_path(cmds: string | (string | Point)[], klasses: string): any;
 }
+export type Builder = import('xmlbuilder2/lib/interfaces').XMLBuilder;
 import Driver from "./driver.js";
-import xml from "xmlbuilder";
 import { Point } from "./point.js";
