@@ -1,4 +1,10 @@
-export default class PDFDriver extends Driver {
+/** @extends Driver<void> */
+export default class PDFDriver extends Driver<void> {
+    /**
+     * @param {import('./ast.js').Diagram} diag
+     * @param {import('./index.js').DrawOptions} argv
+     */
+    constructor(diag: import('./ast.js').Diagram, argv: import('./index.js').DrawOptions);
     styles: {
         text: {
             font: string;
@@ -93,5 +99,13 @@ export default class PDFDriver extends Driver {
      * @param {number} theta
      */
     draw_label(p: import('./point.js').Point, str: string, klasses: string, theta: number): void;
+    /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} theta Angle in radians
+     * @param {() => void} func All of the things created in the func are
+     *   transformed
+     */
+    transform(x: number, y: number, theta: number, func: () => void): void;
 }
 import Driver from "./driver.js";

@@ -1,4 +1,7 @@
-export default class Driver {
+/**
+ * @template [T=object]
+ */
+export default class Driver<T = any> {
     /**
      * @param {import('./ast.js').Diagram} diag
      * @param {import('./index.js').DrawOptions} argv
@@ -28,7 +31,8 @@ export default class Driver {
         text_size: number;
         time_height: number;
     };
-    top: any;
+    /** @type {T} */
+    top: T;
     argv: import("./index.js").DrawOptions;
     width: number;
     height: number;
@@ -38,10 +42,10 @@ export default class Driver {
     clear(): void;
     /**
      * @param {string} [name]
-     * @returns {any} The group object, specific to driver type
+     * @returns {T} The group object, specific to driver type
      * @abstract
      */
-    draw_group(name?: string): any;
+    draw_group(name?: string): T;
     /**
      * @param {Point} p The center of the text
      * @param {string} str The text
@@ -55,9 +59,9 @@ export default class Driver {
      * inside the group.
      *
      * @param {string} name
-     * @param {(group: any) => void} func
+     * @param {(group: T) => void} func
      */
-    group(name: string, func: (group: any) => void): void;
+    group(name: string, func: (group: T) => void): void;
     /**
      * Write out the metadata associated with this quence version.
      *
@@ -124,11 +128,11 @@ export default class Driver {
      * @param {number} x
      * @param {number} y
      * @param {number} theta Angle in radians
-     * @param {() => void} func All of the things created in the func are
+     * @param {(t: T) => void} func All of the things created in the func are
      *   transformed
      * @abstract
      */
-    transform(x: number, y: number, theta: number, func: () => void): void;
+    transform(x: number, y: number, theta: number, func: (t: T) => void): void;
     /**
      * @param {Point} p Position of the point of the arrow
      * @param {number} theta Angle in Radians
