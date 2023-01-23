@@ -15,9 +15,11 @@
   "title": "💩💩",
   "data": [
     {
-      "_line": 6,
+      "_line": 10,
       "kind": "MESSAGE",
-      "props": {},
+      "props": {
+        "background": null
+      },
       "timepoint": null,
       "from": {
         "nm": "ålicë",
@@ -26,19 +28,19 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
+        "dash": "--",
         "end": ">"
       },
-      "classes": "solid closed_forward",
+      "classes": "dashed closed_forward",
       "to": {
         "nm": "bôb",
         "col": 0,
         "tm": 1
       },
-      "msg": "composed"
+      "msg": "çomposed"
     },
     {
-      "_line": 7,
+      "_line": 11,
       "kind": "MESSAGE",
       "props": {},
       "timepoint": null,
@@ -61,7 +63,7 @@
       "msg": "decomposed ©"
     },
     {
-      "_line": 8,
+      "_line": 12,
       "kind": "MESSAGE",
       "props": {},
       "timepoint": null,
@@ -72,16 +74,39 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
-        "end": ">"
+        "dash": "--",
+        "end": ">>"
       },
-      "classes": "solid closed_forward",
+      "classes": "dashed open_forward",
       "to": {
         "nm": "bôb",
         "col": 0,
         "tm": 3
       },
       "msg": "💩💩"
+    },
+    {
+      "_line": 13,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "bôb",
+        "col": 0,
+        "tm": 4
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "ålicë",
+        "col": 1,
+        "tm": 4
+      },
+      "msg": "Esc: \\\ttab\r\nnewline"
     }
   ],
   "blockStack": [],
@@ -108,7 +133,7 @@
     "text_size": 13,
     "time_height": 20
   },
-  "current_time": 4,
-  "max_time": 3,
+  "current_time": 5,
+  "max_time": 4,
   "current_arrow": 0
 }

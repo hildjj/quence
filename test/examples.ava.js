@@ -5,40 +5,41 @@ import fs from 'fs'
 import test from 'ava'
 
 const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
-const DROPS = new URL('../examples/drops.wsd', import.meta.url)
+
+function canon(o) {
+  // Don't care about date
+  o = o.replace(
+    /<dc:date>[^<]+<\/dc:date>/g,
+    '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
+  )
+  // Don't care about version
+  return o.replace(
+    />v\d+\.\d+\.\d+<\/tspan>/,
+    '>v0.2.1</tspan>'
+  )
+}
 
 test('svg', async t => {
   const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
   const output = quence.draw(buf, 'svg', new Store())
-  let o = output.read().toString('utf-8')
-  // Don't care about date
-  o = o.replace(
-    /<dc:date>[^<]+<\/dc:date>/g,
-    '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
-  )
-  // Don't care about version
-  o = o.replace(
-    />v\d+\.\d+\.\d+<\/tspan>/,
-    '>v0.2.1</tspan>'
-  )
-  t.snapshot(o)
+  const o = output.read().toString('utf-8')
+  t.snapshot(canon(o))
 })
 
 test('svg drops', async t => {
+  const DROPS = new URL('../examples/drops.wsd', import.meta.url)
   const buf = await fs.promises.readFile(DROPS, 'utf-8')
   const output = quence.draw(buf, 'svg', new Store())
-  let o = output.read().toString('utf-8')
-  // Don't care about date
-  o = o.replace(
-    /<dc:date>[^<]+<\/dc:date>/g,
-    '<dc:date>2017-06-27T06:26:23.547Z</dc:date>'
-  )
-  // Don't care about version
-  o = o.replace(
-    />v\d+\.\d+\.\d+<\/tspan>/,
-    '>v0.2.1</tspan>'
-  )
-  t.snapshot(o)
+  const o = output.read().toString('utf-8')
+  t.snapshot(canon(o))
+})
+
+test('svg unicode', async t => {
+  const UNICODE = new URL('../examples/unicode.wsd', import.meta.url)
+  const buf = await fs.promises.readFile(UNICODE, 'utf-8')
+  const output = quence.draw(buf, 'svg', new Store())
+  const o = output.read().toString('utf-8')
+  t.snapshot(canon(o))
 })
 
 test('pdf', async t => {
@@ -77,4 +78,7 @@ A@doesNotExist->B
   `, {output: 'json'}, new Store()))
 
   await t.throws(() => quence.draw('', {output: 'not valid'}))
+
+  await t.throws(() => quence.draw('set unknown_property', 'json'))
 })
+

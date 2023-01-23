@@ -1,8 +1,13 @@
+  #
+  # Indented cômment
+  #
 set font "Source-Code-Pro-for-Powerline.ttf"
-set no_link
+set no_link true
+set auto_number false
 
-title 💩\u{1F4A9}
-participant "Bôb\"\'" as bôb
-ålicë -> bôb: composed
-ålicë -> bôb: decomposed \xa9
-\u00e5lic\u{eb} -> b\u00f4b: 💩\u{1F4A9}
+title 💩\u{1F4A9}# Title cômment
+participant "Bôb\"\'" as bôb # Participant cômment [background=""]
+ålicë --> bôb: \u00e7omposed [background]
+ålicë -> bôb: decomposed \xa9 []
+\u00e5lic\u{eb} -->> b\u00f4b: 💩\u{1F4A9}
+bôb -> ålicë: Esc: \\\ttab\r\nnewline
