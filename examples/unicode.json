@@ -1,0 +1,139 @@
+{
+  "parts": [
+    {
+      "col": 0,
+      "nm": "bôb",
+      "desc": "Bôb\"'"
+    },
+    {
+      "col": 1,
+      "nm": "ålicë",
+      "desc": "ålicë"
+    }
+  ],
+  "timepoints": {},
+  "title": "💩💩",
+  "data": [
+    {
+      "_line": 10,
+      "kind": "MESSAGE",
+      "props": {
+        "background": null
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "ålicë",
+        "col": 1,
+        "tm": 1
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "--",
+        "end": ">"
+      },
+      "classes": "dashed closed_forward",
+      "to": {
+        "nm": "bôb",
+        "col": 0,
+        "tm": 1
+      },
+      "msg": "çomposed"
+    },
+    {
+      "_line": 11,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "ålicë",
+        "col": 1,
+        "tm": 2
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "bôb",
+        "col": 0,
+        "tm": 2
+      },
+      "msg": "decomposed ©"
+    },
+    {
+      "_line": 12,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "ålicë",
+        "col": 1,
+        "tm": 3
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "--",
+        "end": ">>"
+      },
+      "classes": "dashed open_forward",
+      "to": {
+        "nm": "bôb",
+        "col": 0,
+        "tm": 3
+      },
+      "msg": "💩💩"
+    },
+    {
+      "_line": 13,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "bôb",
+        "col": 0,
+        "tm": 4
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "solid closed_forward",
+      "to": {
+        "nm": "ålicë",
+        "col": 1,
+        "tm": 4
+      },
+      "msg": "Esc: \\\ttab\r\nnewline"
+    }
+  ],
+  "blockStack": [],
+  "props": {
+    "arrow_color": "black",
+    "arrow_height": 10,
+    "arrow_width": 4,
+    "auto_number": false,
+    "background": "white",
+    "block_tab_fill": "gray",
+    "block_stroke": "gray",
+    "column_width": 150,
+    "font": "Source-Code-Pro-for-Powerline.ttf",
+    "label_space_x": 3,
+    "label_space_y": -3,
+    "line_color": "black",
+    "line_width": 1,
+    "no_clear": false,
+    "no_feet": false,
+    "no_link": true,
+    "rung_color": "black",
+    "rung_width": 1,
+    "text_color": "black",
+    "text_size": 13,
+    "time_height": 20
+  },
+  "current_time": 5,
+  "max_time": 4,
+  "current_arrow": 0
+}
