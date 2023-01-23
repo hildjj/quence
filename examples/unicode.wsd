@@ -1,0 +1,8 @@
+set font "Source-Code-Pro-for-Powerline.ttf"
+set no_link
+
+title 💩\u{1F4A9}
+participant "Bôb\"\'" as bôb
+ålicë -> bôb: composed
+ålicë -> bôb: decomposed \xa9
+\u00e5lic\u{eb} -> b\u00f4b: 💩\u{1F4A9}
