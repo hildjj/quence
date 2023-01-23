@@ -19,6 +19,8 @@ Released: TBD
 - (FEATURE) Built-in API descriptions for Typescript
 - (REFACTOR) Removed useless logging
 - (UPDATE) Updated all dependencies to latest
+- (FEATURE) Adds unicode support, including \u0000, \u{0}, and \x00 escapes.
+  Participant names are canonicalized using NFC.
 
 ### Bug Fixes
 
