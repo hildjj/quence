@@ -1,4 +1,4 @@
-ARROW = ../bin/quence
+ARROW = ../bin/quence.js
 SRCS = $(wildcard *.wsd)
 PICS = ${SRCS:.wsd=.png}
 
@@ -12,7 +12,7 @@ clean:
 	-$(RM) *.pdf *.png
 
 .wsd.pdf :
-	$(ARROW) -o pdf $< -n
+	$(ARROW) -p no_link -o pdf $< -n
 
 .pdf.png :
 	gs -q -dNOPAUSE -dBATCH -sDEVICE=pngalpha -r100 -dEPSCrop -sOutputFile=$@ $<
