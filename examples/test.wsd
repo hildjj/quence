@@ -29,7 +29,15 @@ Bob <<->> Alice: <<->>
 Bob <--> Alice: <-->
 Bob <-->> Alice: <-->>
 Bob <<--> Alice: <<-->
-Bob <<-->> Alice: <<-->>
+Bob <<-->> Alice: <<-->> [duration=2]
+Alice <-> Bob: <-> R
+Alice <->> Bob: <->> R
+Alice <<-> Bob: <<-> R
+Alice <<->> Bob: <<->> R
+Alice <--> Bob: <--> R
+Alice <-->> Bob: <-->> R
+Alice <<--> Bob: <<--> R
+Alice <<-->> Bob: <<-->> R [duration=2]
 
 loop outer
 	loop first # with a comment

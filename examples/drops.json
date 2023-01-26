@@ -98,10 +98,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
+        "dash": "--",
         "end": "#"
       },
-      "classes": "solid",
+      "classes": "dashed",
       "to": {
         "nm": "Mallory",
         "col": 2,
@@ -149,10 +149,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
+        "dash": "--",
         "end": "#"
       },
-      "classes": "solid",
+      "classes": "dashed",
       "to": {
         "nm": "Mallory",
         "col": 2,
@@ -199,10 +199,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "--",
+        "dash": "-",
         "end": "#"
       },
-      "classes": "dashed",
+      "classes": "solid",
       "to": {
         "nm": "Bob",
         "col": 1,
@@ -249,10 +249,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "--",
+        "dash": "-",
         "end": "#"
       },
-      "classes": "dashed",
+      "classes": "solid",
       "to": {
         "nm": "Bob",
         "col": 1,
@@ -295,10 +295,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
+        "dash": "--",
         "end": "#"
       },
-      "classes": "solid",
+      "classes": "dashed",
       "to": {
         "nm": "Bob",
         "col": 1,
@@ -345,10 +345,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "-",
+        "dash": "--",
         "end": "#"
       },
-      "classes": "solid",
+      "classes": "dashed",
       "to": {
         "nm": "Bob",
         "col": 1,
@@ -391,10 +391,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "--",
+        "dash": "-",
         "end": "#"
       },
-      "classes": "dashed",
+      "classes": "solid",
       "to": {
         "nm": "Alice",
         "col": 0,
@@ -440,10 +440,10 @@
       },
       "arrow": {
         "begin": null,
-        "dash": "--",
+        "dash": "-",
         "end": "#"
       },
-      "classes": "dashed",
+      "classes": "solid",
       "to": {
         "nm": "Alice",
         "col": 0,

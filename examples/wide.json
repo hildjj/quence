@@ -1,0 +1,137 @@
+{
+  "parts": [
+    {
+      "col": 0,
+      "nm": "Alice",
+      "desc": "Alice"
+    },
+    {
+      "col": 1,
+      "nm": "Bob",
+      "desc": "Bob"
+    }
+  ],
+  "timepoints": {},
+  "title": null,
+  "data": [
+    {
+      "_line": 6,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 1
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 1
+      }
+    },
+    {
+      "_line": 7,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 2
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 4
+      }
+    },
+    {
+      "_line": 8,
+      "kind": "MESSAGE",
+      "props": {
+        "duration": 2
+      },
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 5
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 7
+      }
+    },
+    {
+      "_line": 9,
+      "kind": "MESSAGE",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 1,
+        "tm": 8
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Alice",
+        "col": 0,
+        "tm": 8
+      }
+    }
+  ],
+  "blockStack": [],
+  "props": {
+    "arrow_color": "black",
+    "arrow_height": 10,
+    "arrow_width": 4,
+    "auto_number": false,
+    "background": "white",
+    "block_tab_fill": "gray",
+    "block_stroke": "gray",
+    "column_width": 150,
+    "font": "Helvetica",
+    "label_space_x": 3,
+    "label_space_y": -3,
+    "line_color": "black",
+    "line_width": 20,
+    "no_clear": false,
+    "no_feet": false,
+    "no_link": false,
+    "rung_color": "lightgray",
+    "rung_width": 10,
+    "text_color": "black",
+    "text_size": 13,
+    "time_height": 50
+  },
+  "current_time": 9,
+  "max_time": 8,
+  "current_arrow": 0
+}
