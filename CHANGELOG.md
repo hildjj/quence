@@ -11,6 +11,7 @@ Released: 2023-01-26
 - (BREAKING) Now requires node 14+
 - (BREAKING) Major API refactor
 - (BREAKING) New CLI.  Only some thought given to backward-compatibility.
+- (FEATURE) New web interface, available at https://hildjj.github.io/quence/
 
 ### Minor Changes
 
