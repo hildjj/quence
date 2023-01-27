@@ -16,6 +16,13 @@ export class Point {
      */
     static angle(p1: Point, p2: Point): number;
     /**
+     * Convert radians to degrees.
+     *
+     * @param {number} theta Angle in radians
+     * @returns {number} Angle in degrees
+     */
+    static deg(theta: number): number;
+    /**
      * Create a point
      *
      * @param {number} x
@@ -43,6 +50,14 @@ export class Point {
      * @returns {Point}
      */
     adjust(dx: number, dy: number): Point;
+    /**
+     * Adjust point in polar coordinates
+     *
+     * @param {number} r Radius
+     * @param {number} theta Angle, in radians
+     * @returns {Point}
+     */
+    polarAdjust(r: number, theta: number): Point;
 }
 /**
  * Position is a point that was identified by a column and time, which is
