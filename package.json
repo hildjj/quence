@@ -18,7 +18,7 @@
     "build": "peggy --format es lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
     "types": "tsc",
-    "version": "package-extract name homepage version && (cd examples && make clean && make) && git add examples package.js"
+    "version": "package-extract name homepage version && npm run snaps && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add docs examples test/snapshots package.js"
   },
   "repository": {
     "type": "git",
