@@ -4,7 +4,7 @@ This file documents all notable changes to quence.
 
 ## v2.0.0
 
-Released: TBD
+Released: 2023-01-26
 
 ### Major Changes
 
