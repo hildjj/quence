@@ -6,20 +6,20 @@ set rung_color lightgray
 Alice -> Bob
 Alice -# Bob: Adjacent
 Alice ->> Mallory
-Alice -# Mallory: Skip
+Alice --# Mallory: Skip
 Alice -> Mallory [duration=2, advance=-1]
-Alice -# Mallory [duration=2, advance=-2]
+Alice --# Mallory [duration=2, advance=-2]
 Alice -> Bob [duration=2, advance=-1]
-Alice --# Bob [duration=2, advance=-1]
+Alice -# Bob [duration=2, advance=-1]
 Alice -> Bob [duration=3, advance=-2]
-Alice --# Bob [duration=3, advance=-4]
+Alice -# Bob [duration=3, advance=-4]
 
 Mallory -> Bob
-Mallory -# Bob [advance=0]
+Mallory --# Bob [advance=0]
 Mallory -> Bob [duration=2, advance=-1]
-Mallory -# Bob [duration=2, advance=0]
+Mallory --# Bob [duration=2, advance=0]
 
 Mallory -> Alice
-Mallory --# Alice [advance=-1]
+Mallory -# Alice [advance=-1]
 Mallory -> Alice [duration=3, advance=-2]
-Mallory --# Alice [duration=3]
+Mallory -# Alice [duration=3]

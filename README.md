@@ -8,7 +8,6 @@ Arguments:
   FILE                        file names to process, "-" for stdin
 
 Options:
-  -n, --nolink                do not add project link to output
   -o, --output <type>         output type (choices: "js", "json", "pdf", "svg",
                               default: "pdf")
   -O, --out <FILE>            output file name, "-" for stdout. Not valid with

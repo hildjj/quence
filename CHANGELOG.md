@@ -25,3 +25,5 @@ Released: TBD
 ### Bug Fixes
 
 - (BUG) Respect arrow_height and arrow_width
+- (BUG) Begin arrows were flipped for R2L lines
+- (BUG) Fix many issues with big line_width's

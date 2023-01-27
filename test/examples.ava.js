@@ -3,8 +3,9 @@ import Store from './store.js'
 import fs from 'fs'
 // eslint-disable-next-line node/no-missing-import
 import test from 'ava'
+import url from 'url'
 
-const EXAMPLE = new URL('../examples/test.wsd', import.meta.url)
+const EXAMPLES = new URL('../examples/', import.meta.url)
 
 function canon(o) {
   // Don't care about date
@@ -20,41 +21,46 @@ function canon(o) {
 }
 
 test('svg', async t => {
-  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = quence.draw(buf, 'svg', new Store())
-  const o = output.read().toString('utf-8')
-  t.snapshot(canon(o))
-})
-
-test('svg drops', async t => {
-  const DROPS = new URL('../examples/drops.wsd', import.meta.url)
-  const buf = await fs.promises.readFile(DROPS, 'utf-8')
-  const output = quence.draw(buf, 'svg', new Store())
-  const o = output.read().toString('utf-8')
-  t.snapshot(canon(o))
-})
-
-test('svg unicode', async t => {
-  const UNICODE = new URL('../examples/unicode.wsd', import.meta.url)
-  const buf = await fs.promises.readFile(UNICODE, 'utf-8')
-  const output = quence.draw(buf, 'svg', new Store())
-  const o = output.read().toString('utf-8')
-  t.snapshot(canon(o))
+  const dir = await fs.promises.readdir(EXAMPLES)
+  for (const f of dir) {
+    if (f.endsWith('.wsd')) {
+      const fn = new URL(f, EXAMPLES)
+      const buf = await fs.promises.readFile(fn, 'utf-8')
+      const output = quence.draw(buf, 'svg', new Store())
+      const o = await output.readFullString()
+      t.snapshot(canon(o), fn.toString())
+    }
+  }
 })
 
 test('pdf', async t => {
-  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = quence.draw(buf, {output: 'pdf'}, new Store())
-  const o = await output.readFull() // Wait for `finish` event
-  t.assert(o.length > 0)
-  t.is(o.toString('utf8', 0, 5), '%PDF-')
+  const cwd = process.cwd()
+  process.chdir(url.fileURLToPath(EXAMPLES))
+  const dir = await fs.promises.readdir(EXAMPLES)
+  for (const f of dir) {
+    if (f.endsWith('.wsd')) {
+      const fn = new URL(f, EXAMPLES)
+      const buf = await fs.promises.readFile(fn, 'utf-8')
+      const output = quence.draw(buf, 'pdf', new Store())
+      const o = await output.readFull()
+      t.assert(o.length > 0)
+      t.is(o.toString('utf8', 0, 5), '%PDF-')
+    }
+  }
+  process.chdir(cwd)
 })
 
 test('json', async t => {
-  const buf = await fs.promises.readFile(EXAMPLE, 'utf-8')
-  const output = quence.draw(buf, {output: 'json'}, new Store())
-  const o = output.read()
-  t.snapshot(o.toString('utf-8'))
+  const dir = await fs.promises.readdir(EXAMPLES)
+  for (const f of dir) {
+    if (f.endsWith('.wsd')) {
+      const fn = new URL(f, EXAMPLES)
+      const buf = await fs.promises.readFile(fn, 'utf-8')
+      const output = quence.draw(buf, 'json', new Store())
+      const o = await output.readFullString()
+      t.snapshot(o, fn.toString('utf8'))
+    }
+  }
 })
 
 test('web svg', async t => {

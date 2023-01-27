@@ -36,6 +36,9 @@ path.open {
   stroke: [arrow_color];
   fill: none;
 }
+path.solid {
+  stroke-linecap: round;
+}
 text.end {
   text-anchor: end;
 }

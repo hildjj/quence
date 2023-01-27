@@ -1,0 +1,9 @@
+set rung_width 10
+set rung_color lightgray
+set line_width 20
+set time_height 50
+
+Alice <-> Bob
+Alice <-> Bob [duration=2]
+Bob <-> Alice [duration=2]
+Bob <-> Alice
