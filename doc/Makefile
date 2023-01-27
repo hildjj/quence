@@ -12,7 +12,7 @@ clean:
 	-$(RM) *.pdf *.png
 
 .wsd.pdf :
-	$(ARROW) -p no_link -o pdf $< -n
+	$(ARROW) -p no_link -p line_color=lightgray -p arrow_color=lightgray -p rung_color=lightgray -p text_color=lightgray -o pdf $<
 
 .pdf.png :
 	gs -q -dNOPAUSE -dBATCH -sDEVICE=pngalpha -r100 -dEPSCrop -sOutputFile=$@ $<
