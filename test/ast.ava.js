@@ -47,6 +47,7 @@ test('diagram create', t => {
   t.throws(() => d.addStep(12))
   d.addAdvance(1, 2)
   const a1 = d.addEndpoint('Alice')
+  t.throws(() => a1.TM)
   const a2 = d.addEndpoint('Alice', 'here')
   const b1 = d.addEndpoint('Bob')
   t.throws(() => d.parts.add('Bob'))
