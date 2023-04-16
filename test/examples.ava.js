@@ -28,7 +28,7 @@ test('svg', async t => {
       const buf = await fs.promises.readFile(fn, 'utf-8')
       const output = quence.draw(buf, 'svg', new Store())
       const o = await output.readFullString()
-      t.snapshot(canon(o), fn.toString())
+      t.snapshot(canon(o), f)
     }
   }
 })
@@ -58,7 +58,7 @@ test('json', async t => {
       const buf = await fs.promises.readFile(fn, 'utf-8')
       const output = quence.draw(buf, 'json', new Store())
       const o = await output.readFullString()
-      t.snapshot(o, fn.toString('utf8'))
+      t.snapshot(o, f)
     }
   }
 })
