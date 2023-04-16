@@ -164,6 +164,22 @@ You can put a note on an endpoint using `note`, as in:
 note A: This is a note
 ```
 
+## Blocks
+
+You can create a dotted block boundary around a section using the `block`, `loop`, and `opt`
+commands, as in:
+
+```
+block Do a thing
+A-B: Some messages
+end
+```
+
+The difference between these commands is that `loop` and `opt` also
+produce a shaded tab with the words "loop" and "opt" respectively,
+whereas `block` just labels the block but with no shaded tab.
+
+
 ### Message properties
 
 <img src='https://raw.github.com/hildjj/quence/main/doc/messages.png' align='right'/>

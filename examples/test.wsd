@@ -83,6 +83,11 @@ Bob<->carlos [duration=1]
 A -# B: Lost
 A -# A: Lost self
 
+block An unlabeled block
+	Bob --> Bob: -->
+	Bob ->> Bob: ->>
+	Bob <-> Bob: <->
+end
 
 # Notes
 note Alice: Alice note
