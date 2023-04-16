@@ -25,3 +25,4 @@ tsconfig.json
 .gitattributes
 ava.config.cjs
 CHANGELOG.md
+vscode/
