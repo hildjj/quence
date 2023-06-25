@@ -1,6 +1,5 @@
 import {Buffer} from 'buffer'
 import Store from './store.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('Store', t => new Promise(resolve => {

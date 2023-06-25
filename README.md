@@ -166,12 +166,20 @@ note A: This is a note
 
 ## Blocks
 
-You can create a dotted block boundary around a section using the `block`, `loop`, and `opt`
-commands, as in:
+You can create a dotted block boundary around a section using the `block`,
+`loop`, and `opt` commands, as in:
 
 ```
 block Do a thing
-A-B: Some messages
+  A->B: Some messages
+end
+
+loop Many times
+  A->B: Some messages
+end
+
+opt Might happen
+  A->B: Some messages
 end
 ```
 

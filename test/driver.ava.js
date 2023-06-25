@@ -1,6 +1,5 @@
 import Driver from '../lib/driver.js'
 import {parse} from '../lib/grammar.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('driver', t => {
