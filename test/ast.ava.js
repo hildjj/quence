@@ -1,5 +1,4 @@
 import {Arrow, Diagram, Step} from '../lib/ast.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('arrow create', t => {

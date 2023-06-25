@@ -1,7 +1,6 @@
 import PDFDriver from '../lib/PDFDriver.js'
 import {Point} from '../lib/point.js'
 import {parse} from '../lib/grammar.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('PDF edges', t => {

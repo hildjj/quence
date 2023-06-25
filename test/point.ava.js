@@ -1,5 +1,4 @@
 import {Point} from '../lib/point.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('point', t => {

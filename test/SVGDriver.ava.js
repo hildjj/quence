@@ -1,7 +1,6 @@
 import {Point} from '../lib/point.js'
 import SVGDriver from '../lib/SVGDriver.js'
 import {parse} from '../lib/grammar.js'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 
 test('SVG edges', t => {

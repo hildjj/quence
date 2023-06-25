@@ -2,7 +2,6 @@ import Store from './store.js'
 import {execa} from 'execa'
 import {main} from '../lib/cli.js'
 import path from 'path'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 import url from 'url'
 

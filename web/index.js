@@ -1,4 +1,4 @@
-/* eslint-disable node/no-missing-import */
+/* eslint-disable n/no-missing-import */
 import './registerStaticFiles.js'
 import * as SvgCss from 'bundle-text:../lib/svg.css'
 import * as initial from 'bundle-text:./initial.wsd'

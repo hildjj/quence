@@ -1,6 +1,6 @@
 /* eslint-disable capitalized-comments */
 /* eslint-disable max-len */
-/* eslint-disable node/no-missing-import */
+/* eslint-disable n/no-missing-import */
 
 // The content file is returned as is
 import Courier from 'bundle-text:./node_modules/quence/node_modules/pdfkit/js/data/Courier.afm'

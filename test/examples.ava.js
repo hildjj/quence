@@ -1,7 +1,6 @@
 import * as quence from '../lib/index.js'
 import Store from './store.js'
 import fs from 'fs'
-// eslint-disable-next-line node/no-missing-import
 import test from 'ava'
 import url from 'url'
 
