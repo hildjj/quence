@@ -144,6 +144,6 @@ export default class Driver<T = any> {
      */
     draw_arrow(msg: ast.Message): void;
 }
-import * as ast from "./ast.js";
-import { Point } from "./point.js";
-import * as pjson from "../package.js";
+import * as ast from './ast.js';
+import { Point } from './point.js';
+import * as pjson from '../package.js';

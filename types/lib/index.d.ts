@@ -55,6 +55,6 @@ export type DrawOptions = {
      */
     nolink?: boolean;
 };
-import json from "./JSONDriver.js";
-import pdf from "./PDFDriver.js";
-import svg from "./SVGDriver.js";
+import json from './JSONDriver.js';
+import pdf from './PDFDriver.js';
+import svg from './SVGDriver.js';
