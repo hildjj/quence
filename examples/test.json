@@ -1278,22 +1278,113 @@
       "msg": "Lost self"
     },
     {
+      "_line": 86,
+      "kind": "BLOCK",
+      "depth": 0,
+      "typ": "simple",
+      "msg": "An unlabeled block",
+      "start": 79,
+      "end": 86
+    },
+    {
+      "_line": 87,
+      "kind": "SELF",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 80
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "--",
+        "end": ">"
+      },
+      "classes": "dashed closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 81
+      },
+      "msg": "-->"
+    },
+    {
       "_line": 88,
+      "kind": "SELF",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 82
+      },
+      "arrow": {
+        "begin": null,
+        "dash": "-",
+        "end": ">>"
+      },
+      "classes": "solid open_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 83
+      },
+      "msg": "->>"
+    },
+    {
+      "_line": 89,
+      "kind": "SELF",
+      "props": {},
+      "timepoint": null,
+      "from": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 84
+      },
+      "arrow": {
+        "begin": "<",
+        "dash": "-",
+        "end": ">"
+      },
+      "classes": "closed_back solid closed_forward",
+      "to": {
+        "nm": "Bob",
+        "col": 0,
+        "tm": 85
+      },
+      "msg": "<->"
+    },
+    {
+      "_line": 90,
+      "kind": "END_BLOCK",
+      "start": {
+        "_line": 86,
+        "kind": "BLOCK",
+        "depth": 0,
+        "typ": "simple",
+        "msg": "An unlabeled block",
+        "start": 79,
+        "end": 86
+      }
+    },
+    {
+      "_line": 93,
       "kind": "NOTE",
       "from": {
         "nm": "Alice",
         "col": 1,
-        "tm": 79
+        "tm": 87
       },
       "msg": "Alice note"
     },
     {
-      "_line": 90,
+      "_line": 95,
       "kind": "NOTE",
       "from": {
         "nm": "B",
         "col": 4,
-        "tm": 80
+        "tm": 88
       },
       "msg": "B note"
     }
@@ -1322,7 +1413,7 @@
     "text_size": 13,
     "time_height": 20
   },
-  "current_time": 81,
-  "max_time": 80,
+  "current_time": 89,
+  "max_time": 88,
   "current_arrow": 0
 }
