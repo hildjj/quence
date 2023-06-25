@@ -24,5 +24,5 @@ export default class SVGDriver extends Driver<import("xmlbuilder2/lib/interfaces
     draw_path(cmds: string | (string | Point)[], klasses: string): any;
 }
 export type Builder = import('xmlbuilder2/lib/interfaces').XMLBuilder;
-import Driver from "./driver.js";
-import { Point } from "./point.js";
+import Driver from './driver.js';
+import { Point } from './point.js';

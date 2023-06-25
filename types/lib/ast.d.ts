@@ -3,12 +3,12 @@
  */
 export type Kind = string;
 export namespace Kind {
-    const ADVANCE: string;
-    const MESSAGE: string;
-    const SELF: string;
-    const BLOCK: string;
-    const END_BLOCK: string;
-    const NOTE: string;
+    let ADVANCE: string;
+    let MESSAGE: string;
+    let SELF: string;
+    let BLOCK: string;
+    let END_BLOCK: string;
+    let NOTE: string;
 }
 export class Endpoint {
     /**
@@ -139,12 +139,12 @@ export class SelfMessage extends Message {
 export class Block extends Step {
     /**
      * @param {number} line Line number from the source file
-     * @param {"loop"|"opt"} typ Type of block
+     * @param {"loop"|"opt"|"simple"} typ Type of block
      * @param {string} msg Associated message
      */
-    constructor(line: number, typ: "loop" | "opt", msg: string);
+    constructor(line: number, typ: "loop" | "opt" | "simple", msg: string);
     depth: number;
-    typ: "loop" | "opt";
+    typ: "loop" | "opt" | "simple";
     msg: string;
     /**
      * @type {number|null}
