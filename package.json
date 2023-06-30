@@ -18,7 +18,7 @@
     "build": "peggy --format es lib/grammar.pegjs",
     "release": "npm version patch && git push --follow-tags && npm publish",
     "types": "tsc",
-    "version": "package-extract name homepage version && npm run snaps && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add docs examples test/snapshots package.js"
+    "version": "package-extract name homepage version && npm run types && npm run snaps && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add docs examples types test/snapshots package.js"
   },
   "repository": {
     "type": "git",
@@ -55,18 +55,28 @@
     "xmlbuilder2": "3.1.1"
   },
   "devDependencies": {
-    "@cto.af/eslint-config": "^2.0.1",
-    "@types/node": "20.3.1",
+    "@cto.af/eslint-config": "^2.0.3",
+    "@types/node": "20.3.2",
     "@types/pdfkit": "0.12.10",
-    "ava": "latest",
-    "c8": "8.0.0",
-    "eslint": "latest",
+    "ava": "^5.3.1",
+    "c8": "^8.0.0",
+    "eslint": "^8.43.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-node": "^11.1.0",
-    "execa": "7.1.1",
-    "package-extract": "1.0.2",
+    "execa": "^7.1.1",
+    "package-extract": "^1.0.3",
     "peggy": "^3.0.2",
-    "typescript": "5.1.3"
+    "typescript": "^5.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "semver": ">=7.5.3",
+      "word-wrap" : "npm:@aashutoshrathi/word-wrap"
+    }
+  },
+  "overrides": {
+    "semver": ">=7.5.3",
+    "word-wrap" : "npm:@aashutoshrathi/word-wrap"
   },
   "engines": {
     "node": ">=16"
