@@ -1,7 +1,7 @@
 {
   "name": "quence",
   "description": "Create sequence diagrams",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "main": "./lib/index.js",
   "bin": {
@@ -71,12 +71,12 @@
   "pnpm": {
     "overrides": {
       "semver": ">=7.5.3",
-      "word-wrap" : "npm:@aashutoshrathi/word-wrap"
+      "word-wrap": "npm:@aashutoshrathi/word-wrap"
     }
   },
   "overrides": {
     "semver": ">=7.5.3",
-    "word-wrap" : "npm:@aashutoshrathi/word-wrap"
+    "word-wrap": "npm:@aashutoshrathi/word-wrap"
   },
   "engines": {
     "node": ">=16"
