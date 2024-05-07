@@ -26,3 +26,5 @@ tsconfig.json
 ava.config.cjs
 CHANGELOG.md
 vscode/
+eslint.config.js
+.c8rc

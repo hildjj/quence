@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 module.exports = {
   // Allow chdir
@@ -6,4 +6,4 @@ module.exports = {
   files: [
     'test/*.ava.js',
   ],
-}
+};

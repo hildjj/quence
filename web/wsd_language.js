@@ -15,27 +15,42 @@ export const config = {
     {open: '[', close: ']'},
     {open: '"', close: '"'},
   ],
-}
+};
 
 export const tokenizer = {
   // Set defaultToken to invalid to see what you do not tokenize yet
   // defaultToken: 'invalid',
 
   keywords: [
-    'advance', 'as', 'end', 'false', 'loop', 'opt',
-    'participant', 'set', 'title', 'true',
+    'advance',
+    'as',
+    'end',
+    'false',
+    'loop',
+    'opt',
+    'participant',
+    'set',
+    'title',
+    'true',
   ],
 
   typeKeywords: [],
 
   operators: [
-    '->', '-->',
-    '->>', '-->>',
-    '-#', '--#',
-    '<->', '<-->',
-    '<->>', '<-->>',
-    '<<->', '<<-->',
-    '<<->>', '<<-->>',
+    '->',
+    '-->',
+    '->>',
+    '-->>',
+    '-#',
+    '--#',
+    '<->',
+    '<-->',
+    '<->>',
+    '<-->>',
+    '<<->',
+    '<<-->',
+    '<<->>',
+    '<<-->>',
     ':',
   ],
 
@@ -103,7 +118,7 @@ export const tokenizer = {
       [/[ \t\r\n]+/, 'white'],
     ],
   },
-}
+};
 
 export const theme = {
   base: 'vs-dark',
@@ -124,4 +139,4 @@ export const theme = {
       foreground: 'ADFF2F',
     },
   ],
-}
+};

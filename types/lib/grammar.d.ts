@@ -1,3 +1,4 @@
+declare const peg$allowedStartRules: string[];
 declare function peg$SyntaxError(message: any, expected: any, found: any, location: any): any;
 declare class peg$SyntaxError {
     constructor(message: any, expected: any, found: any, location: any);
@@ -6,6 +7,5 @@ declare class peg$SyntaxError {
 declare namespace peg$SyntaxError {
     function buildMessage(expected: any, found: any): string;
 }
-declare function peg$parse(input: any, options: any): ast.Diagram;
-import * as ast from './ast.js';
-export { peg$SyntaxError as SyntaxError, peg$parse as parse };
+declare function peg$parse(input: any, options: any): any;
+export { peg$allowedStartRules as StartRules, peg$SyntaxError as SyntaxError, peg$parse as parse };
