@@ -1,0 +1,11 @@
+block Do a thing
+  A->B: Some messages
+end
+
+loop Many times
+  A->B: Some messages
+end
+
+opt Might happen
+  A->B: Some messages
+end
