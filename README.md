@@ -267,4 +267,4 @@ Quence was formerly known as "arrow", until I was asked very nicely to let
 another project use that name.
 
 [![Tests](https://github.com/hildjj/quence/actions/workflows/node.js.yml/badge.svg)](https://github.com/hildjj/quence/actions/workflows/node.js.yml)
-[![Coverage Status](https://coveralls.io/repos/github/hildjj/quence/badge.svg?branch=main)](https://coveralls.io/github/hildjj/quence?branch=main)
+[![codecov](https://codecov.io/gh/hildjj/quence/graph/badge.svg?token=H0cmzICYg2)](https://codecov.io/gh/hildjj/quence)
