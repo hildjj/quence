@@ -1,4 +1,4 @@
-import {Arrow, Diagram, Step} from '../lib/ast.js';
+import {Arrow, Diagram, Endpoint, Step} from '../lib/ast.js';
 import test from 'ava';
 
 test('arrow create', t => {
@@ -85,4 +85,9 @@ test('Step', t => {
   t.throws(() => {
     s.compute();
   });
+});
+
+test('Endpoint', t => {
+  const e = new Endpoint('foo', 1, '');
+  t.is(e.tm, null);
 });

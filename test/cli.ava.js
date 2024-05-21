@@ -65,4 +65,7 @@ test('exec', async t => {
   });
   t.true(stdout.length > 0);
   t.regex(stdout, /alice/);
+
+  const err = await run(TEST, '-ojs', '--out', '__DOES_NOT_EXIST___/foo.js');
+  t.is(err.stderr, "ENOENT: no such file or directory, open '__DOES_NOT_EXIST___/foo.js'\n");
 });
