@@ -1,85 +1,180 @@
 import {parse} from '../lib/grammar.js';
 import test from 'ava';
+import {testPeggy} from '@peggyjs/coverage';
+
+function isInvalid(t, text, opts) {
+  const er = t.throws(() => parse(text, {
+    grammarSource: 'isInvalid',
+    ...opts,
+  }), undefined, `"${text}"`);
+  if (typeof er?.format === 'function') {
+    t.truthy(er.format([{source: 'isInvalid', text}]));
+  }
+}
 
 test('parse error', t => {
-  t.throws(() => parse('Bob'));
-  t.throws(() => parse('Bob -'));
-  t.throws(() => parse('Bob ->'));
-  t.throws(() => parse('Bob - >'));
-  t.throws(() => parse('Bob a'));
-  t.throws(() => parse('advance'));
-  t.throws(() => parse('advance '));
-  t.throws(() => parse('advance\t'));
-  t.throws(() => parse('advance\\t'));
-  t.throws(() => parse('advance\\'));
-  t.throws(() => parse('Bob\x01 ->'));
-  t.throws(() => parse('Bob\x10 ->'));
+  isInvalid(t, 'Bob');
+  isInvalid(t, 'Bob');
+  isInvalid(t, 'Bob -');
+  isInvalid(t, 'Bob ->');
+  isInvalid(t, 'Bob - >');
+  isInvalid(t, 'Bob a');
+  isInvalid(t, 'advance');
+  isInvalid(t, 'advance ');
+  isInvalid(t, 'advance\t');
+  isInvalid(t, 'advance\\t');
+  isInvalid(t, 'advance\\');
+  isInvalid(t, 'Bob\x01 ->');
+  isInvalid(t, 'Bob\x10 ->');
 });
 
 test('start rule', t => {
   const ast = parse('Bob -> Alice', {startRule: 'start'});
   t.truthy(ast);
-  t.throws(() => parse('Bob -> Alice', {startRule: 'send'}));
+  isInvalid(t, 'Bob -> Alice', {startRule: 'send'});
 });
 
 test('participant', t => {
   t.truthy(parse('participant Bob'));
+  t.truthy(parse('  participant Bob'));
+  t.truthy(parse('participant  "Bob" as Judy'));
+  isInvalid(t, 'participant \\u0g2g');
+  isInvalid(t, 'participant \\u00gg');
+  isInvalid(t, 'participant \\u002g');
+  isInvalid(t, 'participant \\u{g}');
+  isInvalid(t, 'participant \\u{0');
 
   // TODO: this ought to work.
   // t.truthy(parse('participant Bob cob\n'));
 
-  t.throws(() => parse('participant'));
-  t.throws(() => parse('participantBob'));
-  t.throws(() => parse('participant "Bob'));
-  t.throws(() => parse('participant "Bob"'));
-  t.throws(() => parse('participant "Bob" '));
-  t.throws(() => parse('participant "Bob" as'));
-  t.throws(() => parse('participant "Bob" as '));
+  isInvalid(t, 'participant');
+  isInvalid(t, 'participantBob');
+  isInvalid(t, 'participant "Bob');
+  isInvalid(t, 'participant "Bob"');
+  isInvalid(t, 'participant "Bob" ');
+  isInvalid(t, 'participant "Bob" as');
+  isInvalid(t, 'participant "Bob" as ');
 });
 
 test('send', t => {
   // Here: Bob -> Alice: Test duration=2[duration=2]
-  t.throws(() => parse('Bob '));
-  t.throws(() => parse('Bob@'));
-  t.throws(() => parse('Bob @'));
-  t.throws(() => parse('Bob @ '));
-  t.throws(() => parse('Bob @t'));
-  t.throws(() => parse('Bob @t ->'));
-  t.throws(() => parse('t:'));
-  t.throws(() => parse('Bob -> Alice\nBob'));
+  isInvalid(t, 'Bob ');
+  isInvalid(t, 'Bob@');
+  isInvalid(t, 'Bob @');
+  isInvalid(t, 'Bob @ ');
+  isInvalid(t, 'Bob @t');
+  isInvalid(t, 'Bob @t ->');
+  isInvalid(t, 't:');
+  isInvalid(t, 'Bob -> Alice\nBob');
 });
 
 test('blocks', t => {
-  t.throws(() => parse('opt'));
-  t.throws(() => parse('loop'));
-  t.throws(() => parse('block'));
-  t.throws(() => parse('opt '));
-  t.throws(() => parse('loop '));
-  t.throws(() => parse('block '));
-  t.throws(() => parse('opt A'));
-  t.throws(() => parse('loop A'));
-  t.throws(() => parse('block "'));
-  t.throws(() => parse('opt "'));
-  t.throws(() => parse('loop "'));
-  t.throws(() => parse('block "'));
+  isInvalid(t, 'opt');
+  isInvalid(t, 'loop');
+  isInvalid(t, 'block');
+  isInvalid(t, 'opt ');
+  isInvalid(t, 'loop ');
+  isInvalid(t, 'block ');
+  isInvalid(t, 'opt A');
+  isInvalid(t, 'loop A');
+  isInvalid(t, 'block "');
+  isInvalid(t, 'opt "');
+  isInvalid(t, 'loop "');
+  isInvalid(t, 'block "');
 });
 
 test('options', t => {
   t.truthy(parse('A->B [ duration = 2 ,\tadvance=""\t]'));
+  t.truthy(parse('A->B []'));
+  t.truthy(parse('A->B [ ]'));
+  t.truthy(parse('A->B [  ]'));
+  isInvalid(t, 'A->B [');
+  isInvalid(t, 'A->B [ ');
+  isInvalid(t, 'A->B [ foo=');
+  isInvalid(t, 'A->B [foo=2,');
+  isInvalid(t, 'A->B [foo=2,bar=');
 });
 
 test('note', t => {
-  t.throws(() => parse('note'));
-  t.throws(() => parse('note '));
-  t.throws(() => parse('noteBob'));
-  t.throws(() => parse('note Bob'));
+  isInvalid(t, 'note');
+  isInvalid(t, 'note ');
+  isInvalid(t, 'noteBob');
+  isInvalid(t, 'note Bob');
   t.truthy(parse('note Bob: #'));
   t.truthy(parse('note Bob: \\\\ #'));
 });
 
 test('set', t => {
-  t.throws(() => parse('set'));
-  t.throws(() => parse('set '));
-  t.throws(() => parse('set UNKNOWN_PROP'));
-  t.throws(() => parse('set no_feet "'));
+  isInvalid(t, 'set');
+  isInvalid(t, 'set ');
+  isInvalid(t, 'set UNKNOWN_PROP');
+  isInvalid(t, 'set no_feet "');
+  isInvalid(t, 'set no_feet:');
+});
+
+test('title', t => {
+  t.truthy(parse('  title foo'));
+  t.truthy(parse('title foo'));
+  t.truthy(parse('title #'));
+  t.truthy(parse('title \\xgg'));
+  t.truthy(parse('title "\\xag"'));
+  isInvalid(t, 'title');
+  isInvalid(t, 'title"');
+  isInvalid(t, 'title "');
+});
+
+test('grammar edges', t => {
+  t.truthy(parse('a->b'));
+  t.truthy(parse('a-->>b'));
+  t.truthy(parse('a--#b'));
+  t.truthy(parse('a<->b'));
+  t.truthy(parse('a<<-->>b'));
+  t.truthy(parse('a->b: \\l'));
+  t.truthy(parse('a->b: \\l\\l'));
+  isInvalid(t, 'a-b');
+  isInvalid(t, 'a--b');
+  isInvalid(t, 'a<-b');
+  isInvalid(t, 'a<--b');
+  isInvalid(t, 'a<b');
+  isInvalid(t, 'a<<b');
+  t.truthy(parse('a->b', {startRule: 'start'}));
+  isInvalid(t, 'a->b', {startRule: '____UKNOWN_START____'});
+});
+
+test('testPeggy', async t => {
+  const grammarUrl = new URL('../lib/grammar.js', import.meta.url);
+  await testPeggy(grammarUrl, [
+    {
+      validInput: 'a->b',
+      validResult(r) {
+        t.snapshot(r);
+        return r;
+      },
+      peg$maxFailPos: 4,
+    },
+    {
+      invalidInput: 'Bob',
+    },
+    {
+      invalidInput: 'Bob',
+      startRule: 'start',
+    },
+    {
+      validInput: '',
+      validResult: ' ',
+      options: {
+        peg$startRuleFunction: 'peg$parse_',
+        peg$silentFails: -1,
+      },
+    },
+    {
+      validInput: ' ',
+      validResult: ' ',
+      peg$maxFailPos: 1,
+      options: {
+        peg$startRuleFunction: 'peg$parse_',
+        peg$silentFails: -1,
+      },
+    },
+  ]);
 });

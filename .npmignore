@@ -28,3 +28,4 @@ CHANGELOG.md
 vscode/
 eslint.config.js
 .c8rc
+.ncurc

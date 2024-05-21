@@ -34,8 +34,8 @@ jobs:
           npm run types
           git diff --quiet --exit-code --cached
       - name: Test ${{ matrix.node-version }}
-        run: npm run coverage
+        run: npm run test
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

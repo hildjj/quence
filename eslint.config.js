@@ -7,10 +7,12 @@ export default [
   {
     ignores: [
       'lib/grammar.js',
-      '*.min.js',
       'vscode/out/**',
       'vscode/dist/**',
       '**/*.d.ts',
+      '**/*.min.js',
+      'node_modules/**',
+      'vscode/.vscode-test/**',
     ],
   },
   ...base,
