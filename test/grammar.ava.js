@@ -176,5 +176,51 @@ test('testPeggy', async t => {
         peg$silentFails: -1,
       },
     },
+    {
+      invalidInput: 'title foo',
+      options: {
+        peg$failAfter: {
+          peg$parseto_the_end: 0,
+        },
+      },
+    },
+    {
+      invalidInput: 'loop foo',
+      options: {
+        peg$failAfter: {
+          peg$parseto_the_end: 0,
+        },
+      },
+    },
+    {
+      invalidInput: 'opt foo',
+      options: {
+        peg$failAfter: {
+          peg$parseto_the_end: 0,
+        },
+      },
+    },
+    {
+      invalidInput: 'block foo',
+      options: {
+        peg$failAfter: {
+          peg$parseto_the_end: 0,
+        },
+      },
+    },
+    {
+      invalidInput: 'a',
+      options: {
+        peg$startRuleFunction: 'peg$parseWS',
+        peg$silentFails: -1,
+      },
+    },
+    {
+      invalidInput: ' a',
+      options: {
+        peg$startRuleFunction: 'peg$parseWS',
+        peg$silentFails: -1,
+      },
+    },
   ]);
 });
