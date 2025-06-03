@@ -31,8 +31,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs
           publish_branch: gh-pages
-          destination_dir: docs
       - run: npm pkg delete devDependencies scripts packageManager pnpm
-      - run: npm publish --access public --provenance
+      - run: npm publish --access public --provenance --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
