@@ -10,4 +10,5 @@
 coverage/
 docs/
 node_modules
+types/
 vscode/
