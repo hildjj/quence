@@ -1,5 +1,4 @@
 /* eslint-disable prefer-named-capture-group */
-/* eslint-disable array-element-newline */
 export const config = {
   comments: {
     lineComment: '#',
@@ -103,7 +102,7 @@ export const tokenizer = {
     ],
 
     dblStringBody: [
-      [/[^\\"]+$/, 'string', '@popall'],
+      // [/[^\\"]+$/m, 'string', '@popall'],
       [/[^\\"]+/, 'string'],
       [/\\./, 'string'],
       [/"/, 'string.escape', '@popall'],
@@ -111,7 +110,7 @@ export const tokenizer = {
     ],
 
     comment: [
-      [/#.*$/, 'comment'], // -# is an arrow, not a comment
+      [/#.*$/m, 'comment'], // -# is an arrow, not a comment
     ],
 
     whitespace: [

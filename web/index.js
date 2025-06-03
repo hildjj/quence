@@ -2,18 +2,20 @@
 import './registerStaticFiles.js';
 import * as SvgCss from 'bundle-text:../lib/svg.css';
 import * as initial from 'bundle-text:./initial.wsd';
-import * as monaco from 'monaco-editor';
-import {SyntaxError, draw} from 'quence';
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.main.js';
 import {config, theme, tokenizer} from './wsd_language.js';
 import EditorWorker from 'url:monaco-editor/esm/vs/editor/editor.worker.js';
 import Store from '../test/store.js';
+import {draw} from 'quence';
 
 self.MonacoEnvironment = {
-  getWorkerUrl(moduleId, label) {
-    if (label === 'editorWorkerService') {
-      return EditorWorker;
+  getWorkerUrl(_moduleId, label) {
+    switch (label) {
+      case 'editorWorkerService':
+        return EditorWorker;
+      default:
+        throw new Error(`Unknown service: "${label}"`);
     }
-    throw new Error(`Unknown worker: ${{moduleId, label}}`);
   },
 };
 
@@ -77,7 +79,7 @@ async function drawWeb(type) {
     }, new Store());
     return s;
   } catch (er) {
-    if (er instanceof SyntaxError) {
+    if (typeof er.format === 'function') {
       const marker = {
         severity: monaco.MarkerSeverity.Error,
         message: er.message,

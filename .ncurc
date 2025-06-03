@@ -1,4 +1,3 @@
 {
-  "dep": ["prod", "dev", "packageManager"],
-  "reject": ["eslint", "eslint-plugin-ava"]
+  "dep": ["prod", "dev", "packageManager"]
 }

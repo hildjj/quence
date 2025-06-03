@@ -13,11 +13,18 @@ export default [
       '**/*.min.js',
       'node_modules/**',
       'vscode/.vscode-test/**',
+      '**/.vscode/**',
     ],
   },
   ...base,
   ...mod,
   ...ts,
+  {
+    files: ['**/*.js'],
+    rules: {
+      'n/prefer-node-protocol': 'off',
+    },
+  },
   {
     files: [
       'web/**/*.js',
