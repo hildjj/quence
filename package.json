@@ -16,6 +16,7 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "scripts": {
+    "clean": "rm -rf coverage types && cd web && npm run clean",
     "docs": "cd web && npm run build",
     "lint": "eslint .",
     "test": "c8 ava",
@@ -23,7 +24,7 @@
     "build": "peggy --format es lib/grammar.pegjs && npm run types && npm run docs",
     "start": "hostlocal",
     "types": "tsc",
-    "version": "package-extract -s name homepage version && npm run types && npm run snaps && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add docs examples types test/snapshots package.js"
+    "version": "package-extract -s name homepage version && npm run snaps && npm run build && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add examples test/snapshots package.js"
   },
   "repository": {
     "type": "git",
