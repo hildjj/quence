@@ -1,5 +1,4 @@
 /* eslint-disable capitalized-comments */
-/* eslint-disable max-len */
 /* eslint-disable n/no-missing-import */
 
 /* eslint-disable @stylistic/max-len */

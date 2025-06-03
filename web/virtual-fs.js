@@ -5,8 +5,8 @@ import {Buffer} from 'buffer';
 
 function normalizeFilename(fileName) {
   // Hack: Just take the filename, ignore directories.
-  const m = String(fileName).match(/[^/]*$/);
-  return m ? m[0] : fileName;
+  // Also, if no slash, this takes from 0 to the end.
+  return fileName.slice(fileName.lastIndexOf('/') + 1);
 }
 
 const fileData = {};

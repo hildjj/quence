@@ -6,23 +6,23 @@
   "private": true,
   "scripts": {
     "build": "parcel build index.html --no-content-hash --no-source-maps --public-url '.' --no-autoinstall --dist-dir ../docs",
-    "postbuild": "find ../docs -type f -name '*.js' -not -name 'index.*.js' -not -name 'editor.*.js' -delete",
+    "postbuild": "find ../docs -type f -name '*.js' -not -name 'index.*.js' -not -name 'editor.*.js' -not -name 'web.*.js' -not -name 'quence.*.js' -delete",
     "clean": "rm -rf ../docs .parcel-cache && mkdir ../docs"
   },
   "keywords": [],
   "author": "Joe Hildebrand <joe-github@cursive.net>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "@parcel/core": "2.12.0",
-    "@parcel/transformer-inline-string": "2.12.0",
+    "@parcel/core": "2.15.2",
+    "@parcel/transformer-inline-string": "2.15.2",
     "assert": "2.1.0",
     "brfs": "2.0.2",
     "browserify-zlib": "0.2.0",
     "buffer": "^5.7.1",
     "constants-browserify": "1.0.0",
     "events": "3.3.0",
-    "monaco-editor": "0.48.0",
-    "parcel": "2.12.0",
+    "monaco-editor": "0.52.2",
+    "parcel": "2.15.2",
     "path-browserify": "1.0.1",
     "process": "0.11.10",
     "punycode": "^2.3.1",
@@ -31,7 +31,7 @@
     "stream-browserify": "3.0.0",
     "string_decoder": "1.3.0",
     "svgo": "3.3.2",
-    "url": "0.11.3",
+    "url": "0.11.4",
     "util": "0.12.5"
   },
   "alias": {
@@ -43,5 +43,9 @@
     "stream": "stream-browserify",
     "util": "util/",
     "zlib": "browserify-zlib"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "engines": {
+    "node": ">=20"
   }
 }
