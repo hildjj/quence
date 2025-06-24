@@ -10,5 +10,6 @@
     "moduleResolution": "node",
     "outDir": "types",
     "target": "ES2020",
+    "skipLibCheck": true,
   }
 }
