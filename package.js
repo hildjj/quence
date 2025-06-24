@@ -3,4 +3,4 @@
 
 export const name = 'quence';
 export const homepage = 'https://github.com/hildjj/quence';
-export const version = '4.0.1';
+export const version = '4.0.2';
