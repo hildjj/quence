@@ -1,7 +1,7 @@
 {
   "name": "quence",
   "description": "Create sequence diagrams",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "type": "module",
   "main": "./lib/index.js",
   "bin": {
