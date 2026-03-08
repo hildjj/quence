@@ -1,0 +1,4 @@
+packages:
+  - web
+  - vscode
+linkWorkspacePackages: true
