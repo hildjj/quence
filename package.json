@@ -63,7 +63,7 @@
   "devDependencies": {
     "@cto.af/eslint-config": "^6.2.5",
     "@peggyjs/coverage": "2.0.5",
-    "@types/node": "25.3.5",
+    "@types/node": "25.4.0",
     "@types/pdfkit": "0.17.5",
     "ava": "^7.0.0",
     "eslint": "10.0.3",
@@ -72,11 +72,18 @@
     "hostlocal": "2.4.1",
     "package-extract": "^3.1.5",
     "peggy": "^5.1.0",
-    "superc8": "12.2.4",
+    "superc8": "12.3.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "8.56.1"
+    "typescript-eslint": "8.57.0"
   },
-  "packageManager": "pnpm@10.31.0",
+  "packageManager": "pnpm@10.32.0",
+  "pnpm": {
+    "overrides": {
+      "mocha>diff": "~8.0.3",
+      "mocha>serialize-javascript": "~7.0.4",
+      "monaco-editor>dompurify": "~3.3.2"
+    }
+  },
   "engines": {
     "node": ">=20"
   }
