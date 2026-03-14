@@ -17,6 +17,7 @@
   "bugs": "https://github.com/hildjj/quence/issues",
   "scripts": {
     "clean": "rm -rf .parcel-cache coverage types && cd web && npm run clean",
+    "predocs": "mkdir -p docs",
     "docs": "cd web && npm run build",
     "lint": "eslint .",
     "test": "c8 ava",
