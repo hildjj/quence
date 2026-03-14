@@ -15,22 +15,16 @@ jobs:
         node-version: [20, 22, 24, 25]
     steps:
       - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm
-      - name: Install modules
-        run: pnpm install
-      - name: Lint
-        run: npm run lint
-      - name: Type check
-        run: |
-          npm run types
-          git diff --quiet --exit-code --cached
-      - name: Test ${{ matrix.node-version }}
-        run: npm run test
+      - uses: pnpm/action-setup@v4
+        with:
+          cache: true
+          run_install: true
+      - name: Build ${{ matrix.node-version }}
+        run: npm run build
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:

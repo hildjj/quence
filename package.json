@@ -1,7 +1,7 @@
 {
   "name": "quence",
   "description": "Create sequence diagrams",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "type": "module",
   "main": "./lib/index.js",
   "bin": {
@@ -16,12 +16,12 @@
   "homepage": "https://github.com/hildjj/quence",
   "bugs": "https://github.com/hildjj/quence/issues",
   "scripts": {
-    "clean": "rm -rf coverage types && cd web && npm run clean",
+    "clean": "rm -rf .parcel-cache coverage types && cd web && npm run clean",
     "docs": "cd web && npm run build",
     "lint": "eslint .",
     "test": "c8 ava",
     "snaps": "ava --update-snapshots",
-    "build": "peggy --format es lib/grammar.pegjs && npm run types && npm run docs",
+    "build": "peggy --format es lib/grammar.pegjs && npm run types && npm run lint && npm run docs",
     "start": "hostlocal",
     "types": "tsc",
     "version": "package-extract -s name homepage version && npm run snaps && npm run build && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add examples test/snapshots package.js"
@@ -63,7 +63,7 @@
   "devDependencies": {
     "@cto.af/eslint-config": "^6.2.5",
     "@peggyjs/coverage": "2.0.5",
-    "@types/node": "25.4.0",
+    "@types/node": "25.5.0",
     "@types/pdfkit": "0.17.5",
     "ava": "^7.0.0",
     "eslint": "10.0.3",
@@ -76,7 +76,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "8.57.0"
   },
-  "packageManager": "pnpm@10.32.0",
+  "packageManager": "pnpm@10.32.1",
   "pnpm": {
     "overrides": {
       "mocha>diff": "~8.0.3",
