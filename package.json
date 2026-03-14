@@ -22,7 +22,7 @@
     "lint": "eslint .",
     "test": "c8 ava",
     "snaps": "ava --update-snapshots",
-    "build": "peggy --format es lib/grammar.pegjs && npm run types && npm run lint && npm run docs",
+    "build": "peggy --format es lib/grammar.pegjs && npm run types && npm run lint && npm run docs && npm run test",
     "start": "hostlocal",
     "types": "tsc",
     "version": "package-extract -s name homepage version && npm run snaps && npm run build && (cd examples && make clean && make) && (cd web && npm run clean && npm run build) && git add examples test/snapshots package.js"
