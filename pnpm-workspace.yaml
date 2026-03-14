@@ -1,4 +1,6 @@
 packages:
   - web
   - vscode
-linkWorkspacePackages: true
+hoist: true
+shamefullyHoist: true
+#linkWorkspacePackages: true
